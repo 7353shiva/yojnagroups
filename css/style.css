@@ -1,0 +1,1158 @@
+/* =========================================================
+   YOJNA GROUP
+   MAIN / DESKTOP CSS
+========================================================= */
+
+
+/* =========================================================
+   ROOT COLORS
+========================================================= */
+
+:root {
+
+    --yojna-yellow: #FEF907;
+    --yojna-blue: #033141;
+    --yojna-white: #FFFFFF;
+
+    --yojna-black: #111111;
+    --yojna-charcoal: #171717;
+    --yojna-dark-gray: #252525;
+
+    --yojna-gray: #6F6F6F;
+    --yojna-light-gray: #F3F3F3;
+
+    --yojna-border: #D9D9D9;
+
+    /* Division Colors */
+
+    --yojna-events: #FEF907;
+    --yojna-media: #4AA3DF;
+    --yojna-yatra: #F59E0B;
+    --yojna-services: #4CAF50;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color:#073042;
+    background: var(--yojna-white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.yojna-container {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.yojna-section-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--yojna-blue);
+    margin-bottom: 15px;
+}
+
+.yojna-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 55px;
+}
+
+.yojna-section-heading h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    max-width: 650px;
+}
+
+.yojna-section-heading h2 span {
+    color: var(--yojna-blue);
+}
+
+.yojna-section-heading > p {
+    max-width: 400px;
+    color: var(--yojna-gray);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.yojna-primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 24px;
+    background: var(--yojna-yellow);
+    color: var(--yojna-black);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.yojna-primary-button:hover {
+    background: var(--yojna-white);
+    transform: translateY(-3px);
+}
+
+.yojna-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 24px;
+    border: 1px solid rgba(255,255,255,0.7);
+    color: var(--yojna-white);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.yojna-secondary-button:hover {
+    background: var(--yojna-white);
+    color: var(--yojna-black);
+}
+
+.yojna-text-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--yojna-blue);
+    transition: 0.3s ease;
+}
+
+.yojna-text-button:hover {
+    gap: 16px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.yojna-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #073042;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.yojna-header-container {
+    width: min(1280px, calc(100% - 60px));
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.yojna-logo img {
+    width: 100px;
+}
+
+.yojna-desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.yojna-desktop-nav > a,
+.yojna-dropdown-link { 
+  left:10px;
+    color: var(--yojna-white);
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+
+}
+
+.yojna-desktop-nav > a:hover,
+.yojna-desktop-nav > a.active,
+.yojna-dropdown-link:hover {
+    color: var(--yojna-yellow);
+}
+.site-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    size:100px
+}
+
+.site-name {
+    font-size: 23px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+========================================================= */
+
+.yojna-header-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 19px;
+
+    background: var(--yojna-yellow);
+    color: var(--yojna-black);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+.yojna-header-button:hover {
+    background: var(--yojna-white);
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+========================================================= */
+
+.yojna-mobile-toggle,
+.yojna-mobile-nav {
+    display: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.yojna-hero {
+    position: relative;
+    min-height: 760px;
+    height: 100vh;
+    max-height: 900px;
+
+    overflow: hidden;
+
+    background:#85817E;
+}
+
+.yojna-hero-slider {
+    position: absolute;
+    inset: 0;
+}
+
+.yojna-hero-slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+    transform: scale(1.04);
+
+    transition:
+        opacity 1.2s ease,
+        transform 6s ease;
+}
+
+.yojna-hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.yojna-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.88) 0%,
+            rgba(0,0,0,0.65) 45%,
+            rgba(0,0,0,0.3) 100%
+        );
+}
+
+.yojna-hero-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, calc(100% - 80px));
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.yojna-hero-content {
+    max-width: 720px;
+    padding-top: 70px;
+}
+
+.yojna-hero-label {
+    color: var(--yojna-yellow);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.yojna-hero h1 {
+    margin: 22px 0;
+
+    color: var(--yojna-white);
+
+    font-size: clamp(50px, 7vw, 88px);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.yojna-hero h1 span {
+    color: var(--yojna-yellow);
+}
+
+.yojna-hero-content p {
+    max-width: 580px;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+.yojna-hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.yojna-hero-scroll {
+    position: absolute;
+    z-index: 3;
+
+    left: 40px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.yojna-hero-scroll i {
+    color: var(--yojna-yellow);
+}
+
+.yojna-hero-number {
+    position: absolute;
+    z-index: 3;
+
+    right: 40px;
+    bottom: 30px;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.yojna-home-introduction {
+    padding: 120px 0;
+    background: var(--yojna-white);
+}
+
+.yojna-introduction-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.yojna-introduction-image {
+    position: relative;
+}
+
+.yojna-introduction-image-frame {
+    position: relative;
+    overflow: hidden;
+}
+
+.yojna-introduction-image-frame img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+.yojna-introduction-number {
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+
+    width: 115px;
+    height: 115px;
+
+    background: var(--yojna-yellow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.yojna-introduction-number span {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.yojna-introduction-number strong {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.yojna-introduction-content h2 {
+    font-size: 54px;
+    line-height: 1.08;
+    margin-bottom: 25px;
+}
+
+.yojna-introduction-content h2 span {
+    color: var(--yojna-blue);
+}
+
+.yojna-introduction-content p {
+    color: var(--yojna-gray);
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   DIVISIONS
+========================================================= */
+
+.yojna-home-divisions {
+    padding: 120px 0;
+    background:#5F6970;
+    color: var(--yojna-white);
+}
+
+.yojna-home-divisions .yojna-section-label {
+    color: var(--yojna-yellow);
+}
+
+.yojna-section-heading h2 {
+    color: var(--yojna-white);
+}
+
+.yojna-section-heading h2 span {
+    color: var(--yojna-yellow);
+}
+
+.yojna-section-heading > p {
+    color: rgba(255,255,255,0.6);
+}
+
+.yojna-divisions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.yojna-division-card {
+    position: relative;
+
+    min-height: 360px;
+    padding: 30px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    transition: 0.4s ease;
+}
+
+.yojna-division-card:hover {
+    transform: translateY(-8px);
+    background: var(--yojna-dark-gray);
+}
+
+.yojna-division-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.yojna-division-number {
+    color: rgba(255,255,255,0.35);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.yojna-division-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--yojna-black);
+    font-size: 20px;
+}
+
+.yojna-events-card .yojna-division-icon {
+    background: var(--yojna-events);
+}
+
+.yojna-media-card .yojna-division-icon {
+    background: var(--yojna-media);
+    color: var(--yojna-white);
+}
+
+.yojna-yatra-card .yojna-division-icon {
+    background: var(--yojna-yatra);
+    color: var(--yojna-white);
+}
+
+.yojna-services-card .yojna-division-icon {
+    background: var(--yojna-services);
+    color: var(--yojna-white);
+}
+
+.yojna-division-card h3 {
+    margin-top: 90px;
+    margin-bottom: 15px;
+
+    font-size: 27px;
+}
+
+.yojna-division-card p {
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+}
+
+.yojna-division-link {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    color: var(--yojna-white);
+}
+
+.yojna-division-card:hover .yojna-division-link {
+    color: var(--yojna-yellow);
+}
+
+
+/* =========================================================
+   BOOK MY TRIP
+========================================================= */
+
+.yojna-book-trip {
+    position: relative;
+
+    padding: 110px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--yojna-blue),
+            #071d24
+        );
+
+    color: var(--yojna-white);
+
+    overflow: hidden;
+}
+
+.yojna-book-trip::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -200px;
+    top: -200px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+}
+
+.yojna-book-trip-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(254,249,7,0.08),
+            transparent 35%
+        );
+}
+
+.yojna-book-trip .yojna-container {
+    position: relative;
+    z-index: 2;
+}
+
+.yojna-book-trip-content {
+    max-width: 720px;
+}
+
+.yojna-book-trip .yojna-section-label {
+    color: var(--yojna-yellow);
+}
+
+.yojna-book-trip h2 {
+    font-size: 58px;
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.yojna-book-trip h2 span {
+    color: var(--yojna-yellow);
+}
+
+.yojna-book-trip-content p {
+    max-width: 650px;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 30px;
+}
+
+.yojna-book-trip-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.yojna-trip-primary,
+.yojna-trip-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 23px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+.yojna-trip-primary {
+    background: var(--yojna-yellow);
+    color: var(--yojna-black);
+}
+
+.yojna-trip-primary:hover {
+    background: var(--yojna-white);
+}
+
+.yojna-trip-secondary {
+    border: 1px solid rgba(255,255,255,0.5);
+    color: var(--yojna-white);
+}
+
+.yojna-trip-secondary:hover {
+    background: var(--yojna-white);
+    color: var(--yojna-black);
+}
+
+
+/* =========================================================
+   TRIP SERVICES
+========================================================= */
+
+.yojna-trip-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 70px;
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.yojna-trip-service {
+    padding: 30px 30px 10px;
+
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.yojna-trip-service:last-child {
+    border-right: none;
+}
+
+.yojna-trip-service i {
+    color: var(--yojna-yellow);
+    font-size: 25px;
+}
+
+.yojna-trip-service h3 {
+    margin: 15px 0 7px;
+    font-size: 17px;
+}
+
+.yojna-trip-service p {
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TRAVEL PARTNERS
+========================================================= */
+
+.yojna-travel-partners {
+    padding: 110px 0;
+    background: var(--yojna-white);
+}
+
+.yojna-travel-partners-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.yojna-travel-partners-heading h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.yojna-travel-partners-heading h2 span {
+    color: var(--yojna-blue);
+}
+
+.yojna-travel-partners-heading p {
+    color: var(--yojna-gray);
+}
+
+.yojna-travel-partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.yojna-travel-partner-card {
+    padding: 35px;
+    background: var(--yojna-light-gray);
+    border: 1px solid var(--yojna-border);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.yojna-travel-partner-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--yojna-yellow);
+}
+
+.yojna-partner-logo-placeholder {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--yojna-blue);
+    color: var(--yojna-yellow);
+
+    font-size: 27px;
+}
+
+.yojna-travel-partner-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.yojna-travel-partner-card p {
+    color: var(--yojna-gray);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   WHY YOJNA
+========================================================= */
+
+.yojna-home-why {
+    padding: 120px 0;
+    background: var(--yojna-light-gray);
+}
+
+.yojna-why-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+}
+
+.yojna-why-content h2 {
+    font-size: 52px;
+    line-height: 1.08;
+    margin-bottom: 22px;
+}
+
+.yojna-why-content h2 span {
+    color: var(--yojna-blue);
+}
+
+.yojna-why-content p {
+    color: var(--yojna-gray);
+    margin-bottom: 28px;
+}
+
+.yojna-why-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.yojna-why-feature {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid var(--yojna-border);
+    background: var(--yojna-white);
+}
+
+.yojna-why-feature > span {
+    color: var(--yojna-gray);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.yojna-why-feature i {
+    display: block;
+    color: var(--yojna-blue);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.yojna-why-feature h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.yojna-why-feature p {
+    color: var(--yojna-gray);
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.yojna-home-projects {
+    padding: 120px 0;
+    background: var(--yojna-white);
+}
+
+.yojna-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.yojna-project-card {
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+    background: var(--yojna-black);
+}
+
+.yojna-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.6s ease;
+}
+
+.yojna-project-card:hover img {
+    transform: scale(1.06);
+}
+
+.yojna-project-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+
+    padding: 35px;
+
+    color: var(--yojna-white);
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.9)
+        );
+}
+
+.yojna-project-overlay span {
+    color: var(--yojna-yellow);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.yojna-project-overlay h3 {
+    margin-top: 8px;
+    max-width: 300px;
+    font-size: 21px;
+}
+
+.yojna-project-overlay i {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--yojna-yellow);
+    color: var(--yojna-black);
+}
+
+/* =========================================================
+   HOME PAGE CTA - ROUNDED BOX
+========================================================= */
+
+.yojna-home-cta {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 65px 70px;
+    background: #073042;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.yojna-home-cta .yojna-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.yojna-home-cta .yojna-cta-content {
+    max-width: 800px;
+}
+
+.yojna-home-cta .yojna-section-label {
+    display: block;
+    margin-bottom: 14px;
+    color: #FEF907;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.yojna-home-cta .yojna-cta-content h2 {
+    margin: 0 0 18px;
+    color: #FFFFFF;
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.yojna-home-cta .yojna-cta-content h2 span {
+    color: #FEF907;
+}
+
+.yojna-home-cta .yojna-cta-content p {
+    max-width: 600px;
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.yojna-home-cta .yojna-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 22px;
+    background: #FEF907;
+    color: #033141;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.yojna-home-cta .yojna-cta-button i {
+    transition: transform 0.3s ease;
+}
+
+.yojna-home-cta .yojna-cta-button:hover {
+    background: #FFFFFF;
+    color: #033141;
+}
+
+.yojna-home-cta .yojna-cta-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.yojna-footer {
+    background: var(--yojna-black);
+    color: var(--yojna-white);
+    padding: 80px 0 25px;
+}
+
+.yojna-footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr 0.7fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.yojna-footer-logo img {
+    width: 145px;
+    margin-bottom: 20px;
+}
+
+.yojna-footer-brand p {
+    max-width: 330px;
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+}
+
+.yojna-footer-social {
+    display: flex;
+    gap: 9px;
+    margin-top: 25px;
+}
+
+.yojna-footer-social a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    color: var(--yojna-white);
+
+    transition: 0.3s ease;
+}
+
+.yojna-footer-social a:hover {
+    background: var(--yojna-yellow);
+    color: var(--yojna-black);
+}
+
+.yojna-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.yojna-footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.yojna-footer-column a,
+.yojna-footer-column p {
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+}
+
+.yojna-footer-column a:hover {
+    color: var(--yojna-yellow);
+}
+
+.yojna-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    color: rgba(255,255,255,0.4);
+
+    font-size: 10px;
+}
+
+.yojna-footer-bottom div {
+    display: flex;
+    gap: 25px;
+}
+
+.yojna-footer-bottom a:hover {
+    color: var(--yojna-white);
+}
