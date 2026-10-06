@@ -1,0 +1,292 @@
+/* =========================================================
+   ABOUT / EVENTS / MEDIA / YATRA RESPONSIVE
+========================================================= */
+
+
+@media (max-width: 1100px) {
+
+    .about-division-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .events-activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .media-services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-company-grid,
+    .events-intro-grid,
+    .media-intro-grid,
+    .yatra-intro-grid {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-page-banner,
+    .events-page-banner,
+    .media-page-banner,
+    .yatra-page-banner {
+        min-height: 420px;
+    }
+
+    .about-page-banner-content,
+    .events-page-banner-content,
+    .media-page-banner-content,
+    .yatra-page-banner-content {
+        padding: 65px 0;
+    }
+
+    .about-page-banner-content h1,
+    .events-page-banner-content h1,
+    .media-page-banner-content h1,
+    .yatra-page-banner-content h1 {
+        font-size: 45px;
+    }
+
+
+    .about-company-intro,
+    .about-company-divisions,
+    .about-approach-section,
+    .events-introduction,
+    .events-activities-section,
+    .events-work-section,
+    .events-executed-section,
+    .media-introduction,
+    .media-activities-section,
+    .media-work-section,
+    .media-executed-section,
+    .yatra-introduction,
+    .yatra-services-section,
+    .yatra-experience-section {
+        padding: 75px 0;
+    }
+
+
+    .about-company-grid,
+    .events-intro-grid,
+    .media-intro-grid,
+    .yatra-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+
+    .about-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+
+    .events-work-grid,
+    .media-work-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .yatra-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .yatra-experience-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .about-company-heading h2,
+    .about-section-heading h2,
+    .about-approach-content h2,
+    .events-intro-heading h2,
+    .media-intro-heading h2,
+    .yatra-intro-heading h2,
+    .events-section-heading h2,
+    .media-section-heading h2,
+    .yatra-section-heading h2 {
+        font-size: 37px;
+    }
+
+
+    .media-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .events-executed-list,
+    .media-executed-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-page-banner,
+    .events-page-banner,
+    .media-page-banner,
+    .yatra-page-banner {
+        min-height: 390px;
+    }
+
+
+    .about-page-banner-content,
+    .events-page-banner-content,
+    .media-page-banner-content,
+    .yatra-page-banner-content {
+        padding: 50px 20px;
+    }
+
+
+    .about-page-banner-content h1,
+    .events-page-banner-content h1,
+    .media-page-banner-content h1,
+    .yatra-page-banner-content h1 {
+        font-size: 35px;
+    }
+
+
+    .about-page-banner-content p,
+    .events-page-banner-content p,
+    .media-page-banner-content p,
+    .yatra-page-banner-content p {
+        font-size: 14px;
+    }
+
+
+    .about-company-intro,
+    .about-company-divisions,
+    .about-approach-section,
+    .events-introduction,
+    .events-activities-section,
+    .events-work-section,
+    .events-executed-section,
+    .media-introduction,
+    .media-activities-section,
+    .media-work-section,
+    .media-executed-section,
+    .yatra-introduction,
+    .yatra-services-section,
+    .yatra-experience-section,
+    .yatra-statement-section {
+        padding: 60px 0;
+    }
+
+
+    .about-division-grid,
+    .events-activity-grid,
+    .events-work-grid,
+    .media-work-grid,
+    .media-services-grid,
+    .yatra-experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-company-heading h2,
+    .about-section-heading h2,
+    .about-approach-content h2,
+    .events-intro-heading h2,
+    .media-intro-heading h2,
+    .yatra-intro-heading h2,
+    .events-section-heading h2,
+    .media-section-heading h2,
+    .yatra-section-heading h2 {
+        font-size: 31px;
+    }
+
+
+    .about-division-card {
+        min-height: 310px;
+    }
+
+
+    .events-work-image,
+    .media-work-image,
+    .yatra-experience-image {
+        height: 240px;
+    }
+
+
+    .events-work-content,
+    .media-work-content,
+    .yatra-experience-content {
+        padding: 22px;
+    }
+
+
+    .events-activity-card {
+        min-height: auto;
+    }
+
+
+    .media-service-item {
+        min-height: auto;
+    }
+
+
+    .yatra-service-card {
+        padding: 32px 25px;
+    }
+
+
+    .yatra-statement {
+        padding-left: 22px;
+    }
+
+
+    .yatra-statement h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .about-page-banner-content h1,
+    .events-page-banner-content h1,
+    .media-page-banner-content h1,
+    .yatra-page-banner-content h1 {
+        font-size: 30px;
+    }
+
+
+    .about-company-heading h2,
+    .about-section-heading h2,
+    .about-approach-content h2,
+    .events-intro-heading h2,
+    .media-intro-heading h2,
+    .yatra-intro-heading h2,
+    .events-section-heading h2,
+    .media-section-heading h2,
+    .yatra-section-heading h2 {
+        font-size: 28px;
+    }
+
+
+    .events-work-image,
+    .media-work-image,
+    .yatra-experience-image {
+        height: 210px;
+    }
+
+}

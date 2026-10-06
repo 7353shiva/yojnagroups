@@ -1156,3 +1156,2246 @@ button {
 .yojna-footer-bottom a:hover {
     color: var(--yojna-white);
 }
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.events-page-banner,
+.media-page-banner,
+.yatra-page-banner {
+    position: relative;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+
+.events-page-banner {
+    background-image: url("../images/events/events-banner.jpg");
+}
+
+.media-page-banner {
+    background-image: url("../images/media/media-banner.jpg");
+}
+
+.yatra-page-banner {
+    background-image: url("../images/yatra/yatra-banner.jpg");
+}
+
+
+
+.events-page-banner-overlay,
+.media-page-banner-overlay,
+.yatra-page-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(7,48,66,.94),
+        rgba(3,49,65,.70)
+    );
+}
+
+
+
+.events-page-banner .yojna-container,
+.media-page-banner .yojna-container,
+.yatra-page-banner .yojna-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+
+
+.events-page-banner-content,
+.media-page-banner-content,
+.yatra-page-banner-content {
+    max-width: 760px;
+    padding: 80px 0;
+}
+
+
+
+.events-page-label,
+.media-page-label,
+.yatra-page-label,
+.about-page-section-label,
+.events-section-label,
+.media-section-label,
+.yatra-section-label {
+    display: inline-block;
+    color: #FEF907;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+
+
+.events-page-banner-content h1,
+.media-page-banner-content h1,
+.yatra-page-banner-content h1 {
+    margin: 18px 0 20px;
+    color: #FFFFFF;
+    font-size: 56px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+
+
+.events-page-banner-content h1 span,
+.media-page-banner-content h1 span,
+.yatra-page-banner-content h1 span {
+    display: block;
+    color: #FEF907;
+}
+
+
+.events-page-banner-content p,
+.media-page-banner-content p,
+.yatra-page-banner-content p {
+    max-width: 650px;
+    margin: 0;
+    color: rgba(255,255,255,.80);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ABOUT INTRODUCTION
+========================================================= */
+
+.about-company-intro {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.about-company-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 90px;
+}
+
+.about-company-heading h2,
+.about-section-heading h2,
+.about-approach-content h2 {
+    margin: 15px 0 0;
+    color: #033141;
+    font-size: 45px;
+    line-height: 1.15;
+}
+
+.about-company-heading h2 span,
+.about-section-heading h2 span,
+.about-approach-content h2 span {
+    display: block;
+    color: #073042;
+}
+
+.about-company-text p {
+    margin: 0 0 20px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+
+/* =========================================================
+   EVENTS PAGE
+========================================================= */
+
+.events-introduction,
+.media-introduction,
+.yatra-introduction {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.events-intro-grid,
+.media-intro-grid,
+.yatra-intro-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 90px;
+}
+
+.events-intro-heading h2,
+.media-intro-heading h2,
+.yatra-intro-heading h2 {
+    margin: 15px 0 0;
+    color: #033141;
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.events-intro-heading h2 span,
+.media-intro-heading h2 span,
+.yatra-intro-heading h2 span {
+    display: block;
+    color: #073042;
+}
+
+.events-intro-text p,
+.media-intro-text p,
+.yatra-intro-text p {
+    margin: 0 0 20px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   EVENTS ACTIVITIES
+========================================================= */
+
+.events-activities-section {
+    padding: 100px 0;
+    background: #F3F3F3;
+}
+
+.events-section-heading,
+.media-section-heading,
+.yatra-section-heading {
+    max-width: 720px;
+    margin-bottom: 50px;
+}
+
+.events-section-heading h2,
+.media-section-heading h2,
+.yatra-section-heading h2 {
+    margin: 15px 0;
+    color: #033141;
+    font-size: 43px;
+    line-height: 1.15;
+}
+
+.events-section-heading h2 span,
+.media-section-heading h2 span,
+.yatra-section-heading h2 span {
+    display: block;
+    color: #073042;
+}
+
+.events-section-heading p,
+.media-section-heading p,
+.yatra-section-heading p {
+    margin: 15px 0 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+.events-activity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.events-activity-card {
+    position: relative;
+    min-height: 240px;
+    padding: 30px 25px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #E1E1E1;
+    transition: .3s ease;
+}
+
+.events-activity-card:hover {
+    transform: translateY(-6px);
+    border-color: #FEF907;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.events-activity-card > span {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #D5D5D5;
+    font-weight: 700;
+}
+
+.events-activity-card i {
+    display: block;
+    margin-bottom: 25px;
+    color: #033141;
+    font-size: 30px;
+}
+
+.events-activity-card h3 {
+    margin: 0 0 12px;
+    color: #033141;
+    font-size: 18px;
+}
+
+.events-activity-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   WORK IMAGE SECTIONS
+========================================================= */
+
+.events-work-section,
+.media-work-section,
+.yatra-experience-section {
+    padding: 110px 0;
+    background: #FFFFFF;
+}
+
+.events-work-grid,
+.media-work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.events-work-card,
+.media-work-card,
+.yatra-experience-card {
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E2E2E2;
+    transition: .3s ease;
+}
+
+.events-work-card:hover,
+.media-work-card:hover,
+.yatra-experience-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.10);
+}
+
+.events-work-image,
+.media-work-image,
+.yatra-experience-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.events-work-image img,
+.media-work-image img,
+.yatra-experience-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.events-work-card:hover img,
+.media-work-card:hover img,
+.yatra-experience-card:hover img {
+    transform: scale(1.05);
+}
+
+.events-work-content,
+.media-work-content,
+.yatra-experience-content {
+    padding: 28px;
+}
+
+.events-work-content span,
+.media-work-content span,
+.yatra-experience-content span {
+    color: #A77A2A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.events-work-content h3,
+.media-work-content h3,
+.yatra-experience-content h3 {
+    margin: 10px 0;
+    color: #033141;
+    font-size: 23px;
+}
+
+.events-work-content p,
+.media-work-content p,
+.yatra-experience-content p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EVENTS EXECUTED
+========================================================= */
+
+.events-executed-section,
+.media-executed-section {
+    padding: 100px 0;
+    background: #073042;
+}
+
+.events-executed-section .events-section-heading h2,
+.media-executed-section .media-section-heading h2 {
+    color: #FFFFFF;
+}
+
+.events-executed-section .events-section-heading h2 span,
+.media-executed-section .media-section-heading h2 span {
+    color: #FEF907;
+}
+
+.events-executed-list,
+.media-executed-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 30px;
+}
+
+.events-executed-list div,
+.media-executed-list div {
+    padding: 16px 18px;
+    background: rgba(255,255,255,.07);
+    color: rgba(255,255,255,.85);
+    border-left: 3px solid #FEF907;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MEDIA PAGE
+========================================================= */
+
+.media-activities-section {
+    padding: 100px 0;
+    background: #F3F3F3;
+}
+
+.media-services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.media-service-item {
+    min-height: 160px;
+    padding: 25px 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #E2E2E2;
+    transition: .3s ease;
+}
+
+.media-service-item:hover {
+    transform: translateY(-5px);
+    border-color: #4AA3DF;
+}
+
+.media-service-item i {
+    display: block;
+    margin-bottom: 22px;
+    color: #033141;
+    font-size: 28px;
+}
+
+.media-service-item h3 {
+    margin: 0;
+    color: #033141;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   YATRA PAGE
+========================================================= */
+
+.yatra-services-section {
+    padding: 100px 0;
+    background: #F3F3F3;
+}
+
+.yatra-service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.yatra-service-card {
+    position: relative;
+    padding: 40px 30px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    border: 1px solid #E2E2E2;
+    transition: .3s ease;
+}
+
+.yatra-service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.09);
+    border-color: #F59E0B;
+}
+
+.yatra-service-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: #D5D5D5;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.yatra-service-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #073042;
+    color: #FEF907;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.yatra-service-card h3 {
+    margin: 0 0 14px;
+    color: #033141;
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.yatra-service-card p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* YATRA IMAGES */
+
+.yatra-experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.yatra-experience-image {
+    height: 270px;
+}
+
+.yatra-statement-section {
+    padding: 90px 0;
+    background: #073042;
+}
+
+.yatra-statement {
+    max-width: 800px;
+    padding-left: 35px;
+    border-left: 5px solid #FEF907;
+}
+
+.yatra-statement h2 {
+    margin: 15px 0;
+    color: #FFFFFF;
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.yatra-statement h2 span {
+    color: #FEF907;
+}
+
+.yatra-statement p {
+    max-width: 650px;
+    margin: 0;
+    color: rgba(255,255,255,.75);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+
+/* =========================================================
+   ABOUT BANNER
+========================================================= */
+
+.yojna-about-banner {
+    position: relative;
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("../images/about/about-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.yojna-about-banner-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 48, 66, 0.94),
+            rgba(7, 48, 66, 0.70),
+            rgba(7, 48, 66, 0.45)
+        );
+}
+
+.yojna-about-banner-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+
+    padding: 80px 0;
+}
+
+.yojna-about-label,
+.yojna-about-section-label {
+    display: inline-block;
+
+    color: #FEF907;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+.yojna-about-label {
+    margin-bottom: 18px;
+}
+
+.yojna-about-banner-content h1 {
+    margin: 0 0 22px;
+
+    color: #FFFFFF;
+
+    font-size: 58px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+.yojna-about-banner-content h1 span {
+    display: block;
+    color: #FEF907;
+}
+
+.yojna-about-banner-content p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ABOUT INTRO
+========================================================= */
+
+.yojna-about-intro {
+    padding: 105px 0;
+
+    background: #FFFFFF;
+}
+
+.yojna-about-intro-grid {
+    display: grid;
+
+    grid-template-columns: 0.95fr 1.05fr;
+
+    gap: 85px;
+
+    align-items: center;
+}
+
+.yojna-about-intro-image {
+    position: relative;
+
+    min-height: 480px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background: #073042;
+}
+
+.yojna-about-intro-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 480px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.yojna-about-image-tag {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    background: #FEF907;
+
+    color: #033141;
+
+    border-radius: 5px;
+}
+
+.yojna-about-image-tag strong {
+    font-size: 16px;
+}
+
+.yojna-about-image-tag span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.yojna-about-intro-content h2 {
+    margin: 15px 0 25px;
+
+    color: #033141;
+
+    font-size: 46px;
+    line-height: 1.15;
+}
+
+.yojna-about-intro-content h2 span {
+    display: block;
+    color: #073042;
+}
+
+.yojna-about-intro-content > p {
+    margin: 0 0 18px;
+
+    color: #5F5F5F;
+
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.yojna-about-highlight {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+    padding: 20px 22px;
+
+    border-left: 4px solid #FEF907;
+
+    background: #F3F3F3;
+}
+
+.yojna-about-highlight i {
+    color: #033141;
+
+    font-size: 24px;
+}
+
+.yojna-about-highlight p {
+    margin: 0;
+
+    color: #033141;
+
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ABOUT STORY
+========================================================= */
+
+.yojna-about-story {
+    padding: 105px 0;
+
+    background: #F3F3F3;
+}
+
+.yojna-about-heading {
+    max-width: 720px;
+
+    margin-bottom: 55px;
+}
+
+.yojna-about-heading h2 {
+    margin: 15px 0 18px;
+
+    color: #033141;
+
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.yojna-about-heading h2 span {
+    display: block;
+    color: #073042;
+}
+
+.yojna-about-heading > p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* Timeline */
+
+.yojna-about-timeline {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.yojna-about-timeline-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 20px;
+
+    padding: 32px;
+
+    background: #FFFFFF;
+
+    border-radius: 12px;
+
+    border: 1px solid #E0E0E0;
+
+    transition: 0.3s ease;
+}
+
+.yojna-about-timeline-item:hover {
+    transform: translateY(-6px);
+
+    border-color: #FEF907;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.yojna-about-timeline-number {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #073042;
+
+    color: #FEF907;
+
+    border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.yojna-about-timeline-content > span {
+    color: #A77A2A;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.yojna-about-timeline-content h3 {
+    margin: 8px 0 10px;
+
+    color: #033141;
+
+    font-size: 20px;
+}
+
+.yojna-about-timeline-content p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DIVISIONS
+========================================================= */
+
+.yojna-about-divisions {
+    padding: 105px 0;
+
+    background: #FFFFFF;
+}
+
+.yojna-about-division-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.yojna-about-division-card {
+    position: relative;
+
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 25px;
+
+    text-decoration: none;
+
+    background: #FFFFFF;
+
+    border-radius: 13px;
+
+    border: 1px solid #E2E2E2;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.yojna-about-division-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+}
+
+.yojna-about-division-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+    background: #073042;
+
+    color: #FEF907;
+
+    border-radius: 9px;
+
+    font-size: 22px;
+}
+
+.yojna-about-division-number {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    color: #D7D7D7;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.yojna-about-division-card h3 {
+    margin: 0 0 12px;
+
+    color: #033141;
+
+    font-size: 23px;
+}
+
+.yojna-about-division-card p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.yojna-about-division-link {
+    margin-top: auto;
+    padding-top: 25px;
+
+    color: #033141;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.yojna-about-division-link i {
+    margin-left: 5px;
+
+    transition: 0.3s ease;
+}
+
+.yojna-about-division-card:hover
+.yojna-about-division-link i {
+    transform: translate(4px, -3px);
+}
+
+
+/* Division colours */
+
+.yojna-about-events {
+    border-top: 4px solid #FEF907;
+}
+
+.yojna-about-media {
+    border-top: 4px solid #4AA3DF;
+}
+
+.yojna-about-yatra {
+    border-top: 4px solid #F59E0B;
+}
+
+.yojna-about-services {
+    border-top: 4px solid #4CAF50;
+}
+
+
+/* =========================================================
+   WHAT WE DO
+========================================================= */
+
+.yojna-about-work {
+    padding: 105px 0;
+
+    background: #073042;
+}
+
+.yojna-about-work-grid {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+.yojna-about-work-content h2 {
+    margin: 15px 0 25px;
+
+    color: #FFFFFF;
+
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.yojna-about-work-content h2 span {
+    display: block;
+
+    color: #FEF907;
+}
+
+.yojna-about-work-content p {
+    max-width: 580px;
+
+    margin: 0 0 18px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.yojna-about-work-list {
+    border-left: 2px solid rgba(255,255,255,0.15);
+}
+
+.yojna-about-work-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 20px;
+
+    padding: 0 0 30px 30px;
+}
+
+.yojna-about-work-item:last-child {
+    padding-bottom: 0;
+}
+
+.yojna-about-work-item > span {
+    position: absolute;
+
+    left: -17px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FEF907;
+
+    color: #033141;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.yojna-about-work-item h3 {
+    margin: 0 0 6px;
+
+    color: #FFFFFF;
+
+    font-size: 19px;
+}
+
+.yojna-about-work-item p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   WHY YOJNA
+========================================================= */
+
+.yojna-about-why {
+    padding: 105px 0;
+
+    background: #F3F3F3;
+}
+
+.yojna-about-why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.yojna-about-why-card {
+    padding: 32px 27px;
+
+    background: #FFFFFF;
+
+    border-radius: 12px;
+
+    border: 1px solid #E2E2E2;
+
+    transition: 0.3s ease;
+}
+
+.yojna-about-why-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #FEF907;
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.yojna-about-why-card > span {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #C9C9C9;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.yojna-about-why-card > i {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #033141;
+
+    font-size: 29px;
+}
+
+.yojna-about-why-card h3 {
+    margin: 0 0 10px;
+
+    color: #033141;
+
+    font-size: 18px;
+}
+
+.yojna-about-why-card p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL STATEMENT
+========================================================= */
+
+.yojna-about-statement {
+    padding: 90px 0;
+
+    background: #FFFFFF;
+}
+
+.yojna-about-statement-box {
+    max-width: 900px;
+
+    padding-left: 35px;
+
+    border-left: 5px solid #FEF907;
+}
+
+.yojna-about-statement-box h2 {
+    margin: 15px 0;
+
+    color: #033141;
+
+    font-size: 45px;
+    line-height: 1.15;
+}
+
+.yojna-about-statement-box h2 span {
+    color: #073042;
+}
+
+.yojna-about-statement-box p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   OUR APPROACH
+========================================================= */
+
+.yojna-home-approach {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.yojna-approach-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+.yojna-approach-heading h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 12px;
+    color: #111;
+}
+
+.yojna-approach-heading h2 span {
+    color: #f5b301;
+}
+
+.yojna-approach-heading p {
+    max-width: 460px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+.yojna-approach-process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
+}
+
+.yojna-approach-step {
+    position: relative;
+}
+
+.yojna-approach-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #f5b301;
+    line-height: 1;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.yojna-approach-line {
+    height: 2px;
+    background: linear-gradient(90deg, #f5b301 0%, #eee 100%);
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.yojna-approach-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f5b301;
+}
+
+.yojna-approach-small {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.yojna-approach-content h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111;
+    margin: 10px 0 14px;
+}
+
+.yojna-approach-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+@media (max-width: 900px) {
+    .yojna-approach-process {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .yojna-home-approach {
+        padding: 70px 0;
+    }
+    .yojna-approach-heading {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .yojna-approach-process {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   CLIENTS — HORIZONTAL AUTO-SCROLL MARQUEE
+========================================================= */
+
+.yojna-home-clients {
+    padding: 100px 0;
+    background: #f8f9fb;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   MARQUEE WRAPPER
+--------------------------------------------------------- */
+
+.yojna-clients-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    margin-top: 40px;
+
+    /* Soft fade on left & right edges */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #000 10%,
+        #000 90%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        #000 10%,
+        #000 90%,
+        transparent 100%
+    );
+}
+
+/* ---------------------------------------------------------
+   MOVING TRACK
+--------------------------------------------------------- */
+
+.yojna-clients-track {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: max-content;
+    animation: clientsScroll 45s linear infinite;
+    will-change: transform;
+}
+
+/* Pause on hover */
+.yojna-clients-marquee:hover .yojna-clients-track {
+    animation-play-state: paused;
+}
+
+/* ---------------------------------------------------------
+   SCROLL ANIMATION
+   The track has 20 items (10 × 2).
+   Translating by -50% moves through exactly one full set,
+   then resets invisibly — creating a seamless loop.
+--------------------------------------------------------- */
+
+@keyframes clientsScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ---------------------------------------------------------
+   CLIENT LOGO CARD
+--------------------------------------------------------- */
+
+.yojna-client-logo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 120px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    transition: all 0.4s ease;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.yojna-client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-color: #f5b301;
+}
+
+.yojna-client-logo img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+    .yojna-clients-track {
+        gap: 24px;
+        animation-duration: 38s;
+    }
+
+    .yojna-client-logo {
+        width: 170px;
+        height: 110px;
+        padding: 20px;
+    }
+
+    .yojna-client-logo img {
+        max-height: 52px;
+    }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .yojna-home-clients {
+        padding: 70px 0;
+    }
+
+    .yojna-clients-marquee {
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+
+    .yojna-clients-track {
+        gap: 18px;
+        animation-duration: 30s;
+    }
+
+    .yojna-client-logo {
+        width: 150px;
+        height: 100px;
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .yojna-client-logo img {
+        max-height: 46px;
+    }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .yojna-clients-track {
+        gap: 14px;
+        animation-duration: 25s;
+    }
+
+    .yojna-client-logo {
+        width: 130px;
+        height: 90px;
+        padding: 14px;
+    }
+
+    .yojna-client-logo img {
+        max-height: 40px;
+    }
+}
+
+/* ---------------------------------------------------------
+   ACCESSIBILITY — respect reduced motion preference
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .yojna-clients-track {
+        animation: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .yojna-clients-marquee {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+.yojna-home-testimonials {
+    padding: 100px 0;
+    background:#033141;
+    color: #fff;
+}
+
+.yojna-testimonials-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+.yojna-testimonials-heading .yojna-section-label {
+    color: #f5b301;
+}
+
+.yojna-testimonials-heading h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 12px;
+    color: #fff;
+}
+
+.yojna-testimonials-heading h2 span {
+    color: #f5b301;
+}
+
+.yojna-testimonials-heading p {
+    max-width: 460px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+}
+
+.yojna-testimonial-feature {
+    position: relative;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 60px 70px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.yojna-testimonial-quote-mark {
+    font-size: 8rem;
+    line-height: 0.8;
+    color: #f5b301;
+    font-family: Georgia, serif;
+    opacity: 0.9;
+}
+
+.yojna-testimonial-stars {
+    color: #f5b301;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    margin-bottom: 24px;
+}
+
+.yojna-testimonial-content blockquote {
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    line-height: 1.7;
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+    margin-bottom: 30px;
+    border: none;
+    padding: 0;
+}
+
+.yojna-testimonial-client {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.yojna-testimonial-client-line {
+    width: 50px;
+    height: 2px;
+    background: #f5b301;
+}
+
+.yojna-testimonial-client strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.yojna-testimonial-client span {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.yojna-testimonial-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+}
+
+.yojna-testimonial-number-line {
+    width: 2px;
+    height: 40px;
+    background: rgba(255,255,255,0.2);
+}
+
+.yojna-testimonial-navigation {
+    display: flex;
+    gap: 12px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.yojna-testimonial-nav {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.yojna-testimonial-nav:hover,
+.yojna-testimonial-nav.active {
+    background: #f5b301;
+    border-color: #f5b301;
+    color: #111;
+}
+
+@media (max-width: 900px) {
+    .yojna-testimonial-feature {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        gap: 24px;
+    }
+    .yojna-testimonial-quote-mark {
+        font-size: 5rem;
+    }
+    .yojna-testimonial-number {
+        flex-direction: row;
+    }
+    .yojna-testimonial-number-line {
+        width: 40px;
+        height: 2px;
+    }
+    .yojna-home-testimonials {
+        padding: 70px 0;
+    }
+    .yojna-testimonials-heading {
+        margin-bottom: 50px;
+    }
+}
+
+/* =========================================================
+   HERO SECTION — 5 SLIDES
+========================================================= */
+
+.yojna-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 620px;
+    max-height: 900px;
+    overflow: hidden;
+    background: #111;
+}
+
+.yojna-hero-slider {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.yojna-hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
+    z-index: 1;
+}
+
+.yojna-hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.yojna-hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1.05);
+    transition: transform 6s ease-out;
+}
+
+.yojna-hero-slide.active img {
+    transform: scale(1);
+}
+
+.yojna-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.55) 45%,
+        rgba(0, 0, 0, 0.15) 100%
+    );
+    z-index: 1;
+}
+
+/* ---------------------------------------------------------
+   HERO CONTENT
+--------------------------------------------------------- */
+
+.yojna-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 720px;
+    color: #fff;
+    z-index: 3;
+    opacity: 0;
+    animation: heroContentIn 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.yojna-hero-slide.active .yojna-hero-content {
+    opacity: 0;
+    animation: heroContentIn 1s ease 0.3s forwards;
+}
+
+@keyframes heroContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-50% + 40px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+.yojna-hero-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #f5b301;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.yojna-hero-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 28px;
+    height: 2px;
+    background: #f5b301;
+    transform: translateY(-50%);
+}
+
+.yojna-hero-content h1 {
+    font-size: clamp(2rem, 5.5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.yojna-hero-content h1 span {
+    color: #f5b301;
+    display: inline-block;
+}
+
+.yojna-hero-content p {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 540px;
+    margin-bottom: 32px;
+}
+
+/* ---------------------------------------------------------
+   HERO BUTTON
+--------------------------------------------------------- */
+
+.yojna-hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5b301;
+    color: #111;
+    padding: 16px 32px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.yojna-hero-button:hover {
+    background: #fff;
+    color: #111;
+    gap: 16px;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(245, 179, 1, 0.35);
+}
+
+.yojna-hero-button i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.yojna-hero-button:hover i {
+    transform: translate(2px, -2px);
+}
+
+/* ---------------------------------------------------------
+   MAKEMYTRIP COLLABORATION BADGE (SLIDE 4)
+--------------------------------------------------------- */
+
+.yojna-hero-partner {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+}
+
+.yojna-hero-partner-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    padding-right: 14px;
+}
+
+.yojna-hero-partner-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+/* ---------------------------------------------------------
+   HERO ARROWS
+--------------------------------------------------------- */
+
+.yojna-hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.yojna-hero-arrow:hover {
+    background: #f5b301;
+    border-color: #f5b301;
+    color: #111;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.yojna-hero-prev {
+    left: 28px;
+}
+
+.yojna-hero-next {
+    right: 28px;
+}
+
+/* ---------------------------------------------------------
+   HERO DOTS
+--------------------------------------------------------- */
+
+.yojna-hero-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 5;
+}
+
+.yojna-hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    padding: 0;
+}
+
+.yojna-hero-dot:hover {
+    border-color: #f5b301;
+}
+
+.yojna-hero-dot.active {
+    width: 36px;
+    border-radius: 6px;
+    background: #f5b301;
+    border-color: #f5b301;
+}
+
+/* ---------------------------------------------------------
+   SLIDE COUNTER (01 / 05)
+--------------------------------------------------------- */
+
+.yojna-hero-counter {
+    position: absolute;
+    bottom: 40px;
+    right: 8%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    z-index: 5;
+}
+
+.yojna-hero-current {
+    color: #f5b301;
+    font-size: 1.1rem;
+}
+
+.yojna-hero-divider {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 2px;
+}
+
+.yojna-hero-total {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------------------------------------------------------
+   SCROLL INDICATOR
+--------------------------------------------------------- */
+
+.yojna-hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.yojna-hero-scroll i {
+    font-size: 1rem;
+    color: #f5b301;
+    animation: scrollBounce 1.8s infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .yojna-hero-content {
+        left: 6%;
+        max-width: 600px;
+    }
+
+    .yojna-hero-arrow {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+
+    .yojna-hero-prev { left: 18px; }
+    .yojna-hero-next { right: 18px; }
+
+    .yojna-hero-counter {
+        right: 6%;
+    }
+
+    .yojna-hero-scroll {
+        left: 6%;
+    }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .yojna-hero {
+        height: 90vh;
+        min-height: 560px;
+    }
+
+    .yojna-hero-content {
+        left: 6%;
+        right: 6%;
+        max-width: 100%;
+    }
+
+    .yojna-hero-content h1 {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        line-height: 1.15;
+    }
+
+    .yojna-hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .yojna-hero-button {
+        padding: 14px 26px;
+        font-size: 0.82rem;
+    }
+
+    .yojna-hero-arrow {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+
+    .yojna-hero-prev { left: 12px; }
+    .yojna-hero-next { right: 12px; }
+
+    .yojna-hero-dots {
+        bottom: 24px;
+        gap: 8px;
+    }
+
+    .yojna-hero-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .yojna-hero-dot.active {
+        width: 28px;
+    }
+
+    .yojna-hero-counter {
+        bottom: 24px;
+        right: 6%;
+        font-size: 0.75rem;
+    }
+
+    .yojna-hero-scroll {
+        display: none;
+    }
+
+    .yojna-hero-partner {
+        padding: 10px 18px;
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    .yojna-hero-partner-label {
+        font-size: 0.62rem;
+        letter-spacing: 1.5px;
+        padding-right: 10px;
+    }
+
+    .yojna-hero-partner-name {
+        font-size: 1rem;
+    }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+    .yojna-hero {
+        height: 100vh;
+        min-height: 520px;
+    }
+
+    .yojna-hero-content h1 {
+        font-size: 1.65rem;
+    }
+
+    .yojna-hero-label {
+        font-size: 0.65rem;
+        letter-spacing: 3px;
+        padding-left: 32px;
+    }
+
+    .yojna-hero-label::before {
+        width: 22px;
+    }
+
+    .yojna-hero-arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
