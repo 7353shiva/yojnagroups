@@ -1,11 +1,16 @@
 /* =========================================================
-   ABOUT / EVENTS / MEDIA / YATRA RESPONSIVE
+   SITE-WIDE / ABOUT / EVENTS / MEDIA / YATRA RESPONSIVE
 ========================================================= */
 
 
 @media (max-width: 1100px) {
 
-    .about-division-grid {
+    .yojna-container {
+        width: min(1180px, calc(100% - 48px));
+    }
+
+    .yojna-about-division-grid,
+    .yojna-about-why-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -17,7 +22,8 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .about-company-grid,
+    .yojna-about-intro-grid,
+    .yojna-about-work-grid,
     .events-intro-grid,
     .media-intro-grid,
     .yatra-intro-grid {
@@ -33,21 +39,117 @@
 
 @media (max-width: 900px) {
 
-    .about-page-banner,
+    .yojna-footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 32px;
+        padding-bottom: 50px;
+    }
+
+    .yojna-footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .yojna-header-container {
+        width: calc(100% - 40px);
+        height: 84px;
+    }
+
+    .yojna-desktop-nav,
+    .yojna-header-button {
+        display: none;
+    }
+
+    .yojna-mobile-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: transparent;
+        color: #FFFFFF;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .yojna-mobile-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 84px);
+        overflow-y: auto;
+        padding: 10px 24px 20px;
+        background: #073042;
+        box-shadow: 0 14px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .yojna-mobile-nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .yojna-mobile-nav > a,
+    .yojna-mobile-division-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 13px 4px;
+        border: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        background: transparent;
+        color: #FFFFFF;
+        font: inherit;
+        text-align: left;
+    }
+
+    .yojna-mobile-divisions {
+        display: none;
+        flex-direction: column;
+        padding-left: 16px;
+    }
+
+    .yojna-mobile-divisions.active {
+        display: flex;
+    }
+
+    .yojna-mobile-divisions a {
+        padding: 11px 4px;
+        color: rgba(255, 255, 255, 0.78);
+    }
+
+    .yojna-mobile-talk {
+        margin-top: 12px;
+        padding: 13px 15px !important;
+        background: #FEF907;
+        color: #111111 !important;
+    }
+
+    .yojna-mobile-division-toggle i {
+        transition: transform 0.2s ease;
+    }
+
+    .yojna-mobile-division-toggle.active i {
+        transform: rotate(180deg);
+    }
+
+    .yojna-about-banner,
     .events-page-banner,
     .media-page-banner,
     .yatra-page-banner {
         min-height: 420px;
     }
 
-    .about-page-banner-content,
+    .yojna-about-banner-content,
     .events-page-banner-content,
     .media-page-banner-content,
     .yatra-page-banner-content {
         padding: 65px 0;
     }
 
-    .about-page-banner-content h1,
+    .yojna-about-banner-content h1,
     .events-page-banner-content h1,
     .media-page-banner-content h1,
     .yatra-page-banner-content h1 {
@@ -55,9 +157,12 @@
     }
 
 
-    .about-company-intro,
-    .about-company-divisions,
-    .about-approach-section,
+    .yojna-about-intro,
+    .yojna-about-story,
+    .yojna-about-divisions,
+    .yojna-about-work,
+    .yojna-about-why,
+    .yojna-about-statement,
     .events-introduction,
     .events-activities-section,
     .events-work-section,
@@ -67,13 +172,13 @@
     .media-work-section,
     .media-executed-section,
     .yatra-introduction,
-    .yatra-services-section,
     .yatra-experience-section {
         padding: 75px 0;
     }
 
 
-    .about-company-grid,
+    .yojna-about-intro-grid,
+    .yojna-about-work-grid,
     .events-intro-grid,
     .media-intro-grid,
     .yatra-intro-grid {
@@ -82,9 +187,9 @@
     }
 
 
-    .about-approach-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
+    .yojna-about-intro-image,
+    .yojna-about-intro-image img {
+        min-height: 380px;
     }
 
 
@@ -94,19 +199,15 @@
     }
 
 
-    .yatra-service-grid {
-        grid-template-columns: 1fr;
-    }
-
-
     .yatra-experience-grid {
         grid-template-columns: 1fr 1fr;
     }
 
 
-    .about-company-heading h2,
-    .about-section-heading h2,
-    .about-approach-content h2,
+    .yojna-about-intro-content h2,
+    .yojna-about-heading h2,
+    .yojna-about-work-content h2,
+    .yojna-about-statement-box h2,
     .events-intro-heading h2,
     .media-intro-heading h2,
     .yatra-intro-heading h2,
@@ -136,7 +237,7 @@
 
 @media (max-width: 600px) {
 
-    .about-page-banner,
+    .yojna-about-banner,
     .events-page-banner,
     .media-page-banner,
     .yatra-page-banner {
@@ -144,7 +245,7 @@
     }
 
 
-    .about-page-banner-content,
+    .yojna-about-banner-content,
     .events-page-banner-content,
     .media-page-banner-content,
     .yatra-page-banner-content {
@@ -152,7 +253,7 @@
     }
 
 
-    .about-page-banner-content h1,
+    .yojna-about-banner-content h1,
     .events-page-banner-content h1,
     .media-page-banner-content h1,
     .yatra-page-banner-content h1 {
@@ -160,7 +261,7 @@
     }
 
 
-    .about-page-banner-content p,
+    .yojna-about-banner-content p,
     .events-page-banner-content p,
     .media-page-banner-content p,
     .yatra-page-banner-content p {
@@ -168,9 +269,12 @@
     }
 
 
-    .about-company-intro,
-    .about-company-divisions,
-    .about-approach-section,
+    .yojna-about-intro,
+    .yojna-about-story,
+    .yojna-about-divisions,
+    .yojna-about-work,
+    .yojna-about-why,
+    .yojna-about-statement,
     .events-introduction,
     .events-activities-section,
     .events-work-section,
@@ -180,14 +284,15 @@
     .media-work-section,
     .media-executed-section,
     .yatra-introduction,
-    .yatra-services-section,
     .yatra-experience-section,
     .yatra-statement-section {
         padding: 60px 0;
     }
 
 
-    .about-division-grid,
+    .yojna-about-division-grid,
+    .yojna-about-timeline,
+    .yojna-about-why-grid,
     .events-activity-grid,
     .events-work-grid,
     .media-work-grid,
@@ -197,9 +302,10 @@
     }
 
 
-    .about-company-heading h2,
-    .about-section-heading h2,
-    .about-approach-content h2,
+    .yojna-about-intro-content h2,
+    .yojna-about-heading h2,
+    .yojna-about-work-content h2,
+    .yojna-about-statement-box h2,
     .events-intro-heading h2,
     .media-intro-heading h2,
     .yatra-intro-heading h2,
@@ -210,10 +316,39 @@
     }
 
 
-    .about-division-card {
+    .yojna-about-division-card {
         min-height: 310px;
     }
 
+    .yojna-about-banner-content {
+        padding: 50px 0;
+    }
+
+    .yojna-about-intro-image,
+    .yojna-about-intro-image img {
+        min-height: 300px;
+    }
+
+    .yojna-about-timeline-item {
+        grid-template-columns: 48px 1fr;
+        gap: 16px;
+        padding: 24px 20px;
+    }
+
+    .yojna-about-timeline-number {
+        width: 44px;
+        height: 44px;
+    }
+
+    .yojna-about-work-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding-left: 25px;
+    }
+
+    .yojna-about-statement-box {
+        padding-left: 22px;
+    }
 
     .events-work-image,
     .media-work-image,
@@ -239,11 +374,6 @@
     }
 
 
-    .yatra-service-card {
-        padding: 32px 25px;
-    }
-
-
     .yatra-statement {
         padding-left: 22px;
     }
@@ -251,6 +381,45 @@
 
     .yatra-statement h2 {
         font-size: 32px;
+    }
+
+    .yojna-container {
+        width: calc(100% - 36px);
+    }
+
+    .yojna-header-container {
+        width: calc(100% - 36px);
+        height: 76px;
+    }
+
+    .yojna-mobile-nav {
+        max-height: calc(100vh - 76px);
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .yojna-home-cta {
+        padding: 70px 0;
+    }
+
+    .yojna-footer {
+        padding: 60px 0 20px;
+    }
+
+    .yojna-footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px 24px;
+        padding-bottom: 40px;
+    }
+
+    .yojna-footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .yojna-footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
     }
 
 }
@@ -262,7 +431,7 @@
 
 @media (max-width: 380px) {
 
-    .about-page-banner-content h1,
+    .yojna-about-banner-content h1,
     .events-page-banner-content h1,
     .media-page-banner-content h1,
     .yatra-page-banner-content h1 {
@@ -270,9 +439,10 @@
     }
 
 
-    .about-company-heading h2,
-    .about-section-heading h2,
-    .about-approach-content h2,
+    .yojna-about-intro-content h2,
+    .yojna-about-heading h2,
+    .yojna-about-work-content h2,
+    .yojna-about-statement-box h2,
     .events-intro-heading h2,
     .media-intro-heading h2,
     .yatra-intro-heading h2,

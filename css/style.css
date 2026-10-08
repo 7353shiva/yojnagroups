@@ -1171,7 +1171,7 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-    padding: 80px 0;
+    padding: 80px 170px;
 }
 
 
@@ -1613,72 +1613,6 @@ button {
     color: #033141;
     font-size: 16px;
     line-height: 1.4;
-}
-
-
-/* =========================================================
-   YATRA PAGE
-========================================================= */
-
-.yatra-services-section {
-    padding: 100px 0;
-    background: #F3F3F3;
-}
-
-.yatra-service-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.yatra-service-card {
-    position: relative;
-    padding: 40px 30px;
-    background: #FFFFFF;
-    border-radius: 15px;
-    border: 1px solid #E2E2E2;
-    transition: .3s ease;
-}
-
-.yatra-service-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 18px 40px rgba(0,0,0,.09);
-    border-color: #F59E0B;
-}
-
-.yatra-service-number {
-    position: absolute;
-    top: 20px;
-    right: 22px;
-    color: #D5D5D5;
-    font-size: 28px;
-    font-weight: 700;
-}
-
-.yatra-service-icon {
-    width: 58px;
-    height: 58px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #073042;
-    color: #FEF907;
-    border-radius: 12px;
-    font-size: 24px;
-}
-
-.yatra-service-card h3 {
-    margin: 0 0 14px;
-    color: #033141;
-    font-size: 23px;
-    line-height: 1.3;
-}
-
-.yatra-service-card p {
-    margin: 0;
-    color: #666;
-    line-height: 1.7;
 }
 
 
@@ -3397,5 +3331,1376 @@ button {
     .yojna-hero-arrow {
         width: 40px;
         height: 40px;
+    }
+}
+/* =========================================================
+   YATRA SECTION — MAKEMYTRIP COLLABORATION
+========================================================= */
+
+.yojna-home-yatra {
+    padding: 100px 0;
+    background: #f8f9fb;
+}
+
+/* ---------------------------------------------------------
+   MAKEMYTRIP PARTNER HIGHLIGHT
+--------------------------------------------------------- */
+.yojna-yatra-partner {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 50px;
+    align-items: center;         /* Keep this — works fine */
+    background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+    border-radius: 16px;
+    padding: 50px;
+    margin: 60px 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.yojna-yatra-partner::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(245, 179, 1, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.yojna-yatra-partner-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 40px 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.yojna-yatra-partner-label {
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.yojna-yatra-partner-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #f5b301;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.yojna-yatra-partner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.yojna-yatra-partner-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.yojna-yatra-partner-content > p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 24px;
+}
+
+.yojna-yatra-partner-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.yojna-yatra-partner-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.yojna-yatra-partner-feature:hover {
+    background: rgba(245, 179, 1, 0.1);
+    border-color: rgba(245, 179, 1, 0.3);
+}
+
+.yojna-yatra-partner-feature i {
+    color: #f5b301;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.yojna-yatra-partner-note {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    padding-left: 16px;
+    border-left: 2px solid #f5b301;
+}
+
+/* ---------------------------------------------------------
+   SERVICES SUB-HEADING
+--------------------------------------------------------- */
+
+.yojna-yatra-services-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.yojna-yatra-services-heading h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: #111;
+    margin-top: 10px;
+}
+
+.yojna-yatra-services-heading h3 span {
+    color: #f5b301;
+}
+
+/* ---------------------------------------------------------
+   SERVICES GRID
+--------------------------------------------------------- */
+
+.yojna-yatra-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.yojna-yatra-service-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 36px 28px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.yojna-yatra-service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #f5b301;
+    transition: width 0.4s ease;
+}
+
+.yojna-yatra-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+    border-color: transparent;
+}
+
+.yojna-yatra-service-card:hover::before {
+    width: 100%;
+}
+
+.yojna-yatra-service-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: rgba(245, 179, 1, 0.1);
+    color: #f5b301;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    margin-bottom: 22px;
+    transition: all 0.4s ease;
+}
+
+.yojna-yatra-service-card:hover .yojna-yatra-service-icon {
+    background: #f5b301;
+    color: #fff;
+    transform: rotate(-6deg) scale(1.05);
+}
+
+.yojna-yatra-service-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.yojna-yatra-service-card > p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.yojna-yatra-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    flex-grow: 1;
+}
+
+.yojna-yatra-service-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.yojna-yatra-service-list li i {
+    color: #f5b301;
+    font-size: 0.9rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.yojna-yatra-service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #111;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.yojna-yatra-service-link:hover {
+    color: #f5b301;
+    gap: 10px;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+
+    .yojna-yatra-partner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 30px;
+    }
+
+    .yojna-yatra-partner-badge {
+        padding: 30px 20px;
+    }
+
+    .yojna-yatra-partner-features {
+        grid-template-columns: 1fr;
+    }
+
+    .yojna-yatra-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .yojna-home-yatra {
+        padding: 70px 0;
+    }
+
+    .yojna-yatra-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .yojna-yatra-partner {
+        padding: 30px 24px;
+    }
+
+    .yojna-yatra-partner-name {
+        font-size: 1.3rem;
+    }
+}
+
+/* =========================================================
+   YOJNA YATRA — SECTION HEADING FIX
+========================================================= */
+
+.yojna-home-yatra .yojna-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;      /* NOT flex-end */
+    gap: 60px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.yojna-home-yatra .yojna-section-heading h2 {
+    color: #073042;               /* Dark blue — visible on light bg */
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.15;
+    max-width: 620px;
+    margin: 12px 0 0;
+}
+
+.yojna-home-yatra .yojna-section-heading h2 span {
+    color: #FEF907;               /* Use your brand yellow */
+}
+
+.yojna-home-yatra .yojna-section-heading p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 440px;
+    margin: 0;
+    padding-top: 8px;             /* Align visually with heading */
+}
+
+.yojna-home-yatra .yojna-section-label {
+    color: #073042;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+/* =========================================================
+   YATRA PAGE BANNER — MAKEMYTRIP PARTNER BADGE
+========================================================= */
+
+.yatra-banner-partner {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 32px;
+    padding: 14px 24px 14px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.yatra-banner-partner-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    padding-right: 18px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.yatra-banner-partner-name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #FEF907;
+    letter-spacing: 0.5px;
+}
+
+.yatra-banner-partner-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 8px;
+    padding: 10px 18px;
+    background: #FEF907;
+    color: #033141;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.yatra-banner-partner-link:hover {
+    background: #FFFFFF;
+    color: #033141;
+    gap: 12px;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(254, 249, 7, 0.3);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .yatra-banner-partner {
+        gap: 12px;
+        padding: 12px 18px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .yatra-banner-partner-label {
+        font-size: 0.62rem;
+        letter-spacing: 1.5px;
+        padding-right: 12px;
+    }
+
+    .yatra-banner-partner-name {
+        font-size: 1.05rem;
+    }
+
+    .yatra-banner-partner-link {
+        padding: 8px 14px;
+        font-size: 0.72rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .yatra-banner-partner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .yatra-banner-partner-label {
+        padding-right: 0;
+        border-right: none;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+    }
+
+    .yatra-banner-partner-link {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* =========================================================
+   SERVICES PAGE
+========================================================= */
+
+.services-page {
+    padding-top: 100px;
+}
+
+
+/* =========================================================
+   SERVICES PAGE BANNER
+========================================================= */
+
+.services-page-banner {
+    position: relative;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    background-image: url("../images/services/services-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 80px 0;
+}
+.services-page-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(7, 48, 66, 0.95) 0%,
+        rgba(7, 48, 66, 0.75) 50%,
+        rgba(7, 48, 66, 0.4) 100%
+    );
+}
+
+.services-page-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    padding: 0;                /* ← Removed extra padding */
+}
+
+.services-page-label {
+    display: inline-block;
+    color: #FEF907;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.services-page-banner-content h1 {
+    margin: 18px 0 22px;
+    color: #FFFFFF;
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.services-page-banner-content h1 span {
+    display: block;
+    color: #FEF907;
+}
+
+.services-page-banner-content p {
+    max-width: 680px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.services-banner-badges {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.services-banner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.services-banner-badge i {
+    color: #FEF907;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   SERVICES OVERVIEW
+========================================================= */
+
+.services-overview-section {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.services-section-label {
+    display: inline-block;
+    color: #033141;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.services-section-heading {
+    max-width: 720px;
+    margin-bottom: 55px;
+}
+
+.services-section-heading h2 {
+    margin: 15px 0 18px;
+    color: #033141;
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.services-section-heading h2 span {
+    display: block;
+    color: #073042;
+}
+
+.services-section-heading p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.services-overview-heading {
+    max-width: 720px;
+    margin-bottom: 55px;
+}
+
+.services-overview-heading h2 {
+    margin: 15px 0 0;
+    color: #033141;
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.services-overview-heading h2 span {
+    display: block;
+    color: #073042;
+}
+
+.services-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.services-overview-card {
+    position: relative;
+    padding: 45px 40px;
+    background: #F8F9FB;
+    border: 1px solid #E2E2E2;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-overview-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border-color: #FEF907;
+}
+
+.services-overview-icon {
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #073042;
+    color: #FEF907;
+    border-radius: 14px;
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.services-overview-tag {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 5px 12px;
+    background: rgba(7, 48, 66, 0.08);
+    color: #073042;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+}
+
+.services-overview-card h3 {
+    margin: 0 0 6px;
+    color: #033141;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.services-overview-sub {
+    margin: 0 0 18px !important;
+    color: #A77A2A !important;
+    font-size: 13px !important;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.services-overview-card > p {
+    margin: 0 0 25px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.services-overview-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: #073042;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.services-overview-link:hover {
+    color: #F5B301;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   GODREJ SECTION
+========================================================= */
+
+.services-godrej-section {
+    padding: 100px 0;
+    background: #F3F3F3;
+}
+
+.services-godrej-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 70px;
+}
+
+.services-godrej-benefit {
+    position: relative;
+    padding: 38px 30px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    transition: all 0.4s ease;
+}
+
+.services-godrej-benefit:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    border-color: #FEF907;
+}
+
+.services-godrej-benefit-number {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    color: #D5D5D5;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.services-godrej-benefit-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #073042;
+    color: #FEF907;
+    border-radius: 12px;
+    font-size: 23px;
+    margin-bottom: 22px;
+}
+
+.services-godrej-benefit h3 {
+    margin: 0 0 12px;
+    color: #033141;
+    font-size: 20px;
+}
+
+.services-godrej-benefit p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* MACHINE TABLE */
+
+.services-godrej-models {
+    margin-bottom: 60px;
+}
+
+.services-godrej-models-heading {
+    margin-bottom: 30px;
+}
+
+.services-godrej-models-heading h3 {
+    margin: 0 0 8px;
+    color: #033141;
+    font-size: 26px;
+}
+
+.services-godrej-models-heading p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.services-godrej-table {
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.services-godrej-table-row {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    padding: 22px 30px;
+    border-bottom: 1px solid #EEEEEE;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+}
+
+.services-godrej-table-row:last-child {
+    border-bottom: none;
+}
+
+.services-godrej-table-head {
+    background: #073042;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.services-godrej-table-head div {
+    color: #FEF907;
+}
+
+.services-godrej-table-row strong {
+    color: #033141;
+    font-weight: 700;
+}
+
+
+/* MACHINE HIGHLIGHT */
+
+.services-godrej-highlight {
+    display: flex;
+    gap: 25px;
+    padding: 35px 40px;
+    background: #FFFFFF;
+    border-left: 4px solid #FEF907;
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+
+.services-godrej-highlight-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(254, 249, 7, 0.2);
+    color: #073042;
+    border-radius: 12px;
+    font-size: 26px;
+}
+
+.services-godrej-highlight-content h4 {
+    margin: 0 0 10px;
+    color: #033141;
+    font-size: 19px;
+}
+
+.services-godrej-highlight-content p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* INLINE CTA (shared for Godrej & Parker) */
+
+.services-inline-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 35px 45px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    flex-wrap: wrap;
+}
+
+.services-inline-cta-text h4 {
+    margin: 0 0 6px;
+    color: #033141;
+    font-size: 20px;
+}
+
+.services-inline-cta-text p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PARKER SECTION
+========================================================= */
+
+.services-parker-section {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.services-parker-compare {
+    margin-bottom: 70px;
+}
+
+.services-parker-compare-heading {
+    margin-bottom: 30px;
+}
+
+.services-parker-compare-heading h3 {
+    margin: 0 0 8px;
+    color: #033141;
+    font-size: 26px;
+}
+
+.services-parker-compare-heading p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.services-parker-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.services-parker-compare-col {
+    padding: 35px 35px;
+    background: #F8F9FB;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+}
+
+.services-parker-compare-highlight {
+    background: #073042;
+    border-color: #073042;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-parker-compare-highlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #FEF907;
+}
+
+.services-parker-compare-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.services-parker-compare-highlight .services-parker-compare-label {
+    color: #FEF907;
+}
+
+.services-parker-compare-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-parker-compare-col li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.55;
+}
+
+.services-parker-compare-highlight li {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.services-parker-compare-col li i {
+    flex-shrink: 0;
+    margin-top: 3px;
+    font-size: 1rem;
+}
+
+.services-parker-compare-col li i.bi-dash {
+    color: #999;
+}
+
+.services-parker-compare-col li i.bi-check2 {
+    color: #FEF907;
+}
+
+
+/* PARKER BRAND BACKGROUND */
+
+.services-parker-brand {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 50px;
+    background: #F8F9FB;
+    border-radius: 16px;
+    margin-bottom: 70px;
+}
+
+.services-parker-brand-content h3 {
+    margin: 12px 0 18px;
+    color: #033141;
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.services-parker-brand-content p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.services-parker-brand-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.services-parker-brand-stat {
+    padding: 25px 18px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.services-parker-brand-stat strong {
+    display: block;
+    color: #073042;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.services-parker-brand-stat span {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* USE CASES */
+
+.services-parker-usecases {
+    margin-bottom: 60px;
+}
+
+.services-parker-usecases-heading {
+    margin-bottom: 30px;
+}
+
+.services-parker-usecases-heading h3 {
+    margin: 0 0 8px;
+    color: #033141;
+    font-size: 26px;
+}
+
+.services-parker-usecases-heading p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.services-parker-usecases-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.services-parker-usecase {
+    padding: 32px 26px;
+    background: #F8F9FB;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    transition: all 0.4s ease;
+}
+
+.services-parker-usecase:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    border-color: #FEF907;
+}
+
+.services-parker-usecase i {
+    display: block;
+    font-size: 26px;
+    color: #073042;
+    margin-bottom: 18px;
+}
+
+.services-parker-usecase h4 {
+    margin: 0 0 10px;
+    color: #033141;
+    font-size: 17px;
+}
+
+.services-parker-usecase p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   WHY YOJNA
+========================================================= */
+
+.services-why-section {
+    padding: 100px 0;
+    background: #F3F3F3;
+}
+
+.services-why-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.services-why-heading h2 {
+    margin: 15px 0 0;
+}
+
+.services-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.services-why-card {
+    position: relative;
+    padding: 35px 28px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    transition: all 0.4s ease;
+}
+
+.services-why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    border-color: #FEF907;
+}
+
+.services-why-card > span {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    color: #D5D5D5;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.services-why-card > i {
+    display: block;
+    font-size: 28px;
+    color: #073042;
+    margin-bottom: 20px;
+}
+
+.services-why-card h3 {
+    margin: 0 0 10px;
+    color: #033141;
+    font-size: 18px;
+}
+
+.services-why-card p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .services-page-banner-content h1 {
+        font-size: 44px;
+    }
+
+    .services-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-godrej-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .services-parker-compare-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-parker-brand {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 30px;
+    }
+
+    .services-parker-brand-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-parker-usecases-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-section-heading h2,
+    .services-overview-heading h2 {
+        font-size: 36px;
+    }
+
+    .services-godrej-table-row {
+        grid-template-columns: 1fr 1.2fr 0.8fr;
+        padding: 18px 22px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .services-page {
+        padding-top: 80px;
+    }
+
+    .services-page-banner {
+        min-height: 560px;
+        padding: 60px 0;
+    }
+
+    .services-page-banner-content {
+        padding: 40px 0;
+    }
+
+    .services-page-banner-content h1 {
+        font-size: 32px;
+    }
+
+    .services-page-banner-content p {
+        font-size: 15px;
+    }
+
+    .services-banner-badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services-overview-section,
+    .services-godrej-section,
+    .services-parker-section,
+    .services-why-section {
+        padding: 70px 0;
+    }
+
+    .services-overview-card {
+        padding: 35px 28px;
+    }
+
+    .services-overview-card h3 {
+        font-size: 20px;
+    }
+
+    .services-section-heading h2,
+    .services-overview-heading h2 {
+        font-size: 28px;
+    }
+
+    .services-godrej-table-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 18px 20px;
+    }
+
+    .services-godrej-table-head {
+        display: none;
+    }
+
+    .services-godrej-table-row div:nth-child(1) {
+        font-size: 11px;
+        color: #999;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .services-godrej-table-row div:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .services-godrej-table-row div:nth-child(3) {
+        font-size: 13px;
+        color: #666;
+    }
+
+    .services-godrej-highlight {
+        flex-direction: column;
+        padding: 28px 24px;
+    }
+
+    .services-inline-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 24px;
+    }
+
+    .services-parker-brand {
+        padding: 30px 24px;
+    }
+
+    .services-parker-brand-content h3 {
+        font-size: 22px;
+    }
+
+    .services-parker-brand-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .services-parker-usecases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-why-heading {
+        text-align: left;
     }
 }
