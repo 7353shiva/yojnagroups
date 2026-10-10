@@ -17,7 +17,7 @@ require __DIR__ . '/../vendor/autoload.php';
 |--------------------------------------------------------------------------
 */
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-   header("Location: /yojnagroups-main/contact.html");
+    header("Location: ../contact.html");
     exit;
 }
 
@@ -39,17 +39,19 @@ $message = trim($_POST['message'] ?? '');
 | VALIDATION
 |--------------------------------------------------------------------------
 */
-if (
-    empty($name) ||
-    empty($email) ||
-    empty($service) ||
-    empty($message)
-) {
+if (empty($name) || empty($email) || empty($service) || empty($message)) {
     die("Please fill all required fields.");
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     die("Please enter a valid email address.");
+}
+
+/* Additional — Verify the domain actually accepts email (MX record check) */
+$domain = substr(strrchr($email, "@"), 1);
+
+if (!checkdnsrr($domain, "MX") && !checkdnsrr($domain, "A")) {
+    die("The email domain '$domain' does not accept emails. Please check your address.");
 }
 
 if (!preg_match('/^[0-9]{10}$/', $phone)) {
@@ -75,7 +77,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'internshiva61@gmail.com';
-    $mail->Password   = 'vvfw kvcp wcbs fqay'; // App password
+    $mail->Password   = 'vvfw kvcp wcbs fqay';   // Gmail App Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 

@@ -10,7 +10,7 @@
 
 :root {
 
-    --yojna-yellow: #FEF907;
+    --yojna-yellow:yellow;
     --yojna-blue: #033141;
     --yojna-white: #FFFFFF;
 
@@ -25,10 +25,10 @@
 
     /* Division Colors */
 
-    --yojna-events: #FEF907;
-    --yojna-media: #4AA3DF;
-    --yojna-yatra: #F59E0B;
-    --yojna-services: #4CAF50;
+    --yojna-events: #DB261B;
+    --yojna-media: #6D609D;
+    --yojna-yatra: #E67817;
+    --yojna-services: #246a9b;
 
 }
 
@@ -237,24 +237,29 @@ button {
    HEADER BUTTON
 ========================================================= */
 
-.yojna-header-button {
+/* "Let's Talk" styled as a nav link with subtle CTA emphasis */
+
+.yojna-nav-talk {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-
-    padding: 12px 19px;
-
-    background: var(--yojna-yellow);
-    color: var(--yojna-black);
-
-    font-size: 12px;
-    font-weight: 800;
-
+    gap: 6px;
+    color: var(--yojna-white);
+    font-size: 16px;
+    font-weight: 600;
     transition: 0.3s ease;
 }
 
-.yojna-header-button:hover {
-    background: var(--yojna-white);
+.yojna-nav-talk i {
+    font-size: 13px;
+    transition: transform 0.3s ease;
+}
+
+.yojna-nav-talk:hover {
+    color: var(--yojna-yellow);
+}
+
+.yojna-nav-talk:hover i {
+    transform: translate(2px, -2px);
 }
 
 
@@ -266,7 +271,12 @@ button {
 .yojna-mobile-nav {
     display: none;
 }
-
+.yojna-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
 
 /* =========================================================
    HERO
@@ -833,73 +843,6 @@ button {
 .yojna-travel-partner-card p {
     color: var(--yojna-gray);
     font-size: 13px;
-}
-
-
-/* =========================================================
-   WHY YOJNA
-========================================================= */
-
-.yojna-home-why {
-    padding: 120px 0;
-    background: var(--yojna-light-gray);
-}
-
-.yojna-why-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 100px;
-}
-
-.yojna-why-content h2 {
-    font-size: 52px;
-    line-height: 1.08;
-    margin-bottom: 22px;
-}
-
-.yojna-why-content h2 span {
-    color: var(--yojna-blue);
-}
-
-.yojna-why-content p {
-    color: var(--yojna-gray);
-    margin-bottom: 28px;
-}
-
-.yojna-why-features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.yojna-why-feature {
-    display: flex;
-    gap: 20px;
-    padding: 30px;
-    border: 1px solid var(--yojna-border);
-    background: var(--yojna-white);
-}
-
-.yojna-why-feature > span {
-    color: var(--yojna-gray);
-    font-size: 11px;
-    font-weight: 800;
-}
-
-.yojna-why-feature i {
-    display: block;
-    color: var(--yojna-blue);
-    font-size: 23px;
-    margin-bottom: 12px;
-}
-
-.yojna-why-feature h3 {
-    font-size: 16px;
-    margin-bottom: 7px;
-}
-
-.yojna-why-feature p {
-    color: var(--yojna-gray);
-    font-size: 12px;
 }
 
 /* =========================================================
@@ -3012,38 +2955,15 @@ button {
     background: radial-gradient(circle, rgba(245, 179, 1, 0.15) 0%, transparent 70%);
     pointer-events: none;
 }
-
-.yojna-yatra-partner-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 40px 24px;
-    position: relative;
-    z-index: 1;
+.yojna-yatra-partner-logo {
+    max-width: 200px;
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-top: 10px;
 }
 
-.yojna-yatra-partner-label {
-    font-size: 0.7rem;
-    letter-spacing: 2.5px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.6);
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.yojna-yatra-partner-name {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #f5b301;
-    letter-spacing: 0.5px;
-    line-height: 1.1;
-}
 
 .yojna-yatra-partner-content {
     position: relative;
@@ -3114,13 +3034,14 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    margin-top: 40px;
 }
 
 .yojna-yatra-service-card {
     background: #fff;
     border: 1px solid #eee;
     border-radius: 14px;
-    padding: 36px 28px;
+    padding: 24px 28px;
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -4329,4 +4250,900 @@ button {
     .services-why-heading {
         text-align: left;
     }
+}
+
+/* =========================================================
+   HOME — EVENTS BRIEF SECTION
+========================================================= */
+
+.yojna-home-events-brief {
+    padding: 110px 0;
+    background: #FFFFFF;
+}
+
+.yojna-events-brief-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.yojna-events-brief-image {
+    position: relative;
+}
+
+.yojna-events-brief-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.10);
+}
+
+
+
+.yojna-events-brief-content h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--yojna-blue);
+    margin: 15px 0 22px;
+}
+
+.yojna-events-brief-content h2 span {
+    color: #073042;
+    display: block;
+}
+
+.yojna-events-brief-content > p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.yojna-events-brief-points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 24px;
+}
+
+.yojna-events-brief-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--yojna-blue);
+    line-height: 1.5;
+}
+
+.yojna-events-brief-points li i {
+    color: var(--yojna-yellow);
+    font-size: 18px;
+    flex-shrink: 0;
+    background: #073042;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .yojna-events-brief-grid,
+    .yojna-media-brief-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .yojna-events-brief-image img,
+    .yojna-media-brief-image img {
+        height: 420px;
+    }
+
+    .yojna-events-brief-content h2,
+    .yojna-media-brief-content h2 {
+        font-size: 38px;
+    }
+
+    .yojna-media-brief-content {
+        order: 2;
+    }
+
+    .yojna-media-brief-image {
+        order: 1;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .yojna-home-events-brief,
+    .yojna-home-media-brief {
+        padding: 70px 0;
+    }
+
+    .yojna-events-brief-image img,
+    .yojna-media-brief-image img {
+        height: 320px;
+    }
+
+    .yojna-events-brief-tag,
+    .yojna-media-brief-tag {
+        width: 85px;
+        height: 85px;
+        right: 15px;
+        left: auto;
+        bottom: 15px;
+    }
+
+    .yojna-events-brief-tag span,
+    .yojna-media-brief-tag span {
+        font-size: 22px;
+    }
+
+    .yojna-events-brief-tag strong,
+    .yojna-media-brief-tag strong {
+        font-size: 9px;
+    }
+
+    .yojna-events-brief-content h2,
+    .yojna-media-brief-content h2 {
+        font-size: 28px;
+    }
+
+    .yojna-events-brief-points,
+    .yojna-media-brief-points {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   HOME — MEDIA BRIEF (FULL-WIDTH IMAGE STYLE)
+========================================================= */
+
+.yojna-home-media-brief {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.yojna-media-brief-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.yojna-media-brief-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.yojna-media-brief-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+        90deg,
+        rgba(107, 109, 109, 0.95) 0%,
+        rgba(7, 48, 66, 0.78) 50%,
+        rgba(7, 48, 66, 0.55) 100%
+    );
+}
+
+.yojna-home-media-brief .yojna-container {
+    position: relative;
+    z-index: 3;
+}
+
+.yojna-media-brief-content {
+    max-width: 720px;
+}
+
+.yojna-media-brief-label {
+    display: inline-block;
+    color: #4AA3DF;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.yojna-media-brief-content h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0 0 24px;
+}
+
+.yojna-media-brief-content h2 span {
+    color: #4AA3DF;
+    display: block;
+}
+
+.yojna-media-brief-content p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 28px;
+    max-width: 620px;
+}
+
+.yojna-media-brief-points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 24px;
+    max-width: 620px;
+}
+
+.yojna-media-brief-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.5;
+}
+
+.yojna-media-brief-points li i {
+    color: #4AA3DF;
+    background: rgba(74, 163, 223, 0.15);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 17px;
+}
+
+.yojna-media-brief-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 28px;
+    background: #4AA3DF;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.yojna-media-brief-button:hover {
+    background: #FFFFFF;
+    color: #073042;
+    gap: 14px;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(74, 163, 223, 0.35);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+    .yojna-home-media-brief { min-height: 560px; padding: 80px 0; }
+    .yojna-media-brief-content h2 { font-size: 42px; }
+}
+
+@media (max-width: 600px) {
+    .yojna-home-media-brief { min-height: 500px; padding: 70px 0; }
+    .yojna-media-brief-content h2 { font-size: 28px; }
+    .yojna-media-brief-points { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   HOME — SERVICES BRIEF (STAGGERED IMAGE GRID)
+========================================================= */
+
+.yojna-home-services-brief {
+    padding: 110px 0;
+    background: #FFFFFF;
+}
+
+.yojna-services-brief-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.yojna-services-brief-content h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--yojna-blue);
+    margin: 15px 0 22px;
+}
+
+.yojna-services-brief-content h2 span {
+    color: #073042;
+    display: block;
+}
+
+.yojna-services-brief-content > p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.yojna-services-brief-points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.yojna-services-brief-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--yojna-blue);
+    line-height: 1.5;
+}
+
+.yojna-services-brief-points li i {
+    color: #4CAF50;
+    background: #073042;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 17px;
+}
+
+
+/* ---------------------------------------------------------
+   STAGGERED IMAGE GRID
+--------------------------------------------------------- */
+
+.yojna-services-brief-images {
+    position: relative;
+    height: 620px;
+}
+
+.yojna-services-brief-img-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 78%;
+    height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+}
+
+.yojna-services-brief-img-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.yojna-services-brief-img-top:hover img {
+    transform: scale(1.05);
+}
+
+.yojna-services-brief-img-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 340px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+    z-index: 3;
+    border: 6px solid #FFFFFF;
+}
+
+.yojna-services-brief-img-bottom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.yojna-services-brief-img-bottom:hover img {
+    transform: scale(1.05);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+    .yojna-services-brief-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .yojna-services-brief-content h2 { font-size: 38px; }
+
+    .yojna-services-brief-images {
+        height: 500px;
+    }
+
+    .yojna-services-brief-img-top {
+        width: 75%;
+        height: 320px;
+    }
+
+    .yojna-services-brief-img-bottom {
+        width: 65%;
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .yojna-home-services-brief { padding: 70px 0; }
+
+    .yojna-services-brief-content h2 { font-size: 28px; }
+
+    .yojna-services-brief-images {
+        height: 420px;
+    }
+
+    .yojna-services-brief-img-top {
+        width: 80%;
+        height: 260px;
+    }
+
+    .yojna-services-brief-img-bottom {
+        width: 70%;
+        height: 220px;
+        border-width: 4px;
+    }
+
+    .yojna-services-brief-tag {
+        width: 80px;
+        height: 80px;
+    }
+
+    .yojna-services-brief-tag span { font-size: 22px; }
+    .yojna-services-brief-tag strong { font-size: 9px; }
+}
+
+/* =========================================================
+   SERVICES PRODUCT SHOWCASE
+   (Godrej Coffee Machine + Parker Pen)
+========================================================= */
+
+.services-product-showcase {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.services-product-showcase.services-product-parker {
+    background: #F8F9FB;   /* slight grey to differentiate */
+}
+
+.services-product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Reverse layout for Parker (image on right) */
+.services-product-grid-reverse {
+    direction: ltr;   /* normal flow, just reordered in HTML */
+}
+
+
+/* ---------------- IMAGE SIDE ---------------- */
+
+.services-product-image {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+.services-product-image img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.services-product-image:hover img {
+    transform: scale(1.03);
+}
+
+.services-product-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 10px 18px;
+    background: #FEF907;
+    color: #033141;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(254, 249, 7, 0.3);
+}
+
+.services-product-badge-blue {
+    background: #4AA3DF;
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(74, 163, 223, 0.3);
+}
+
+
+/* ---------------- CONTENT SIDE ---------------- */
+
+.services-product-content h2 {
+    font-size: 44px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #033141;
+    margin: 15px 0 22px;
+}
+
+.services-product-content h2 span {
+    color: #073042;
+    display: block;
+}
+
+.services-product-content > p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.services-product-content > p:last-of-type {
+    margin-bottom: 32px;
+}
+
+
+/* ---------------- KEY FEATURES ---------------- */
+
+.services-product-features {
+    margin-bottom: 36px;
+    padding: 26px 28px;
+    background: #F8F9FB;
+    border-radius: 14px;
+    border-left: 4px solid #FEF907;
+}
+
+.services-product-parker .services-product-features {
+    border-left-color: #4AA3DF;
+    background: #FFFFFF;
+}
+
+.services-product-features h4 {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #073042;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.services-product-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 11px;
+}
+
+.services-product-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.55;
+}
+
+.services-product-feature-list li i {
+    flex-shrink: 0;
+    margin-top: 3px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #073042;
+    color: #FEF907;
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+.services-product-parker .services-product-feature-list li i {
+    color: #FFFFFF;
+    background: #4AA3DF;
+}
+
+
+/* ---------------- PRICE BOX ---------------- */
+
+.services-product-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 26px 28px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    flex-wrap: wrap;
+}
+
+.services-product-parker .services-product-price {
+    background: #F8F9FB;
+    border-color: #E2E2E2;
+}
+
+.services-product-price-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.services-product-price-info span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.services-product-price-info strong {
+    font-size: 30px;
+    font-weight: 800;
+    color: #073042;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.services-product-price-info strong span {
+    font-size: 16px;
+    color: #A77A2A;
+    letter-spacing: 0;
+    margin-left: 2px;
+}
+
+.services-product-price-info small {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+
+/* ---------------- RESPONSIVE — TABLET ---------------- */
+
+@media (max-width: 1024px) {
+
+    .services-product-showcase {
+        padding: 80px 0;
+    }
+
+    .services-product-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .services-product-image img {
+        height: 420px;
+    }
+
+    .services-product-content h2 {
+        font-size: 34px;
+    }
+
+    /* Reverse order — image always on top for mobile */
+    .services-product-grid-reverse .services-product-image {
+        order: -1;
+    }
+
+}
+
+
+/* ---------------- RESPONSIVE — MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+    .services-product-showcase {
+        padding: 65px 0;
+    }
+
+    .services-product-image img {
+        height: 320px;
+    }
+
+    .services-product-content h2 {
+        font-size: 26px;
+    }
+
+    .services-product-content > p {
+        font-size: 14px;
+    }
+
+    .services-product-features {
+        padding: 22px 20px;
+    }
+
+    .services-product-price {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px 20px;
+    }
+
+    .services-product-price-info strong {
+        font-size: 26px;
+    }
+
+    .services-product-price .yojna-primary-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .services-product-badge {
+        top: 16px;
+        left: 16px;
+        padding: 8px 14px;
+        font-size: 10px;
+    }
+
+}
+
+/* =========================================================
+   CONTACT PAGE — LOCATION MAP
+========================================================= */
+
+.contact-location-section {
+    padding: 100px 0;
+    background: #F8F9FB;
+}
+
+.contact-location-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.contact-location-heading h2 {
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.15;
+    font-weight: 800;
+    color: #033141;
+    margin: 15px 0 18px;
+}
+
+.contact-location-heading h2 span {
+    color: #073042;
+    display: block;
+}
+
+.contact-location-heading p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #666;
+    margin: 0;
+}
+
+.contact-location-map {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(3, 49, 65, 0.10);
+    border: 1px solid #E2E2E2;
+}
+
+.contact-location-map iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    filter: grayscale(15%);       /* subtle desaturation for design cohesion */
+    transition: filter 0.4s ease;
+}
+
+.contact-location-map:hover iframe {
+    filter: grayscale(0%);
+}
+
+.contact-location-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .contact-location-section {
+        padding: 80px 0;
+    }
+
+    .contact-location-map iframe {
+        height: 420px !important;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .contact-location-section {
+        padding: 65px 0;
+    }
+
+    .contact-location-heading h2 {
+        font-size: 26px;
+    }
+
+    .contact-location-heading p {
+        font-size: 14px;
+    }
+
+    .contact-location-map iframe {
+        height: 320px !important;
+    }
+
+    .contact-location-cta .yojna-primary-button {
+        width: 100%;
+        justify-content: center;
+    }
+
 }
