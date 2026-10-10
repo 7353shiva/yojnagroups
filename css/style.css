@@ -902,85 +902,6 @@ button {
     font-size: 12px;
 }
 
-
-/* =========================================================
-   PROJECTS
-========================================================= */
-
-.yojna-home-projects {
-    padding: 120px 0;
-    background: var(--yojna-white);
-}
-
-.yojna-projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.yojna-project-card {
-    position: relative;
-    height: 430px;
-    overflow: hidden;
-    background: var(--yojna-black);
-}
-
-.yojna-project-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    transition: 0.6s ease;
-}
-
-.yojna-project-card:hover img {
-    transform: scale(1.06);
-}
-
-.yojna-project-overlay {
-    position: absolute;
-    inset: auto 0 0 0;
-
-    padding: 35px;
-
-    color: var(--yojna-white);
-
-    background:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,0.9)
-        );
-}
-
-.yojna-project-overlay span {
-    color: var(--yojna-yellow);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.yojna-project-overlay h3 {
-    margin-top: 8px;
-    max-width: 300px;
-    font-size: 21px;
-}
-
-.yojna-project-overlay i {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--yojna-yellow);
-    color: var(--yojna-black);
-}
-
 /* =========================================================
    HOME PAGE CTA - ROUNDED BOX
 ========================================================= */
@@ -1176,19 +1097,18 @@ button {
 
 
 .events-page-banner {
-    background-image: url("../images/events/events-banner.jpg");
+    background-image: url("../assets/images/events/events-banner.jpg");
 }
 
 .media-page-banner {
-    background-image: url("../images/media/media-banner.jpg");
+    background-image: url("../assets/images/media/media-banner.jpg");
 }
 
 .yatra-page-banner {
-    background-image: url("../images/yatra/yatra-banner.jpg");
+    background-image: url("../assets/images/yatra/yatra-banner.jpg");
 }
 
-
-
+/*
 .events-page-banner-overlay,
 .media-page-banner-overlay,
 .yatra-page-banner-overlay {
@@ -1201,7 +1121,7 @@ button {
     );
 }
 
-
+*/
 
 .events-page-banner .yojna-container,
 .media-page-banner .yojna-container,
@@ -1314,23 +1234,20 @@ button {
 ========================================================= */
 
 .events-introduction,
-.media-introduction,
-.yatra-introduction {
+.media-introduction {
     padding: 100px 0;
     background: #FFFFFF;
 }
 
 .events-intro-grid,
-.media-intro-grid,
-.yatra-intro-grid {
+.media-intro-grid{
     display: grid;
     grid-template-columns: .85fr 1.15fr;
     gap: 90px;
 }
 
 .events-intro-heading h2,
-.media-intro-heading h2,
-.yatra-intro-heading h2 {
+.media-intro-heading h2{
     margin: 15px 0 0;
     color: #033141;
     font-size: 44px;
@@ -1338,15 +1255,13 @@ button {
 }
 
 .events-intro-heading h2 span,
-.media-intro-heading h2 span,
-.yatra-intro-heading h2 span {
+.media-intro-heading h2 span {
     display: block;
     color: #073042;
 }
 
 .events-intro-text p,
-.media-intro-text p,
-.yatra-intro-text p {
+.media-intro-text p {
     margin: 0 0 20px;
     color: #555;
     font-size: 16px;
@@ -1450,8 +1365,7 @@ button {
 ========================================================= */
 
 .events-work-section,
-.media-work-section,
-.yatra-experience-section {
+.media-work-section {
     padding: 110px 0;
     background: #FFFFFF;
 }
@@ -1464,8 +1378,7 @@ button {
 }
 
 .events-work-card,
-.media-work-card,
-.yatra-experience-card {
+.media-work-card{
     overflow: hidden;
     background: #FFFFFF;
     border-radius: 16px;
@@ -1474,22 +1387,19 @@ button {
 }
 
 .events-work-card:hover,
-.media-work-card:hover,
-.yatra-experience-card:hover {
+.media-work-card:hover {
     transform: translateY(-7px);
     box-shadow: 0 18px 40px rgba(0,0,0,.10);
 }
 
 .events-work-image,
-.media-work-image,
-.yatra-experience-image {
+.media-work-image {
     height: 300px;
     overflow: hidden;
 }
 
 .events-work-image img,
-.media-work-image img,
-.yatra-experience-image img {
+.media-work-image img {
     width: 100%;
     height: 100%;
     display: block;
@@ -1498,20 +1408,17 @@ button {
 }
 
 .events-work-card:hover img,
-.media-work-card:hover img,
-.yatra-experience-card:hover img {
+.media-work-card:hover img {
     transform: scale(1.05);
 }
 
 .events-work-content,
-.media-work-content,
-.yatra-experience-content {
+.media-work-content {
     padding: 28px;
 }
 
 .events-work-content span,
-.media-work-content span,
-.yatra-experience-content span {
+.media-work-content span {
     color: #A77A2A;
     font-size: 11px;
     font-weight: 700;
@@ -1519,16 +1426,14 @@ button {
 }
 
 .events-work-content h3,
-.media-work-content h3,
-.yatra-experience-content h3 {
+.media-work-content h3 {
     margin: 10px 0;
     color: #033141;
     font-size: 23px;
 }
 
 .events-work-content p,
-.media-work-content p,
-.yatra-experience-content p {
+.media-work-content p {
     margin: 0;
     color: #666;
     line-height: 1.7;
@@ -1628,39 +1533,6 @@ button {
     height: 270px;
 }
 
-.yatra-statement-section {
-    padding: 90px 0;
-    background: #073042;
-}
-
-.yatra-statement {
-    max-width: 800px;
-    padding-left: 35px;
-    border-left: 5px solid #FEF907;
-}
-
-.yatra-statement h2 {
-    margin: 15px 0;
-    color: #FFFFFF;
-    font-size: 44px;
-    line-height: 1.15;
-}
-
-.yatra-statement h2 span {
-    color: #FEF907;
-}
-
-.yatra-statement p {
-    max-width: 650px;
-    margin: 0;
-    color: rgba(255,255,255,.75);
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-/* =========================================================
-   ABOUT PAGE
-========================================================= */
 
 
 /* =========================================================
@@ -1674,14 +1546,14 @@ button {
     display: flex;
     align-items: center;
 
-    background-image: url("../images/about/about-banner.jpg");
+    background-image: url("../assets/images/about/about-banner.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     overflow: hidden;
 }
-
+/*
 .yojna-about-banner-overlay {
     position: absolute;
     inset: 0;
@@ -1694,7 +1566,7 @@ button {
             rgba(7, 48, 66, 0.45)
         );
 }
-
+*/
 .yojna-about-banner-content {
     position: relative;
     z-index: 2;
@@ -2478,7 +2350,7 @@ button {
 
 .yojna-home-clients {
     padding: 100px 0;
-    background: #f8f9fb;
+    background:#033141;
     overflow: hidden;
 }
 
@@ -2675,172 +2547,6 @@ button {
 /* =========================================================
    TESTIMONIALS
 ========================================================= */
-
-.yojna-home-testimonials {
-    padding: 100px 0;
-    background:#033141;
-    color: #fff;
-}
-
-.yojna-testimonials-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 40px;
-    margin-bottom: 70px;
-    flex-wrap: wrap;
-}
-
-.yojna-testimonials-heading .yojna-section-label {
-    color: #f5b301;
-}
-
-.yojna-testimonials-heading h2 {
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 800;
-    line-height: 1.2;
-    margin-top: 12px;
-    color: #fff;
-}
-
-.yojna-testimonials-heading h2 span {
-    color: #f5b301;
-}
-
-.yojna-testimonials-heading p {
-    max-width: 460px;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.7);
-}
-
-.yojna-testimonial-feature {
-    position: relative;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 16px;
-    padding: 60px 70px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 40px;
-    align-items: center;
-}
-
-.yojna-testimonial-quote-mark {
-    font-size: 8rem;
-    line-height: 0.8;
-    color: #f5b301;
-    font-family: Georgia, serif;
-    opacity: 0.9;
-}
-
-.yojna-testimonial-stars {
-    color: #f5b301;
-    letter-spacing: 4px;
-    font-size: 1rem;
-    margin-bottom: 24px;
-}
-
-.yojna-testimonial-content blockquote {
-    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
-    line-height: 1.7;
-    color: rgba(255,255,255,0.9);
-    font-style: italic;
-    margin-bottom: 30px;
-    border: none;
-    padding: 0;
-}
-
-.yojna-testimonial-client {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.yojna-testimonial-client-line {
-    width: 50px;
-    height: 2px;
-    background: #f5b301;
-}
-
-.yojna-testimonial-client strong {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.yojna-testimonial-client span {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.6);
-}
-
-.yojna-testimonial-number {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.5);
-}
-
-.yojna-testimonial-number-line {
-    width: 2px;
-    height: 40px;
-    background: rgba(255,255,255,0.2);
-}
-
-.yojna-testimonial-navigation {
-    display: flex;
-    gap: 12px;
-    margin-top: 40px;
-    justify-content: center;
-}
-
-.yojna-testimonial-nav {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.2);
-    background: transparent;
-    color: rgba(255,255,255,0.7);
-    font-weight: 700;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.yojna-testimonial-nav:hover,
-.yojna-testimonial-nav.active {
-    background: #f5b301;
-    border-color: #f5b301;
-    color: #111;
-}
-
-@media (max-width: 900px) {
-    .yojna-testimonial-feature {
-        grid-template-columns: 1fr;
-        padding: 40px 30px;
-        gap: 24px;
-    }
-    .yojna-testimonial-quote-mark {
-        font-size: 5rem;
-    }
-    .yojna-testimonial-number {
-        flex-direction: row;
-    }
-    .yojna-testimonial-number-line {
-        width: 40px;
-        height: 2px;
-    }
-    .yojna-home-testimonials {
-        padding: 70px 0;
-    }
-    .yojna-testimonials-heading {
-        margin-bottom: 50px;
-    }
-}
 
 /* =========================================================
    HERO SECTION — 5 SLIDES
@@ -3135,68 +2841,6 @@ button {
 }
 
 /* ---------------------------------------------------------
-   SLIDE COUNTER (01 / 05)
---------------------------------------------------------- */
-
-.yojna-hero-counter {
-    position: absolute;
-    bottom: 40px;
-    right: 8%;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    z-index: 5;
-}
-
-.yojna-hero-current {
-    color: #f5b301;
-    font-size: 1.1rem;
-}
-
-.yojna-hero-divider {
-    color: rgba(255, 255, 255, 0.4);
-    margin: 0 2px;
-}
-
-.yojna-hero-total {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* ---------------------------------------------------------
-   SCROLL INDICATOR
---------------------------------------------------------- */
-
-.yojna-hero-scroll {
-    position: absolute;
-    bottom: 40px;
-    left: 8%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.65rem;
-    letter-spacing: 3px;
-    font-weight: 600;
-    z-index: 5;
-}
-
-.yojna-hero-scroll i {
-    font-size: 1rem;
-    color: #f5b301;
-    animation: scrollBounce 1.8s infinite;
-}
-
-@keyframes scrollBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
-}
-
-/* ---------------------------------------------------------
    RESPONSIVE — TABLET
 --------------------------------------------------------- */
 
@@ -3461,25 +3105,6 @@ button {
     border-left: 2px solid #f5b301;
 }
 
-/* ---------------------------------------------------------
-   SERVICES SUB-HEADING
---------------------------------------------------------- */
-
-.yojna-yatra-services-heading {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.yojna-yatra-services-heading h3 {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: 800;
-    color: #111;
-    margin-top: 10px;
-}
-
-.yojna-yatra-services-heading h3 span {
-    color: #f5b301;
-}
 
 /* ---------------------------------------------------------
    SERVICES GRID
@@ -3815,13 +3440,14 @@ button {
     min-height: 580px;
     display: flex;
     align-items: center;
-    background-image: url("../images/services/services-banner.jpg");
+    background-image: url("../assets/images/services/services-banner.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
     padding: 80px 0;
 }
+/*
 .services-page-banner-overlay {
     position: absolute;
     inset: 0;
@@ -3832,7 +3458,7 @@ button {
         rgba(7, 48, 66, 0.4) 100%
     );
 }
-
+*/
 .services-page-banner-content {
     position: relative;
     z-index: 2;

@@ -21,8 +21,29 @@
     <link rel="stylesheet" href="css/responsive.css">
     <style>
         /* =========================================================
-   YOJNA CONTACT PAGE
+   YOJNA CONTACT PAGE — THEME UPDATED
 ========================================================= */
+
+:root {
+    --yojna-yellow: #FEF907;
+    --yojna-blue: #033141;
+    --yojna-white: #FFFFFF;
+
+    --yojna-black: #111111;
+    --yojna-charcoal: #171717;
+    --yojna-dark-gray: #252525;
+
+    --yojna-gray: #6F6F6F;
+    --yojna-light-gray: #F3F3F3;
+
+    --yojna-border: #D9D9D9;
+
+    /* Division Colors */
+    --yojna-events: #FEF907;
+    --yojna-media: #4AA3DF;
+    --yojna-yatra: #F59E0B;
+    --yojna-services: #4CAF50;
+}
 
 * {
     margin: 0;
@@ -36,8 +57,8 @@ html {
 
 body {
     font-family: "Inter", sans-serif;
-    color: #263238;
-    background: #ffffff;
+    color: var(--yojna-blue);
+    background: var(--yojna-white);
     line-height: 1.7;
 }
 
@@ -68,12 +89,8 @@ a {
     align-items: center;
 
     background:
-        linear-gradient(
-            135deg,
-            #12343b 0%,
-            #087f8c 55%,
-            #0a9aa8 100%
-        );
+        url("assets/images/contact-banner.jpg")
+        center / cover no-repeat;
 
     overflow: hidden;
 }
@@ -85,7 +102,7 @@ a {
     width: 500px;
     height: 500px;
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(254, 249, 7, 0.1);
     border-radius: 50%;
 
     right: -150px;
@@ -99,7 +116,7 @@ a {
     width: 320px;
     height: 320px;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(254, 249, 7, 0.08);
     border-radius: 50%;
 
     right: 80px;
@@ -109,13 +126,6 @@ a {
 .contact-hero-overlay {
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(18, 52, 59, 0.95),
-            rgba(8, 127, 140, 0.65)
-        );
 }
 
 .contact-hero-content {
@@ -131,7 +141,7 @@ a {
 
     margin-bottom: 20px;
 
-    color: #ffffff;
+    color: var(--yojna-yellow);
 
     font-size: 13px;
     font-weight: 700;
@@ -140,7 +150,7 @@ a {
 }
 
 .contact-hero h1 {
-    color: #ffffff;
+    color: var(--yojna-white);
 
     font-size: clamp(42px, 6vw, 76px);
 
@@ -155,7 +165,7 @@ a {
 
 .contact-hero h1 span {
     display: block;
-    color: #bceff2;
+    color: var(--yojna-yellow);
 }
 
 .contact-hero p {
@@ -168,20 +178,6 @@ a {
     line-height: 1.8;
 }
 
-.contact-hero-number {
-    position: absolute;
-
-    right: 4%;
-    bottom: 35px;
-
-    color: rgba(255, 255, 255, 0.55);
-
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-}
-
 
 /* =========================================================
    MAIN CONTACT SECTION
@@ -189,7 +185,7 @@ a {
 
 .contact-main {
     padding: 100px 0;
-    background: #ffffff;
+    background: var(--yojna-white);
 }
 
 .contact-grid {
@@ -212,7 +208,7 @@ a {
 
     margin-bottom: 18px;
 
-    color: #087f8c;
+    color: var(--yojna-blue);
 
     font-size: 12px;
     font-weight: 800;
@@ -221,7 +217,7 @@ a {
 }
 
 .contact-information h2 {
-    color: #12343b;
+    color: var(--yojna-blue);
 
     font-size: clamp(36px, 4vw, 54px);
 
@@ -236,13 +232,13 @@ a {
 
 .contact-information h2 span {
     display: block;
-    color: #087f8c;
+    color: var(--yojna-blue);
 }
 
 .contact-intro {
     max-width: 500px;
 
-    color: #68777b;
+    color: var(--yojna-gray);
 
     font-size: 16px;
 
@@ -274,11 +270,11 @@ a {
     align-items: center;
     justify-content: center;
 
-    background: #eaf8f9;
+    background: rgba(3, 49, 65, 0.08);
 
     border-radius: 50%;
 
-    color: #087f8c;
+    color: var(--yojna-blue);
 
     font-size: 20px;
 }
@@ -288,7 +284,7 @@ a {
 
     margin-bottom: 4px;
 
-    color: #7a898d;
+    color: var(--yojna-gray);
 
     font-size: 12px;
     font-weight: 700;
@@ -299,7 +295,7 @@ a {
 }
 
 .contact-info-item a {
-    color: #12343b;
+    color: var(--yojna-blue);
 
     font-size: 16px;
     font-weight: 600;
@@ -308,7 +304,7 @@ a {
 }
 
 .contact-info-item a:hover {
-    color: #087f8c;
+    color: #F5B301;
 }
 
 .contact-info-item p {
@@ -327,13 +323,13 @@ a {
 .contact-form-wrapper {
     padding: 45px;
 
-    background: #f7fafb;
+    background: var(--yojna-light-gray);
 
-    border: 1px solid #e4eeee;
+    border: 1px solid var(--yojna-border);
 
     border-radius: 18px;
 
-    box-shadow: 0 20px 60px rgba(18, 52, 59, 0.07);
+    box-shadow: 0 20px 60px rgba(3, 49, 65, 0.07);
 }
 
 .contact-form-header {
@@ -345,7 +341,7 @@ a {
 
     margin-bottom: 10px;
 
-    color: #087f8c;
+    color: var(--yojna-blue);
 
     font-size: 12px;
     font-weight: 800;
@@ -354,7 +350,7 @@ a {
 }
 
 .contact-form-header h3 {
-    color: #12343b;
+    color: var(--yojna-blue);
 
     font-size: 30px;
 
@@ -364,7 +360,7 @@ a {
 }
 
 .contact-form-header h3 strong {
-    color: #087f8c;
+    color: #F5B301;
 }
 
 
@@ -395,7 +391,7 @@ a {
 .form-group label {
     margin-bottom: 8px;
 
-    color: #33494e;
+    color: var(--yojna-blue);
 
     font-size: 13px;
     font-weight: 700;
@@ -408,13 +404,13 @@ a {
 
     padding: 14px 16px;
 
-    border: 1px solid #d6e1e3;
+    border: 1px solid var(--yojna-border);
 
     border-radius: 8px;
 
-    background: #ffffff;
+    background: var(--yojna-white);
 
-    color: #263238;
+    color: var(--yojna-blue);
 
     font-family: "Inter", sans-serif;
 
@@ -438,10 +434,10 @@ a {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: #087f8c;
+    border-color: var(--yojna-blue);
 
     box-shadow:
-        0 0 0 3px rgba(8, 127, 140, 0.08);
+        0 0 0 3px rgba(3, 49, 65, 0.08);
 }
 
 .form-group input::placeholder,
@@ -467,9 +463,9 @@ a {
 
     border-radius: 7px;
 
-    background: #087f8c;
+    background: var(--yojna-yatra);
 
-    color: #ffffff;
+    color: var(--yojna-blue);
 
     font-family: "Inter", sans-serif;
 
@@ -482,7 +478,9 @@ a {
 }
 
 .contact-submit:hover {
-    background: #12343b;
+    background: var(--yojna-blue);
+
+    color: var(--yojna-yellow);
 
     transform: translateY(-2px);
 }
@@ -600,7 +598,7 @@ a {
         <!-- LOGO -->
         <a href="index.html" class="yojna-logo">
             <img src="assets/images/logo/logo.png" alt="Yojna Group" class="site-logo">
-             <span class="site-name">YOJNA</span>
+             <span class="site-name">Yojna Inc.</span>
         </a>
 
         <!-- DESKTOP NAVIGATION -->
@@ -699,10 +697,6 @@ a {
 
                 </div>
 
-            </div>
-
-            <div class="contact-hero-number">
-                CONTACT / 01
             </div>
 
         </section>

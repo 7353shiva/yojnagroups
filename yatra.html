@@ -19,6 +19,676 @@
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+
+        /* =========================================================
+           TRAVEL MODES SECTION
+        ========================================================= */
+/* =========================================================
+   YATRA TRAVEL MODES — DARK THEME
+========================================================= */
+
+.yatra-travel-modes {
+    padding: 100px 0;
+    background: #033141;
+    position: relative;
+    overflow: hidden;
+}
+
+.yatra-travel-modes::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(254, 249, 7, 0.06);
+    top: -180px;
+    right: -180px;
+    pointer-events: none;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+.yatra-travel-modes-heading {
+    max-width: 720px;
+    margin-bottom: 55px;
+    position: relative;
+    z-index: 2;
+}
+
+.yatra-travel-modes-heading .yatra-section-label {
+    display: inline-block;
+    color: #FEF907;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.yatra-travel-modes-heading h2 {
+    margin: 0 0 18px;
+    color: #FFFFFF;
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.yatra-travel-modes-heading h2 span {
+    display: block;
+    color: #FEF907;
+}
+
+.yatra-travel-modes-heading p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+.yatra-travel-modes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+   CARD — background stays constant, no color shift on hover
+========================================================= */
+.yatra-travel-mode-card {
+    position: relative;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.05);   /* Never changes */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Never changes */
+    border-radius: 16px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.yatra-travel-mode-card:hover {
+    /* Only lift + shadow — colors remain identical */
+    transform: translateY(-8px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================
+   ICON — stays yellow/navy on hover (no change)
+========================================================= */
+.yatra-travel-mode-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    background: #FEF907;
+    color: #033141;
+    border-radius: 50%;
+    font-size: 32px;
+    transition: transform 0.4s ease;
+}
+
+.yatra-travel-mode-card:hover .yatra-travel-mode-icon {
+    transform: scale(1.05);   /* Just a gentle grow — no color change */
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+.yatra-travel-mode-card h3 {
+    margin: 0 0 12px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+.yatra-travel-mode-card p {
+    margin: 0 0 18px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+.yatra-travel-mode-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 18px;
+}
+
+.yatra-travel-mode-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.78);
+    margin-bottom: 8px;
+}
+
+.yatra-travel-mode-features li i {
+    color: #FEF907;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1024px) {
+    .yatra-travel-modes { padding: 80px 0; }
+    .yatra-travel-modes-grid { grid-template-columns: repeat(2, 1fr); }
+    .yatra-travel-modes-heading h2 { font-size: 36px; }
+}
+
+@media (max-width: 600px) {
+    .yatra-travel-modes { padding: 65px 0; }
+    .yatra-travel-modes-heading { margin-bottom: 40px; }
+    .yatra-travel-modes-heading h2 { font-size: 28px; }
+    .yatra-travel-modes-grid { grid-template-columns: 1fr; gap: 18px; }
+    .yatra-travel-mode-card { padding: 32px 24px; }
+    .yatra-travel-mode-icon {
+        width: 68px;
+        height: 68px;
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+}
+
+        .yatra-travel-modes-heading h2 span {
+            display: block;
+            color: #F5B301;
+        }
+
+        .yatra-travel-modes-heading p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .yatra-travel-modes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .yatra-travel-mode-card {
+            position: relative;
+            padding: 40px 30px;
+            background: #F8F9FB;
+            border: 1px solid #E2E2E2;
+            border-radius: 16px;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .yatra-travel-mode-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            border-color: #F5B301;
+        }
+
+        .yatra-travel-mode-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            background: #073042;
+            color: #FEF907;
+            border-radius: 50%;
+            font-size: 32px;
+            transition: all 0.4s ease;
+        }
+
+        .yatra-travel-mode-card:hover .yatra-travel-mode-icon {
+            background: #F5B301;
+            color: #033141;
+            transform: rotate(-6deg) scale(1.05);
+        }
+
+        .yatra-travel-mode-card h3 {
+            margin: 0 0 12px;
+            color: #033141;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .yatra-travel-mode-card p {
+            margin: 0 0 18px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+        .yatra-travel-mode-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .yatra-travel-mode-features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .yatra-travel-mode-features li i {
+            color: #F5B301;
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           TOUR CATEGORIES SECTION
+        ========================================================= */
+
+        .yatra-tour-categories {
+            padding: 100px 0;
+            background: #F3F3F3;
+        }
+
+        .yatra-tour-categories-heading {
+            max-width: 720px;
+            margin-bottom: 55px;
+        }
+
+        .yatra-tour-categories-heading .yatra-section-label {
+            display: inline-block;
+            color: #033141;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            margin-bottom: 15px;
+        }
+
+        .yatra-tour-categories-heading h2 {
+            margin: 0 0 18px;
+            color: #033141;
+            font-size: 44px;
+            line-height: 1.15;
+        }
+
+        .yatra-tour-categories-heading h2 span {
+            display: block;
+            color: #F5B301;
+        }
+
+        .yatra-tour-categories-heading p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .yatra-tour-categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .yatra-tour-category-card {
+            position: relative;
+            min-height: 280px;
+            padding: 40px 32px;
+            background: #FFFFFF;
+            border: 1px solid #E2E2E2;
+            border-radius: 16px;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .yatra-tour-category-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: #F5B301;
+            transition: width 0.4s ease;
+        }
+
+        .yatra-tour-category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            border-color: transparent;
+        }
+
+        .yatra-tour-category-card:hover::before {
+            width: 100%;
+        }
+
+        .yatra-tour-category-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            background: rgba(7, 48, 66, 0.08);
+            color: #073042;
+            border-radius: 14px;
+            font-size: 26px;
+            transition: all 0.4s ease;
+        }
+
+        .yatra-tour-category-card:hover .yatra-tour-category-icon {
+            background: #073042;
+            color: #FEF907;
+        }
+
+        .yatra-tour-category-card h3 {
+            margin: 0 0 12px;
+            color: #033141;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .yatra-tour-category-card p {
+            margin: 0 0 20px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .yatra-tour-category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .yatra-tour-category-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(7, 48, 66, 0.06);
+            color: #073042;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+
+        /* =========================================================
+           SPECIAL SERVICES SECTION
+        ========================================================= */
+
+        .yatra-special-services {
+            padding: 100px 0;
+            background: #073042;
+        }
+
+        .yatra-special-services-heading {
+            max-width: 720px;
+            margin-bottom: 55px;
+        }
+
+        .yatra-special-services-heading .yatra-section-label {
+            display: inline-block;
+            color: #FEF907;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            margin-bottom: 15px;
+        }
+
+        .yatra-special-services-heading h2 {
+            margin: 0 0 18px;
+            color: #FFFFFF;
+            font-size: 44px;
+            line-height: 1.15;
+        }
+
+        .yatra-special-services-heading h2 span {
+            display: block;
+            color: #FEF907;
+        }
+
+        .yatra-special-services-heading p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .yatra-special-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .yatra-special-service-card {
+    padding: 38px 30px;
+    background: #FFFFFF;                     /* ← White card */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+        .yatra-special-service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
+    /* Background and border stay identical — no color change */
+}
+
+      .yatra-special-service-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    background: #073042;                     /* ← Navy icon box */
+    color: #FEF907;                          /* ← Yellow icon */
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+       .yatra-special-service-card h3 {
+    margin: 0 0 12px;
+    color: #033141;                          /* ← Dark navy title */
+    font-size: 19px;
+    font-weight: 700;
+}
+
+       .yatra-special-service-card p {
+    margin: 0;
+    color: #555;                             /* ← Dark gray body */
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+        /* =========================================================
+           POPULAR DESTINATIONS SECTION
+        ========================================================= */
+
+        .yatra-popular-destinations {
+            padding: 100px 0;
+            background: #FFFFFF;
+        }
+
+        .yatra-popular-destinations-heading {
+            max-width: 720px;
+            margin-bottom: 55px;
+        }
+
+        .yatra-popular-destinations-heading .yatra-section-label {
+            display: inline-block;
+            color: #033141;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            margin-bottom: 15px;
+        }
+
+        .yatra-popular-destinations-heading h2 {
+            margin: 0 0 18px;
+            color: #033141;
+            font-size: 44px;
+            line-height: 1.15;
+        }
+
+        .yatra-popular-destinations-heading h2 span {
+            display: block;
+            color: #F5B301;
+        }
+
+        .yatra-popular-destinations-heading p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .yatra-popular-destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .yatra-destination-card {
+            position: relative;
+            height: 280px;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #073042;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .yatra-destination-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+        }
+
+        .yatra-destination-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .yatra-destination-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .yatra-destination-overlay {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 30px 25px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+        }
+
+        .yatra-destination-overlay h3 {
+            margin: 0 0 5px;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .yatra-destination-overlay span {
+            color: #FEF907;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE — TABLET
+        ========================================================= */
+
+        @media (max-width: 1024px) {
+
+            .yatra-travel-modes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .yatra-tour-categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .yatra-special-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .yatra-popular-destinations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .yatra-travel-modes-heading h2,
+            .yatra-tour-categories-heading h2,
+            .yatra-special-services-heading h2,
+            .yatra-popular-destinations-heading h2 {
+                font-size: 36px;
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE — MOBILE
+        ========================================================= */
+
+        @media (max-width: 600px) {
+
+            .yatra-travel-modes,
+            .yatra-tour-categories,
+            .yatra-special-services,
+            .yatra-popular-destinations {
+                padding: 70px 0;
+            }
+
+            .yatra-travel-modes-grid,
+            .yatra-tour-categories-grid,
+            .yatra-special-services-grid,
+            .yatra-popular-destinations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .yatra-travel-modes-heading h2,
+            .yatra-tour-categories-heading h2,
+            .yatra-special-services-heading h2,
+            .yatra-popular-destinations-heading h2 {
+                font-size: 28px;
+            }
+
+            .yatra-travel-mode-card {
+                padding: 30px 24px;
+            }
+
+            .yatra-tour-category-card {
+                padding: 30px 24px;
+            }
+
+            .yatra-special-service-card {
+                padding: 30px 24px;
+            }
+
+            .yatra-destination-card {
+                height: 240px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -34,7 +704,7 @@
         <!-- LOGO -->
         <a href="index.html" class="yojna-logo">
             <img src="assets/images/logo/logo.png" alt="Yojna Group" class="site-logo">
-             <span class="site-name">YOJNA</span>
+             <span class="site-name">Yojna Inc.</span>
         </a>
 
         <!-- DESKTOP NAVIGATION -->
@@ -161,57 +831,6 @@
 
 </section>
 
-    <!-- INTRODUCTION -->
-    <section class="yatra-introduction">
-
-        <div class="yojna-container">
-
-            <div class="yatra-intro-grid">
-
-                <div class="yatra-intro-heading">
-
-                    <span class="yatra-section-label">
-                        ABOUT YOJNA YATRA
-                    </span>
-
-                    <h2>
-                        Making Travel
-                        <span>More Convenient.</span>
-                    </h2>
-
-                </div>
-
-
-                <div class="yatra-intro-text">
-
-                    <p>
-                        Yojna Yatra focuses on providing practical
-                        travel support for individuals, families,
-                        groups and organisations.
-                    </p>
-
-                    <p>
-                        Our travel activities include air, road and
-                        rail ticket bookings, package tours and
-                        taxis on hire.
-                    </p>
-
-                    <p>
-                        Whether it is planning a journey, arranging
-                        transportation or organising travel
-                        requirements, the objective is to make the
-                        travel experience simple and convenient.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
   <!-- =========================================================
      YATRA SECTION — MAKEMYTRIP COLLABORATION & TRAVEL SERVICES
 ========================================================= -->
@@ -280,216 +899,111 @@
 
         </div>
 
-
-        <!-- TRAVEL SERVICES GRID -->
-        <div class="yojna-yatra-services-heading">
-            <span class="yojna-section-label">OUR TRAVEL SERVICES</span>
-            <h3>Everything You Need, <span>Under One Roof.</span></h3>
-        </div>
-
-        <div class="yojna-yatra-services-grid">
-
-            <!-- CARD 1 — TOURS & TRAVELS -->
-            <div class="yojna-yatra-service-card">
-                <div class="yojna-yatra-service-icon">
-                    <i class="bi bi-map"></i>
-                </div>
-                <h3>Tours & Travels</h3>
-                <p>
-                    Curated domestic and international tour packages —
-                    from heritage trails across India to exotic
-                    getaways in Europe, Southeast Asia, and beyond.
-                </p>
-                <ul class="yojna-yatra-service-list">
-                    <li><i class="bi bi-check2"></i> Spiritual Yatras (Char Dham, Kailash Mansarovar)</li>
-                    <li><i class="bi bi-check2"></i> Group & Family Tours</li>
-                    <li><i class="bi bi-check2"></i> Honeymoon & Adventure Packages</li>
-                    <li><i class="bi bi-check2"></i> Customized Itineraries</li>
-                </ul>
-                <a href="contact.html" class="yojna-yatra-service-link">
-                    Explore Tours <i class="bi bi-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- CARD 2 — FLIGHT BOOKING -->
-            <div class="yojna-yatra-service-card">
-                <div class="yojna-yatra-service-icon">
-                    <i class="bi bi-airplane"></i>
-                </div>
-                <h3>Flight Booking</h3>
-                <p>
-                    Domestic and international air ticketing with access
-                    to 300+ airline carriers through our MakeMyTrip
-                    distribution network.
-                </p>
-                <ul class="yojna-yatra-service-list">
-                    <li><i class="bi bi-check2"></i> Domestic & International Flights</li>
-                    <li><i class="bi bi-check2"></i> Competitive B2B Fares</li>
-                    <li><i class="bi bi-check2"></i> Zero Cancellation & Price Lock</li>
-                    <li><i class="bi bi-check2"></i> Group & Corporate Bookings</li>
-                </ul>
-                <a href="contact.html" class="yojna-yatra-service-link">
-                    Book Flights <i class="bi bi-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- CARD 3 — HOLIDAY PLANNING -->
-            <div class="yojna-yatra-service-card">
-                <div class="yojna-yatra-service-icon">
-                    <i class="bi bi-calendar-heart"></i>
-                </div>
-                <h3>Holiday Planning</h3>
-                <p>
-                    End-to-end holiday planning — flights, hotels, transfers,
-                    sightseeing, and experiences — all bundled into one
-                    seamless itinerary.
-                </p>
-                <ul class="yojna-yatra-service-list">
-                    <li><i class="bi bi-check2"></i> Personalized Itineraries</li>
-                    <li><i class="bi bi-check2"></i> Hotel & Resort Bookings</li>
-                    <li><i class="bi bi-check2"></i> Local Transfers & Guides</li>
-                    <li><i class="bi bi-check2"></i> Visa Assistance</li>
-                </ul>
-                <a href="contact.html" class="yojna-yatra-service-link">
-                    Plan Holiday <i class="bi bi-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- CARD 4 — VACATIONS -->
-            <div class="yojna-yatra-service-card">
-                <div class="yojna-yatra-service-icon">
-                    <i class="bi bi-suitcase-lg"></i>
-                </div>
-                <h3>Vacations</h3>
-                <p>
-                    Curated vacation packages for every kind of traveller —
-                    beaches, mountains, cities, and beyond. From weekend
-                    getaways to month-long explorations.
-                </p>
-                <ul class="yojna-yatra-service-list">
-                    <li><i class="bi bi-check2"></i> Beach & Island Vacations</li>
-                    <li><i class="bi bi-check2"></i> Hill Station Retreats</li>
-                    <li><i class="bi bi-check2"></i> International Vacations</li>
-                    <li><i class="bi bi-check2"></i> Weekend Getaways</li>
-                </ul>
-                <a href="contact.html" class="yojna-yatra-service-link">
-                    Find Vacations <i class="bi bi-arrow-right"></i>
-                </a>
-            </div>
-
-        </div>
-
     </div>
 
 </section>
 
-    <!-- TRAVEL IMAGES -->
-    <section class="yatra-experience-section">
+
+    <!-- =========================================================
+         TRAVEL MODES SECTION — FLIGHT, BUS, TRAIN, TAXI
+    ========================================================= -->
+
+    <section class="yatra-travel-modes">
 
         <div class="yojna-container">
 
-            <div class="yatra-section-heading">
+            <div class="yatra-travel-modes-heading">
 
                 <span class="yatra-section-label">
-                    TRAVEL EXPERIENCES
+                    ALL TRAVEL MODES
                 </span>
 
                 <h2>
-                    From Planning
-                    <span>to the Journey.</span>
+                    Every Way to Travel,
+                    <span>One Place to Book.</span>
                 </h2>
 
                 <p>
-                    Add your original Yojna Yatra photographs
-                    here to showcase the travel experiences and
-                    services you have handled.
+                    Whether you prefer the speed of a flight, the comfort
+                    of a train, the convenience of a bus, or the freedom
+                    of a taxi — Yojna Yatra has you covered.
                 </p>
 
             </div>
 
+            <div class="yatra-travel-modes-grid">
 
-            <div class="yatra-experience-grid">
-
-
-                <article class="yatra-experience-card">
-
-                    <div class="yatra-experience-image">
-
-                        <img src="images/yatra/yatra-1.jpg"
-                             alt="Travel booking service">
-
+                <!-- FLIGHT -->
+                <div class="yatra-travel-mode-card">
+                    <div class="yatra-travel-mode-icon">
+                        <i class="bi bi-airplane"></i>
                     </div>
+                    <h3>Flight Booking</h3>
+                    <p>
+                        Domestic and international flights with access
+                        to 300+ airlines.
+                    </p>
+                    <ul class="yatra-travel-mode-features">
+                        <li><i class="bi bi-check2"></i> Domestic Flights</li>
+                        <li><i class="bi bi-check2"></i> International Flights</li>
+                        <li><i class="bi bi-check2"></i> Group Bookings</li>
+                        <li><i class="bi bi-check2"></i> Corporate Travel</li>
+                    </ul>
+                </div>
 
-                    <div class="yatra-experience-content">
-
-                        <span>TRAVEL BOOKINGS</span>
-
-                        <h3>
-                            Plan Your Journey
-                        </h3>
-
-                        <p>
-                            Travel booking support across air,
-                            road and rail journeys.
-                        </p>
-
+                <!-- TRAIN -->
+                <div class="yatra-travel-mode-card">
+                    <div class="yatra-travel-mode-icon">
+                        <i class="bi bi-train-front"></i>
                     </div>
+                    <h3>Train Booking</h3>
+                    <p>
+                        Railway ticket booking across all major routes
+                        in India.
+                    </p>
+                    <ul class="yatra-travel-mode-features">
+                        <li><i class="bi bi-check2"></i> IRCTC Authorized</li>
+                        <li><i class="bi bi-check2"></i> All Classes Available</li>
+                        <li><i class="bi bi-check2"></i> Tatkal Booking</li>
+                        <li><i class="bi bi-check2"></i> Group Reservations</li>
+                    </ul>
+                </div>
 
-                </article>
-
-
-                <article class="yatra-experience-card">
-
-                    <div class="yatra-experience-image">
-
-                        <img src="images/yatra/yatra-2.jpg"
-                             alt="Tour package">
-
+                <!-- BUS -->
+                <div class="yatra-travel-mode-card">
+                    <div class="yatra-travel-mode-icon">
+                        <i class="bi bi-bus-front"></i>
                     </div>
+                    <h3>Bus Booking</h3>
+                    <p>
+                        Bus tickets for intercity and interstate
+                        travel across India.
+                    </p>
+                    <ul class="yatra-travel-mode-features">
+                        <li><i class="bi bi-check2"></i> AC & Non-AC Buses</li>
+                        <li><i class="bi bi-check2"></i> Sleeper & Seater</li>
+                        <li><i class="bi bi-check2"></i> Volvo & Luxury Coaches</li>
+                        <li><i class="bi bi-check2"></i> Group Bookings</li>
+                    </ul>
+                </div>
 
-                    <div class="yatra-experience-content">
-
-                        <span>TOUR PACKAGES</span>
-
-                        <h3>
-                            Discover New Destinations
-                        </h3>
-
-                        <p>
-                            Package tour assistance for planned
-                            holidays and journeys.
-                        </p>
-
+                <!-- TAXI -->
+                <div class="yatra-travel-mode-card">
+                    <div class="yatra-travel-mode-icon">
+                        <i class="bi bi-taxi-front"></i>
                     </div>
-
-                </article>
-
-
-                <article class="yatra-experience-card">
-
-                    <div class="yatra-experience-image">
-
-                        <img src="images/yatra/yatra-3.jpg"
-                             alt="Taxi travel service">
-
-                    </div>
-
-                    <div class="yatra-experience-content">
-
-                        <span>TRANSPORTATION</span>
-
-                        <h3>
-                            Travel With Convenience
-                        </h3>
-
-                        <p>
-                            Taxi and transportation arrangements
-                            for different travel requirements.
-                        </p>
-
-                    </div>
-
-                </article>
+                    <h3>Taxi & Cabs</h3>
+                    <p>
+                        Taxis on hire for local travel, airport
+                        transfers, and outstation trips.
+                    </p>
+                    <ul class="yatra-travel-mode-features">
+                        <li><i class="bi bi-check2"></i> Airport Transfers</li>
+                        <li><i class="bi bi-check2"></i> Local Sightseeing</li>
+                        <li><i class="bi bi-check2"></i> Outstation Trips</li>
+                        <li><i class="bi bi-check2"></i> Corporate Fleet</li>
+                    </ul>
+                </div>
 
             </div>
 
@@ -498,27 +1012,146 @@
     </section>
 
 
-    <!-- SIMPLE TRAVEL STATEMENT -->
-    <section class="yatra-statement-section">
+    <!-- =========================================================
+         TOUR CATEGORIES SECTION — VACATION, HONEYMOON, SUMMER HOLIDAY, THIRTH YATRA
+    ========================================================= -->
+
+    <section class="yatra-tour-categories">
 
         <div class="yojna-container">
 
-            <div class="yatra-statement">
+            <div class="yatra-tour-categories-heading">
 
                 <span class="yatra-section-label">
-                    YOJNA YATRA
+                    TOUR CATEGORIES
                 </span>
 
                 <h2>
-                    Wherever You Go,
-                    <span>Start With a Plan.</span>
+                    Tours for Every
+                    <span>Occasion &amp; Traveller.</span>
                 </h2>
 
                 <p>
-                    From the first booking to the journey itself,
-                    Yojna Yatra brings travel requirements together
-                    with a focus on convenience and service.
+                    From family vacations and summer holidays to
+                    honeymoon getaways and spiritual yatras for
+                    senior citizens — we have a tour for everyone.
                 </p>
+
+            </div>
+
+            <div class="yatra-tour-categories-grid">
+
+                <!-- VACATION -->
+                <div class="yatra-tour-category-card">
+                    <div class="yatra-tour-category-icon">
+                        <i class="bi bi-suitcase-lg"></i>
+                    </div>
+                    <h3>Vacation Packages</h3>
+                    <p>
+                        Relaxing vacations for families, couples, and
+                        solo travellers. Beach resorts, hill stations,
+                        and city breaks.
+                    </p>
+                    <div class="yatra-tour-category-tags">
+                        <span class="yatra-tour-category-tag">Beach</span>
+                        <span class="yatra-tour-category-tag">Hill Station</span>
+                        <span class="yatra-tour-category-tag">City Break</span>
+                        <span class="yatra-tour-category-tag">Weekend</span>
+                    </div>
+                </div>
+
+                <!-- HONEYMOON -->
+                <div class="yatra-tour-category-card">
+                    <div class="yatra-tour-category-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h3>Honeymoon Specials</h3>
+                    <p>
+                        Romantic getaways designed for newlyweds.
+                        Private dinners, couple activities, and
+                        luxurious stays.
+                    </p>
+                    <div class="yatra-tour-category-tags">
+                        <span class="yatra-tour-category-tag">Maldives</span>
+                        <span class="yatra-tour-category-tag">Bali</span>
+                        <span class="yatra-tour-category-tag">Kerala</span>
+                        <span class="yatra-tour-category-tag">Europe</span>
+                    </div>
+                </div>
+
+                <!-- SUMMER HOLIDAY -->
+                <div class="yatra-tour-category-card">
+                    <div class="yatra-tour-category-icon">
+                        <i class="bi bi-sun"></i>
+                    </div>
+                    <h3>Summer Holidays</h3>
+                    <p>
+                        Perfect summer getaways for families with
+                        kids. Cool hill stations, amusement parks,
+                        and educational trips.
+                    </p>
+                    <div class="yatra-tour-category-tags">
+                        <span class="yatra-tour-category-tag">Ooty</span>
+                        <span class="yatra-tour-category-tag">Manali</span>
+                        <span class="yatra-tour-category-tag">Shimla</span>
+                        <span class="yatra-tour-category-tag">Darjeeling</span>
+                    </div>
+                </div>
+
+                <!-- THIRTH YATRA -->
+                <div class="yatra-tour-category-card">
+                    <div class="yatra-tour-category-icon">
+                        <i class="bi bi-bank"></i>
+                    </div>
+                    <h3>Thirth Yatra</h3>
+                    <p>
+                        Spiritual journeys for senior citizens and
+                        devotees. Comfortable travel with assistance
+                        at every step.
+                    </p>
+                    <div class="yatra-tour-category-tags">
+                        <span class="yatra-tour-category-tag">Char Dham</span>
+                        <span class="yatra-tour-category-tag">Vaishno Devi</span>
+                        <span class="yatra-tour-category-tag">Tirupati</span>
+                        <span class="yatra-tour-category-tag">Shirdi</span>
+                    </div>
+                </div>
+
+                <!-- ADVENTURE -->
+                <div class="yatra-tour-category-card">
+                    <div class="yatra-tour-category-icon">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+                    <h3>Adventure Tours</h3>
+                    <p>
+                        Thrilling adventures for the bold — trekking,
+                        rafting, paragliding, and wildlife safaris.
+                    </p>
+                    <div class="yatra-tour-category-tags">
+                        <span class="yatra-tour-category-tag">Trekking</span>
+                        <span class="yatra-tour-category-tag">Rafting</span>
+                        <span class="yatra-tour-category-tag">Safari</span>
+                        <span class="yatra-tour-category-tag">Camping</span>
+                    </div>
+                </div>
+
+                <!-- INTERNATIONAL -->
+                <div class="yatra-tour-category-card">
+                    <div class="yatra-tour-category-icon">
+                        <i class="bi bi-globe2"></i>
+                    </div>
+                    <h3>International Tours</h3>
+                    <p>
+                        Explore the world with our curated international
+                        packages. Visa assistance and guided tours included.
+                    </p>
+                    <div class="yatra-tour-category-tags">
+                        <span class="yatra-tour-category-tag">Dubai</span>
+                        <span class="yatra-tour-category-tag">Singapore</span>
+                        <span class="yatra-tour-category-tag">Thailand</span>
+                        <span class="yatra-tour-category-tag">Europe</span>
+                    </div>
+                </div>
 
             </div>
 
@@ -527,36 +1160,230 @@
     </section>
 
 
-<section class="yojna-home-cta">
+    <!-- =========================================================
+         SPECIAL SERVICES SECTION — SENIOR CITIZEN, GROUP, CORPORATE
+    ========================================================= -->
 
-    <div class="yojna-container">
+    <section class="yatra-special-services">
 
-        <div class="yojna-cta-content">
+        <div class="yojna-container">
 
-            <span class="yojna-section-label">
-                LET'S CREATE SOMETHING
-            </span>
+            <div class="yatra-special-services-heading">
 
-            <h2>
-                Have an Idea?
-                <span>Let's Make It Happen.</span>
-            </h2>
+                <span class="yatra-section-label">
+                    SPECIAL SERVICES
+                </span>
 
-            <p>
-                Tell us what you are looking to create,
-                plan or achieve. Let's start a conversation.
-            </p>
+                <h2>
+                    Special Care for
+                    <span>Special Travellers.</span>
+                </h2>
 
-            <a href="contact.html" class="yojna-cta-button">
-                Start a Conversation
-                <i class="bi bi-arrow-up-right"></i>
-            </a>
+                <p>
+                    We understand that different travellers have
+                    different needs. Our special services ensure
+                    a comfortable journey for everyone.
+                </p>
+
+            </div>
+
+            <div class="yatra-special-services-grid">
+
+                <!-- SENIOR CITIZEN -->
+                <div class="yatra-special-service-card">
+                    <div class="yatra-special-service-icon">
+                        <i class="bi bi-person-arms-up"></i>
+                    </div>
+                    <h3>Senior Citizen Tours</h3>
+                    <p>
+                        Specialized tours for elderly travellers with
+                        comfortable pacing, medical assistance, and
+                        wheelchair support where needed. Perfect for
+                        Thirth Yatra and pilgrimage tours.
+                    </p>
+                </div>
+
+                <!-- GROUP TOURS -->
+                <div class="yatra-special-service-card">
+                    <div class="yatra-special-service-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3>Group Tours</h3>
+                    <p>
+                        Customized group tour packages for families,
+                        friends, and organizations. Special rates for
+                        groups of 10 or more with dedicated tour
+                        coordinators.
+                    </p>
+                </div>
+
+                <!-- CORPORATE TRAVEL -->
+                <div class="yatra-special-service-card">
+                    <div class="yatra-special-service-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h3>Corporate Travel</h3>
+                    <p>
+                        End-to-end corporate travel management including
+                        flight bookings, hotel arrangements, conference
+                        facilities, and team offsites with dedicated
+                        account management.
+                    </p>
+                </div>
+
+                <!-- STUDENT TOURS -->
+                <div class="yatra-special-service-card">
+                    <div class="yatra-special-service-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <h3>Student & Educational Tours</h3>
+                    <p>
+                        Educational trips for schools and colleges.
+                        Safe, supervised, and learning-focused tours
+                        with experienced guides and coordinators.
+                    </p>
+                </div>
+
+                <!-- PILGRIMAGE -->
+                <div class="yatra-special-service-card">
+                    <div class="yatra-special-service-icon">
+                        <i class="bi bi-bank"></i>
+                    </div>
+                    <h3>Pilgrimage Tours</h3>
+                    <p>
+                        Comprehensive pilgrimage packages covering
+                        major religious destinations across India.
+                        Includes darshan assistance and comfortable
+                        accommodation.
+                    </p>
+                </div>
+
+                <!-- CUSTOM TOURS -->
+                <div class="yatra-special-service-card">
+                    <div class="yatra-special-service-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <h3>Custom Tours</h3>
+                    <p>
+                        Have something specific in mind? We create
+                        fully customized itineraries based on your
+                        preferences, budget, and schedule.
+                    </p>
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+
+    <!-- =========================================================
+         POPULAR DESTINATIONS SECTION
+    ========================================================= -->
+
+    <section class="yatra-popular-destinations">
+
+        <div class="yojna-container">
+
+            <div class="yatra-popular-destinations-heading">
+
+                <span class="yatra-section-label">
+                    POPULAR DESTINATIONS
+                </span>
+
+                <h2>
+                    Explore Our Most
+                    <span>Loved Destinations.</span>
+                </h2>
+
+                <p>
+                    From the beaches of Goa to the mountains of
+                    Himachal — discover the destinations our
+                    travellers love the most.
+                </p>
+
+            </div>
+
+            <div class="yatra-popular-destinations-grid">
+
+                <!-- GOA -->
+                <div class="yatra-destination-card">
+                    <img src="assets/images/yatra/dest-goa.jpg" alt="Goa">
+                    <div class="yatra-destination-overlay">
+                        <h3>Goa</h3>
+                        <span>BEACH PARADISE</span>
+                    </div>
+                </div>
+
+                <!-- KERALA -->
+                <div class="yatra-destination-card">
+                    <img src="assets/images/yatra/dest-kerala.jpg" alt="Kerala">
+                    <div class="yatra-destination-overlay">
+                        <h3>Kerala</h3>
+                        <span>GOD'S OWN COUNTRY</span>
+                    </div>
+                </div>
+
+                <!-- HIMACHAL -->
+                <div class="yatra-destination-card">
+                    <img src="assets/images/yatra/dest-himachal.jpg" alt="Himachal">
+                    <div class="yatra-destination-overlay">
+                        <h3>Himachal</h3>
+                        <span>MOUNTAIN ESCAPE</span>
+                    </div>
+                </div>
+
+                <!-- RAJASTHAN -->
+                <div class="yatra-destination-card">
+                    <img src="assets/images/yatra/dest-rajasthan.jpg" alt="Rajasthan">
+                    <div class="yatra-destination-overlay">
+                        <h3>Rajasthan</h3>
+                        <span>ROYAL HERITAGE</span>
+                    </div>
+                </div>
+
+                <!-- KASHMIR -->
+                <div class="yatra-destination-card">
+                    <img src="assets/images/yatra/dest-kashmir.jpg" alt="Kashmir">
+                    <div class="yatra-destination-overlay">
+                        <h3>Kashmir</h3>
+                        <span>PARADISE ON EARTH</span>
+                    </div>
+                </div>
+
+                <!-- TAMIL NADU -->
+                <div class="yatra-destination-card">
+                    <img src="assets/images/yatra/dest-tamilnadu.jpg" alt="Tamil Nadu">
+                    <div class="yatra-destination-overlay">
+                        <h3>Tamil Nadu</h3>
+                        <span>TEMPLE TOURS</span>
+                    </div>
+                </div>
+
+                <!-- DUBAI -->
+                <div class="yatra-destination-card">
+                    <img src="assets/images/yatra/dest-dubai.jpg" alt="Dubai">
+                    <div class="yatra-destination-overlay">
+                        <h3>Dubai</h3>
+                        <span>LUXURY &amp; ADVENTURE</span>
+                    </div>
+                </div>
+
+                <!-- THAILAND -->
+                <div class="yatra-destination-card">
+                    <img src="assets/images/yatra/dest-thailand.jpg" alt="Thailand">
+                    <div class="yatra-destination-overlay">
+                        <h3>Thailand</h3>
+                        <span>TROPICAL GETAWAY</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 </main>
 <!-- =========================================================
      FOOTER

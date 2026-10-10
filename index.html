@@ -19,6 +19,239 @@
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+/* =========================================================
+   YOJNA TESTIMONIALS CAROUSEL — TRUE INFINITE LOOP
+========================================================= */
+
+.yojna-testimonials-section {
+    padding: 90px 0 100px;
+    background: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+    font-family: "Inter", sans-serif;
+}
+
+.yojna-testimonials-container {
+    width: min(1280px, 92%);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+.yojna-testimonials-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.yojna-testimonials-label {
+    display: inline-block;
+    color: #033141;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.yojna-testimonials-heading h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #033141;
+    margin: 0 0 18px;
+}
+
+.yojna-testimonials-heading h2 span {
+    color: #F5B301;
+}
+
+.yojna-testimonials-heading p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================================================
+   CAROUSEL WRAPPER
+========================================================= */
+.yojna-testimonials-carousel {
+    position: relative;
+    padding: 0 20px;
+}
+
+.yojna-testimonials-viewport {
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.yojna-testimonials-track {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    align-items: stretch;
+}
+
+/* =========================================================
+   SLIDE
+========================================================= */
+.yojna-testimonial-slide {
+    flex: 0 0 42%;
+    width: 42%;
+    padding: 0 14px;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0.4;
+    transform: scale(0.96);
+}
+
+.yojna-testimonial-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+.yojna-testimonial-card {
+    background: #033141;
+    border-radius: 14px;
+    padding: 40px 45px 38px;
+    width: 100%;
+    max-width: 620px;
+    box-shadow: 0 30px 70px rgba(3, 49, 65, 0.22);
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.yojna-testimonial-name {
+    font-size: 19px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    letter-spacing: 0.2px;
+}
+
+.yojna-testimonial-stars {
+    display: flex;
+    gap: 5px;
+    color: #F5B301;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.yojna-testimonial-stars i { line-height: 1; }
+
+.yojna-testimonial-date {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 500;
+    margin-bottom: 22px;
+    letter-spacing: 0.3px;
+}
+
+.yojna-testimonial-text {
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 400;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.yojna-testimonial-text::-webkit-scrollbar { width: 4px; }
+.yojna-testimonial-text::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+}
+.yojna-testimonial-text::-webkit-scrollbar-thumb {
+    background: rgba(245, 179, 1, 0.6);
+    border-radius: 2px;
+}
+
+/* =========================================================
+   NAVIGATION ARROWS
+========================================================= */
+.yojna-testimonial-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #F5B301;
+    border: none;
+    color: #033141;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 12px 30px rgba(3, 49, 65, 0.25);
+}
+
+.yojna-testimonial-nav:hover {
+    background: #033141;
+    color: #F5B301;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.yojna-testimonial-prev { left: 8px; }
+.yojna-testimonial-next { right: 8px; }
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1100px) {
+    .yojna-testimonial-slide { flex: 0 0 55%; width: 55%; }
+    .yojna-testimonial-card {
+        min-height: 380px;
+        max-height: 380px;
+        padding: 38px 40px 35px;
+    }
+}
+
+@media (max-width: 900px) {
+    .yojna-testimonials-section { padding: 70px 0 80px; }
+    .yojna-testimonial-slide { flex: 0 0 70%; width: 70%; padding: 0 12px; }
+    .yojna-testimonial-card {
+        padding: 35px 32px 32px;
+        min-height: 360px;
+        max-height: 360px;
+    }
+    .yojna-testimonial-nav { width: 46px; height: 46px; font-size: 17px; }
+    .yojna-testimonial-prev { left: 4px; }
+    .yojna-testimonial-next { right: 4px; }
+}
+
+@media (max-width: 600px) {
+    .yojna-testimonial-slide { flex: 0 0 88%; width: 88%; padding: 0 8px; }
+    .yojna-testimonial-card {
+        padding: 30px 24px 28px;
+        min-height: auto;
+        max-height: none;
+        border-radius: 12px;
+    }
+    .yojna-testimonial-name { font-size: 17px; margin-bottom: 8px; }
+    .yojna-testimonial-stars { font-size: 15px; margin-bottom: 10px; }
+    .yojna-testimonial-date { font-size: 12px; margin-bottom: 18px; }
+    .yojna-testimonial-text { font-size: 14px; line-height: 1.7; }
+    .yojna-testimonial-nav { width: 40px; height: 40px; font-size: 15px; }
+    .yojna-testimonial-prev { left: 0; }
+    .yojna-testimonial-next { right: 0; }
+}
+</style>
 </head>
 
 <body>
@@ -34,7 +267,7 @@
         <!-- LOGO -->
         <a href="index.html" class="yojna-logo">
             <img src="assets/images/logo/logo.png" alt="Yojna Group" class="site-logo">
-             <span class="site-name">YOJNA</span>
+             <span class="site-name">Yojna Inc.</span>
         </a>
 
         <!-- DESKTOP NAVIGATION -->
@@ -47,7 +280,6 @@
                     <a href="media.html">Media</a>
                     <a href="yatra.html">Yatra</a>
                     <a href="services.html">Services</a>
-            <a href="clients.html">Clients</a>
             <a href="gallery.html">Gallery</a>
         </nav>
 
@@ -244,22 +476,6 @@
         <button class="yojna-hero-dot" type="button" aria-label="Slide 4"></button>
         <button class="yojna-hero-dot" type="button" aria-label="Slide 5"></button>
     </div>
-
-
-    <!-- SLIDE COUNTER -->
-    <div class="yojna-hero-counter">
-        <span class="yojna-hero-current">01</span>
-        <span class="yojna-hero-divider">/</span>
-        <span class="yojna-hero-total">05</span>
-    </div>
-
-
-    <!-- SCROLL INDICATOR -->
-    <div class="yojna-hero-scroll">
-        <span>SCROLL</span>
-        <i class="bi bi-arrow-down"></i>
-    </div>
-
 </section>
 
 <!-- =========================================================
@@ -666,259 +882,6 @@
 </section>
 
 <!-- =========================================================
-     OUR APPROACH
-========================================================= -->
-
-<section class="yojna-home-approach">
-    <div class="yojna-container">
-
-        <div class="yojna-approach-heading">
-            <div>
-                <span class="yojna-section-label">OUR APPROACH</span>
-                <h2>How We <span>Work</span></h2>
-            </div>
-            <p>
-                A structured approach helps us turn requirements
-                into well-planned and effectively executed programmes.
-            </p>
-        </div>
-
-        <div class="yojna-approach-process">
-
-            <div class="yojna-approach-step">
-                <div class="yojna-approach-number">01</div>
-                <div class="yojna-approach-line"></div>
-                <div class="yojna-approach-content">
-                    <span class="yojna-approach-small">FIRST STEP</span>
-                    <h3>Understand</h3>
-                    <p>
-                        We begin by understanding the requirement,
-                        objectives, audience and expected outcome.
-                    </p>
-                </div>
-            </div>
-
-            <div class="yojna-approach-step">
-                <div class="yojna-approach-number">02</div>
-                <div class="yojna-approach-line"></div>
-                <div class="yojna-approach-content">
-                    <span class="yojna-approach-small">SECOND STEP</span>
-                    <h3>Plan</h3>
-                    <p>
-                        We develop the approach, timeline, resources
-                        and execution plan around the requirement.
-                    </p>
-                </div>
-            </div>
-
-            <div class="yojna-approach-step">
-                <div class="yojna-approach-number">03</div>
-                <div class="yojna-approach-line"></div>
-                <div class="yojna-approach-content">
-                    <span class="yojna-approach-small">THIRD STEP</span>
-                    <h3>Coordinate</h3>
-                    <p>
-                        We coordinate people, materials, partners
-                        and on-ground requirements to keep everything aligned.
-                    </p>
-                </div>
-            </div>
-
-            <div class="yojna-approach-step">
-                <div class="yojna-approach-number">04</div>
-                <div class="yojna-approach-line"></div>
-                <div class="yojna-approach-content">
-                    <span class="yojna-approach-small">FINAL STEP</span>
-                    <h3>Execute</h3>
-                    <p>
-                        We bring the plan to life through focused
-                        execution, monitoring and attention to detail.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- =========================================================
-     BOOK MY TRIP
-========================================================= -->
-
-<section class="yojna-book-trip">
-
-    <div class="yojna-book-trip-overlay"></div>
-
-    <div class="yojna-container">
-
-        <div class="yojna-book-trip-content">
-
-            <span class="yojna-section-label">
-                YOJNA YATRA
-            </span>
-
-            <h2>
-                Ready for Your
-                <span>Next Journey?</span>
-            </h2>
-
-            <p>
-                Plan your journey with our travel solutions.
-                Discover destinations, arrange your travel and
-                make your trip easier from one place.
-            </p>
-
-            <div class="yojna-book-trip-buttons">
-
-                <a href="yatra.html"
-                   class="yojna-trip-primary">
-                    Explore Yatra
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-
-                <a href="contact.html"
-                   class="yojna-trip-secondary">
-                    Book My Trip
-                    <i class="bi bi-airplane"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- TRAVEL SERVICE BOXES -->
-
-        <div class="yojna-trip-services">
-
-            <div class="yojna-trip-service">
-
-                <i class="bi bi-airplane"></i>
-
-                <h3>Flight Booking</h3>
-
-                <p>
-                    Domestic and international travel assistance.
-                </p>
-
-            </div>
-
-            <div class="yojna-trip-service">
-
-                <i class="bi bi-building"></i>
-
-                <h3>Hotel Booking</h3>
-
-                <p>
-                    Accommodation solutions for your journey.
-                </p>
-
-            </div>
-
-            <div class="yojna-trip-service">
-
-                <i class="bi bi-car-front"></i>
-
-                <h3>Travel Support</h3>
-
-                <p>
-                    Convenient travel arrangements and assistance.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     TRAVEL PARTNERS
-========================================================= -->
-
-<section class="yojna-travel-partners">
-
-    <div class="yojna-container">
-
-        <div class="yojna-travel-partners-heading">
-
-            <span class="yojna-section-label">
-                TRAVEL NETWORK
-            </span>
-
-            <h2>
-                Travel Made
-                <span>More Connected.</span>
-            </h2>
-
-            <p>
-                Our travel services connect travellers with
-                trusted booking and travel ecosystems.
-            </p>
-
-        </div>
-
-
-        <div class="yojna-travel-partners-grid">
-
-            <div class="yojna-travel-partner-card">
-
-                <div class="yojna-partner-logo-placeholder">
-                    <i class="bi bi-airplane"></i>
-                </div>
-
-                <h3>Travel Partners</h3>
-
-                <p>
-                    Connected travel solutions for easier planning
-                    and booking.
-                </p>
-
-            </div>
-
-
-            <div class="yojna-travel-partner-card">
-
-                <div class="yojna-partner-logo-placeholder">
-                    <i class="bi bi-globe2"></i>
-                </div>
-
-                <h3>Online Travel</h3>
-
-                <p>
-                    Travel booking support through established
-                    travel platforms and networks.
-                </p>
-
-            </div>
-
-
-            <div class="yojna-travel-partner-card">
-
-                <div class="yojna-partner-logo-placeholder">
-                    <i class="bi bi-map"></i>
-                </div>
-
-                <h3>Complete Journey</h3>
-
-                <p>
-                    From planning to travelling, we help make
-                    your journey smoother.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
      WHY YOJNA
 ========================================================= -->
 
@@ -1035,6 +998,82 @@
     </div>
 
 </section>
+
+<!-- =========================================================
+     OUR APPROACH
+========================================================= -->
+
+<section class="yojna-home-approach">
+    <div class="yojna-container">
+
+        <div class="yojna-approach-heading">
+            <div>
+                <span class="yojna-section-label">OUR APPROACH</span>
+                <h2>How We <span>Work</span></h2>
+            </div>
+            <p>
+                A structured approach helps us turn requirements
+                into well-planned and effectively executed programmes.
+            </p>
+        </div>
+
+        <div class="yojna-approach-process">
+
+            <div class="yojna-approach-step">
+                <div class="yojna-approach-number">01</div>
+                <div class="yojna-approach-line"></div>
+                <div class="yojna-approach-content">
+                    <span class="yojna-approach-small">FIRST STEP</span>
+                    <h3>Understand</h3>
+                    <p>
+                        We begin by understanding the requirement,
+                        objectives, audience and expected outcome.
+                    </p>
+                </div>
+            </div>
+
+            <div class="yojna-approach-step">
+                <div class="yojna-approach-number">02</div>
+                <div class="yojna-approach-line"></div>
+                <div class="yojna-approach-content">
+                    <span class="yojna-approach-small">SECOND STEP</span>
+                    <h3>Plan</h3>
+                    <p>
+                        We develop the approach, timeline, resources
+                        and execution plan around the requirement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="yojna-approach-step">
+                <div class="yojna-approach-number">03</div>
+                <div class="yojna-approach-line"></div>
+                <div class="yojna-approach-content">
+                    <span class="yojna-approach-small">THIRD STEP</span>
+                    <h3>Coordinate</h3>
+                    <p>
+                        We coordinate people, materials, partners
+                        and on-ground requirements to keep everything aligned.
+                    </p>
+                </div>
+            </div>
+
+            <div class="yojna-approach-step">
+                <div class="yojna-approach-number">04</div>
+                <div class="yojna-approach-line"></div>
+                <div class="yojna-approach-content">
+                    <span class="yojna-approach-small">FINAL STEP</span>
+                    <h3>Execute</h3>
+                    <p>
+                        We bring the plan to life through focused
+                        execution, monitoring and attention to detail.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <!-- =========================================================
      CLIENTS — HORIZONTAL AUTO-SCROLL STRIP
 ========================================================= -->
@@ -1062,66 +1101,66 @@
 
             <!-- SET 1 -->
             <div class="yojna-client-logo">
-                <img src="images/clients/client-1.png" alt="Client 1">
+                <img src="assets/images/client/client1.png" alt="Client 1">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-2.png" alt="Client 2">
+                <img src="assets/images/client/client2.png" alt="Client 2">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-3.png" alt="Client 3">
+                <img src="assets/images/client/client3.png" alt="Client 3">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-4.png" alt="Client 4">
+                <img src="assets/images/client/client4.png" alt="Client 4">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-5.png" alt="Client 5">
+                <img src="assets/images/client/client5.png" alt="Client 5">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-6.png" alt="Client 6">
+                <img src="assets/images/client/client6.png" alt="Client 6">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-7.png" alt="Client 7">
+                <img src="assets/images/client/client7.png" alt="Client 7">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-8.png" alt="Client 8">
+                <img src="assets/images/client/client8.png" alt="Client 8">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-9.png" alt="Client 9">
+                <img src="assets/images/client/client9.png" alt="Client 9">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-10.png" alt="Client 10">
+                <img src="assets/images/client/client10.png" alt="Client 10">
             </div>
 
             <!-- SET 2 (DUPLICATE — required for seamless loop) -->
             <div class="yojna-client-logo">
-                <img src="images/clients/client-1.png" alt="Client 1">
+                <img src="assets/images/client/client1.png" alt="Client 1">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-2.png" alt="Client 2">
+                <img src="assets/images/client/client2.png" alt="Client 2">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-3.png" alt="Client 3">
+                <img src="assets/images/client/client3.png" alt="Client 3">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-4.png" alt="Client 4">
+                <img src="assets/images/client/client4.png" alt="Client 4">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-5.png" alt="Client 5">
+                <img src="assets/images/client/client5.png" alt="Client 5">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-6.png" alt="Client 6">
+                <img src="assets/images/client/client6.png" alt="Client 6">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-7.png" alt="Client 7">
+                <img src="assets/images/client/client7.png" alt="Client 7">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-8.png" alt="Client 8">
+                <img src="assets/images/client/client8.png" alt="Client 8">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-9.png" alt="Client 9">
+                <img src="assets/images/client/client9.png" alt="Client 9">
             </div>
             <div class="yojna-client-logo">
-                <img src="images/clients/client-10.png" alt="Client 10">
+                <img src="assets/images/client/client10.png" alt="Client 10">
             </div>
 
         </div>
@@ -1139,167 +1178,280 @@
 
 </section>
 
-
 <!-- =========================================================
-     FEATURED PROJECTS
+     TESTIMONIALS SECTION
 ========================================================= -->
+<section class="yojna-testimonials-section">
 
-<section class="yojna-home-projects">
+    <div class="yojna-testimonials-container">
 
-    <div class="yojna-container">
-
-        <div class="yojna-section-heading">
-
-            <div>
-
-                <span class="yojna-section-label">
-                    OUR WORK
-                </span>
-
-                <h2>
-                    Ideas Into
-                    <span>Experiences.</span>
-                </h2>
-
-            </div>
-
-            <a href="projects.html" class="yojna-text-button">
-                View All Projects
-                <i class="bi bi-arrow-right"></i>
-            </a>
-
-        </div>
-
-
-        <div class="yojna-projects-grid">
-
-
-            <a href="projects.html"
-               class="yojna-project-card">
-
-                <img src="images/projects/project-1.jpg"
-                     alt="Yojna Project">
-
-                <div class="yojna-project-overlay">
-
-                    <span>EVENTS</span>
-
-                    <h3>
-                        Creating Memorable Experiences
-                    </h3>
-
-                    <i class="bi bi-arrow-up-right"></i>
-
-                </div>
-
-            </a>
-
-
-            <a href="projects.html"
-               class="yojna-project-card">
-
-                <img src="images/projects/project-2.jpg"
-                     alt="Yojna Project">
-
-                <div class="yojna-project-overlay">
-
-                    <span>MEDIA</span>
-
-                    <h3>
-                        Connecting Ideas With Audiences
-                    </h3>
-
-                    <i class="bi bi-arrow-up-right"></i>
-
-                </div>
-
-            </a>
-
-
-            <a href="projects.html"
-               class="yojna-project-card">
-
-                <img src="images/projects/project-3.jpg"
-                     alt="Yojna Project">
-
-                <div class="yojna-project-overlay">
-
-                    <span>YATRA</span>
-
-                    <h3>
-                        Experiences Beyond Destinations
-                    </h3>
-
-                    <i class="bi bi-arrow-up-right"></i>
-
-                </div>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-<!-- =========================================================
-     TESTIMONIALS
-========================================================= -->
-
-<section class="yojna-home-testimonials">
-    <div class="yojna-container">
-
+        <!-- HEADING -->
         <div class="yojna-testimonials-heading">
-            <div>
-                <span class="yojna-section-label">CLIENT VOICES</span>
-                <h2>What Our Clients <span>Say</span></h2>
-            </div>
+            <span class="yojna-testimonials-label">CLIENT VOICES</span>
+            <h2>What Our Clients <span>Say</span></h2>
             <p>
-                Experiences from organisations and brands
-                we have worked with across different
-                campaigns and programmes.
+                Experiences from organisations and brands we have
+                worked with across different campaigns and programmes.
             </p>
         </div>
 
-        <div class="yojna-testimonial-feature">
 
-            <div class="yojna-testimonial-quote-mark">“</div>
+        <!-- CAROUSEL -->
+        <div class="yojna-testimonials-carousel">
 
-            <div class="yojna-testimonial-content">
-                <div class="yojna-testimonial-stars">★ ★ ★ ★ ★</div>
+            <!-- PREV -->
+            <button class="yojna-testimonial-nav yojna-testimonial-prev" id="testimonialPrev" aria-label="Previous">
+                <i class="bi bi-chevron-left"></i>
+            </button>
 
-                <blockquote>
-                    Yojna Group brought together planning,
-                    coordination and execution with great
-                    attention to detail. Their team understood
-                    our requirements and delivered the programme
-                    professionally.
-                </blockquote>
+            <!-- VIEWPORT -->
+            <div class="yojna-testimonials-viewport">
+                <div class="yojna-testimonials-track" id="testimonialTrack">
 
-                <div class="yojna-testimonial-client">
-                    <div class="yojna-testimonial-client-line"></div>
-                    <div>
-                        <strong>Client Name</strong>
-                        <span>Company / Organisation</span>
+                    <!-- CARD 1 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Oct 25, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                Yojna Group brought together planning, coordination
+                                and execution with great attention to detail. Their team
+                                understood our requirements and delivered the programme
+                                professionally.
+                            </p>
+                        </div>
                     </div>
+
+                    <!-- CARD 2 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Sep 12, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                Working with Yojna Events was a seamless experience
+                                from start to finish. Their team handled every
+                                aspect of our product launch with precision and
+                                creativity. Highly recommended.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Aug 04, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                The media campaigns executed by Yojna Media
+                                exceeded our expectations. Their outdoor branding
+                                and roadshow strategies gave our brand excellent
+                                visibility across multiple cities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Jul 18, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                Yojna Yatra handled our corporate travel
+                                requirements with complete professionalism.
+                                Flights, hotels, and local transport were
+                                all arranged smoothly. A reliable partner
+                                for business travel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Jun 22, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                Their attention to detail and creative approach
+                                made our annual conference a memorable event.
+                                The Yojna Events team was responsive, flexible,
+                                and delivered on every promise.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">May 30, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                From the first meeting to the final execution,
+                                the Yojna team was professional and dedicated.
+                                They understood our brand values and translated
+                                them beautifully into the event experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 7 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Apr 14, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                Our promotional roadshow across Karnataka was
+                                executed flawlessly. The Yojna Media team managed
+                                logistics, permits, and on-ground coordination
+                                with remarkable efficiency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 8 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Mar 08, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                Yojna Services provided excellent support for
+                                our business requirements. Their team was
+                                proactive, responsive, and always available
+                                when we needed assistance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 9 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Feb 20, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                The exhibition stall designed and managed by
+                                Yojna Events drew significant footfall. Their
+                                creative design and organised execution made
+                                our presence truly stand out.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 10 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Jan 12, 2024</div>
+                            <p class="yojna-testimonial-text">
+                                Booking our team offsite through Yojna Yatra
+                                was effortless. They provided multiple options,
+                                competitive pricing, and handled all the
+                                coordination perfectly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 11 -->
+                    <div class="yojna-testimonial-slide">
+                        <div class="yojna-testimonial-card">
+                            <div class="yojna-testimonial-name">Client Name</div>
+                            <div class="yojna-testimonial-stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="yojna-testimonial-date">Dec 05, 2023</div>
+                            <p class="yojna-testimonial-text">
+                                A truly dependable partner for all our event
+                                and promotional needs. Yojna Group consistently
+                                delivers quality, and their multi-division
+                                expertise is a real advantage.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="yojna-testimonial-number">
-                <span>01</span>
-                <div class="yojna-testimonial-number-line"></div>
-                <span>03</span>
-            </div>
+            <!-- NEXT -->
+            <button class="yojna-testimonial-nav yojna-testimonial-next" id="testimonialNext" aria-label="Next">
+                <i class="bi bi-chevron-right"></i>
+            </button>
 
-        </div>
-
-        <div class="yojna-testimonial-navigation">
-            <button class="yojna-testimonial-nav active" type="button">01</button>
-            <button class="yojna-testimonial-nav" type="button">02</button>
-            <button class="yojna-testimonial-nav" type="button">03</button>
         </div>
 
     </div>
+
 </section>
 
 <!-- =========================================================
@@ -1572,6 +1724,164 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+/* =========================================================
+   YOJNA TESTIMONIALS CAROUSEL — TRUE INFINITE LOOP
+========================================================= */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track   = document.getElementById("testimonialTrack");
+    const prevBtn = document.getElementById("testimonialPrev");
+    const nextBtn = document.getElementById("testimonialNext");
+
+    if (!track) return;
+
+    const originalSlides = Array.from(track.querySelectorAll(".yojna-testimonial-slide"));
+    if (originalSlides.length === 0) return;
+
+    const SLIDE_WIDTH_PCT = 42;
+    const AUTO_DELAY = 5000;
+    const realCount = originalSlides.length;
+    const CLONES = 3;   // how many clones on each side (covers visible window)
+
+    /* -------- BUILD INFINITE TRACK --------
+       Structure: [last 3 clones] + [all originals] + [first 3 clones]
+    ---------------------------------------- */
+
+    // 1. Clone the last CLONES cards → prepend
+    for (let i = realCount - CLONES; i < realCount; i++) {
+        if (i < 0) continue;
+        const clone = originalSlides[i].cloneNode(true);
+        clone.classList.add("clone");
+        clone.classList.remove("active");
+        track.insertBefore(clone, track.firstChild);
+    }
+
+    // 2. Clone the first CLONES cards → append
+    for (let i = 0; i < CLONES; i++) {
+        const clone = originalSlides[i].cloneNode(true);
+        clone.classList.add("clone");
+        clone.classList.remove("active");
+        track.appendChild(clone);
+    }
+
+    // Now the track has: [3 clones] + [originals] + [3 clones]
+    const allSlides = track.querySelectorAll(".yojna-testimonial-slide");
+
+    // Track position starts at the first REAL slide (index = CLONES)
+    let current = CLONES;
+    let isTransitioning = false;
+
+    /* -------- APPLY POSITION -------- */
+    function applyTransform(animate = true) {
+        if (!animate) {
+            track.style.transition = "none";
+        } else {
+            track.style.transition = "transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)";
+        }
+
+        const offsetPct = (100 - SLIDE_WIDTH_PCT) / 2;
+        const translate = -(current * SLIDE_WIDTH_PCT) + offsetPct;
+
+        track.style.transform = "translateX(" + translate + "%)";
+
+        allSlides.forEach((s, i) => {
+            s.classList.toggle("active", i === current);
+        });
+
+        if (!animate) {
+            // Force reflow so the "no transition" apply is committed
+            void track.offsetWidth;
+            track.style.transition = "transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)";
+        }
+    }
+
+    /* -------- GO TO (with invisible reset) -------- */
+    function goTo(index) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        current = index;
+        applyTransform(true);
+    }
+
+    /* -------- HANDLE END OF TRANSITION → INVISIBLE RESET -------- */
+    track.addEventListener("transitionend", function (e) {
+        if (e.propertyName !== "transform") return;
+
+        // If we're on a left-clone (before real slides) → jump to real equivalent
+        if (current < CLONES) {
+            current = current + realCount;
+            applyTransform(false);
+        }
+        // If we're on a right-clone (after real slides) → jump to real equivalent
+        else if (current >= CLONES + realCount) {
+            current = current - realCount;
+            applyTransform(false);
+        }
+
+        isTransitioning = false;
+    });
+
+    /* -------- INIT -------- */
+    applyTransform(false);
+    // Mark initial active
+    allSlides.forEach((s, i) => s.classList.toggle("active", i === current));
+
+    /* -------- CONTROLS -------- */
+    if (nextBtn) nextBtn.addEventListener("click", () => {
+        goTo(current + 1);
+        resetAutoPlay();
+    });
+
+    if (prevBtn) prevBtn.addEventListener("click", () => {
+        goTo(current - 1);
+        resetAutoPlay();
+    });
+
+    /* -------- KEYBOARD -------- */
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") { goTo(current + 1); resetAutoPlay(); }
+        if (e.key === "ArrowLeft")  { goTo(current - 1); resetAutoPlay(); }
+    });
+
+    /* -------- SWIPE -------- */
+    let touchStartX = 0;
+    track.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener("touchend", (e) => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) goTo(current + 1);
+            else          goTo(current - 1);
+            resetAutoPlay();
+        }
+    }, { passive: true });
+
+    /* -------- AUTO SLIDE (every 5 seconds) -------- */
+    let autoPlayTimer = setInterval(() => {
+        goTo(current + 1);
+    }, AUTO_DELAY);
+
+    function resetAutoPlay() {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = setInterval(() => {
+            goTo(current + 1);
+        }, AUTO_DELAY);
+    }
+
+    /* -------- PAUSE ON HOVER -------- */
+    const carousel = document.querySelector(".yojna-testimonials-carousel");
+    if (carousel) {
+        carousel.addEventListener("mouseenter", () => clearInterval(autoPlayTimer));
+        carousel.addEventListener("mouseleave", () => resetAutoPlay());
+    }
+
+    /* -------- RESPONSIVE -------- */
+    window.addEventListener("resize", () => applyTransform(false));
+
+});
 </script>
 
 </body>
