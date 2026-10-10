@@ -4747,4 +4747,406 @@ button {
 
     .yojna-services-brief-tag span { font-size: 22px; }
     .yojna-services-brief-tag strong { font-size: 9px; }
+<<<<<<< HEAD
+=======
+}
+
+/* =========================================================
+   SERVICES PRODUCT SHOWCASE
+   (Godrej Coffee Machine + Parker Pen)
+========================================================= */
+
+.services-product-showcase {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.services-product-showcase.services-product-parker {
+    background: #F8F9FB;   /* slight grey to differentiate */
+}
+
+.services-product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Reverse layout for Parker (image on right) */
+.services-product-grid-reverse {
+    direction: ltr;   /* normal flow, just reordered in HTML */
+}
+
+
+/* ---------------- IMAGE SIDE ---------------- */
+
+.services-product-image {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+.services-product-image img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.services-product-image:hover img {
+    transform: scale(1.03);
+}
+
+.services-product-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 10px 18px;
+    background: #FEF907;
+    color: #033141;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 20px rgba(254, 249, 7, 0.3);
+}
+
+.services-product-badge-blue {
+    background: #4AA3DF;
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(74, 163, 223, 0.3);
+}
+
+
+/* ---------------- CONTENT SIDE ---------------- */
+
+.services-product-content h2 {
+    font-size: 44px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #033141;
+    margin: 15px 0 22px;
+}
+
+.services-product-content h2 span {
+    color: #073042;
+    display: block;
+}
+
+.services-product-content > p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.services-product-content > p:last-of-type {
+    margin-bottom: 32px;
+}
+
+
+/* ---------------- KEY FEATURES ---------------- */
+
+.services-product-features {
+    margin-bottom: 36px;
+    padding: 26px 28px;
+    background: #F8F9FB;
+    border-radius: 14px;
+    border-left: 4px solid #FEF907;
+}
+
+.services-product-parker .services-product-features {
+    border-left-color: #4AA3DF;
+    background: #FFFFFF;
+}
+
+.services-product-features h4 {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #073042;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.services-product-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 11px;
+}
+
+.services-product-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.55;
+}
+
+.services-product-feature-list li i {
+    flex-shrink: 0;
+    margin-top: 3px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #073042;
+    color: #FEF907;
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+.services-product-parker .services-product-feature-list li i {
+    color: #FFFFFF;
+    background: #4AA3DF;
+}
+
+
+/* ---------------- PRICE BOX ---------------- */
+
+.services-product-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 26px 28px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    flex-wrap: wrap;
+}
+
+.services-product-parker .services-product-price {
+    background: #F8F9FB;
+    border-color: #E2E2E2;
+}
+
+.services-product-price-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.services-product-price-info span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.services-product-price-info strong {
+    font-size: 30px;
+    font-weight: 800;
+    color: #073042;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.services-product-price-info strong span {
+    font-size: 16px;
+    color: #A77A2A;
+    letter-spacing: 0;
+    margin-left: 2px;
+}
+
+.services-product-price-info small {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+
+/* ---------------- RESPONSIVE — TABLET ---------------- */
+
+@media (max-width: 1024px) {
+
+    .services-product-showcase {
+        padding: 80px 0;
+    }
+
+    .services-product-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .services-product-image img {
+        height: 420px;
+    }
+
+    .services-product-content h2 {
+        font-size: 34px;
+    }
+
+    /* Reverse order — image always on top for mobile */
+    .services-product-grid-reverse .services-product-image {
+        order: -1;
+    }
+
+}
+
+
+/* ---------------- RESPONSIVE — MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+    .services-product-showcase {
+        padding: 65px 0;
+    }
+
+    .services-product-image img {
+        height: 320px;
+    }
+
+    .services-product-content h2 {
+        font-size: 26px;
+    }
+
+    .services-product-content > p {
+        font-size: 14px;
+    }
+
+    .services-product-features {
+        padding: 22px 20px;
+    }
+
+    .services-product-price {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px 20px;
+    }
+
+    .services-product-price-info strong {
+        font-size: 26px;
+    }
+
+    .services-product-price .yojna-primary-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .services-product-badge {
+        top: 16px;
+        left: 16px;
+        padding: 8px 14px;
+        font-size: 10px;
+    }
+
+}
+
+/* =========================================================
+   CONTACT PAGE — LOCATION MAP
+========================================================= */
+
+.contact-location-section {
+    padding: 100px 0;
+    background: #F8F9FB;
+}
+
+.contact-location-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.contact-location-heading h2 {
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.15;
+    font-weight: 800;
+    color: #033141;
+    margin: 15px 0 18px;
+}
+
+.contact-location-heading h2 span {
+    color: #073042;
+    display: block;
+}
+
+.contact-location-heading p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #666;
+    margin: 0;
+}
+
+.contact-location-map {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(3, 49, 65, 0.10);
+    border: 1px solid #E2E2E2;
+}
+
+.contact-location-map iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    filter: grayscale(15%);       /* subtle desaturation for design cohesion */
+    transition: filter 0.4s ease;
+}
+
+.contact-location-map:hover iframe {
+    filter: grayscale(0%);
+}
+
+.contact-location-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .contact-location-section {
+        padding: 80px 0;
+    }
+
+    .contact-location-map iframe {
+        height: 420px !important;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .contact-location-section {
+        padding: 65px 0;
+    }
+
+    .contact-location-heading h2 {
+        font-size: 26px;
+    }
+
+    .contact-location-heading p {
+        font-size: 14px;
+    }
+
+    .contact-location-map iframe {
+        height: 320px !important;
+    }
+
+    .contact-location-cta .yojna-primary-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+>>>>>>> 575c35f067c016c3e4aa2a283a69b25492b677cf
 }
