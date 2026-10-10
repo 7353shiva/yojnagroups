@@ -19,6 +19,359 @@
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+    
+    /* =========================================================
+   EVENTS INTRODUCTION — IMAGE LEFT, CONTENT RIGHT
+========================================================= */
+
+.events-introduction {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.events-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;   /* Image slightly narrower */
+    gap: 70px;
+    align-items: stretch;                 /* Same height on both sides */
+}
+
+/* ---------- LEFT — Image ---------- */
+.events-intro-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 540px;                    /* Tall enough to match text */
+    background: #033141;                  /* Fallback color if image missing */
+}
+
+.events-intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+    transition: transform 0.6s ease;
+}
+
+.events-intro-image:hover img {
+    transform: scale(1.04);
+}
+
+/* ---------- RIGHT — Content ---------- */
+.events-intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.events-section-label {
+    display: inline-block;
+    color: #073042;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.events-intro-content h2 {
+    margin: 0 0 28px;
+    color: #033141;
+    font-size: 44px;
+    line-height: 1.15;
+}
+
+.events-intro-content h2 span {
+    display: block;
+    color: #F5B301;
+}
+
+.events-intro-content p {
+    margin: 0 0 20px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.events-intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+.events-intro-content strong {
+    color: #033141;
+    font-weight: 700;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1024px) {
+    .events-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .events-intro-image {
+        min-height: 380px;
+    }
+
+    .events-intro-content h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .events-introduction {
+        padding: 70px 0;
+    }
+
+    .events-intro-image {
+        min-height: 280px;
+        border-radius: 12px;
+    }
+
+    .events-intro-content h2 {
+        font-size: 28px;
+        margin-bottom: 22px;
+    }
+
+    .events-intro-content p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+}
+
+/* =========================================================
+   EVENTS ACTIVITIES — IMAGE CARDS WITH HOVER REVEAL
+========================================================= */
+
+.events-activities-section {
+    padding: 100px 0;
+    background: #F3F3F3;
+}
+
+.events-section-heading {
+    max-width: 720px;
+    margin-bottom: 50px;
+}
+
+.events-section-label {
+    display: inline-block;
+    color: #073042;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.events-section-heading h2 {
+    margin: 0 0 15px;
+    color: #033141;
+    font-size: 43px;
+    line-height: 1.15;
+}
+
+.events-section-heading h2 span {
+    display: block;
+    color: #F5B301;
+}
+
+.events-section-heading p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+.events-activity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+.events-activity-card {
+    position: relative;
+    height: 380px;                 /* Tall portrait cards */
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #033141;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.events-activity-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 50px rgba(3, 49, 65, 0.25);
+}
+
+/* ---------- BACKGROUND IMAGE ---------- */
+.events-activity-image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.events-activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.events-activity-card:hover .events-activity-image img {
+    transform: scale(1.08);
+}
+
+/* ---------- DARK OVERLAY (base state) ---------- */
+.events-activity-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+        180deg,
+        rgba(3, 49, 65, 0.15) 0%,
+        rgba(3, 49, 65, 0.55) 55%,
+        rgba(3, 49, 65, 0.92) 100%
+    );
+    transition: background 0.4s ease, opacity 0.4s ease;
+}
+
+/* On hover — red overlay */
+.events-activity-card:hover .events-activity-overlay {
+    background: linear-gradient(
+       180deg,
+        rgba(3, 49, 65, 0.15) 0%,
+        rgba(3, 49, 65, 0.55) 55%,
+        rgba(3, 49, 65, 0.92) 100%
+    );
+}
+
+/* ---------- CONTENT ---------- */
+.events-activity-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    padding: 26px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFFFFF;
+}
+
+
+/* Number */
+.events-activity-number {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+    transition: color 0.4s ease;
+}
+
+.events-activity-card:hover .events-activity-number {
+    color: #D92217;
+}
+
+/* Icon */
+.events-activity-icon {
+    display: block;
+    font-size: 26px;
+    color: #FEF907;
+    margin-bottom: 14px;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.events-activity-card:hover .events-activity-icon {
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* Title */
+.events-activity-content h3 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 700;
+    transition: margin 0.4s ease;
+}
+
+/* Description — hidden by default, revealed on hover */
+.events-activity-desc {
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 13.5px;
+    line-height: 1.6;
+    transition: max-height 0.45s ease, opacity 0.35s ease, margin 0.4s ease;
+}
+
+.events-activity-card:hover .events-activity-desc {
+    max-height: 120px;
+    opacity: 1;
+    margin-top: 12px;
+}
+
+.events-activity-content p{
+    color: #FFFFFF;
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1024px) {
+    .events-activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .events-section-heading h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .events-activities-section {
+        padding: 70px 0;
+    }
+
+    .events-activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-activity-card {
+        height: 340px;
+    }
+
+    .events-section-heading h2 {
+        font-size: 28px;
+    }
+
+    .events-activity-content h3 {
+        font-size: 17px;
+    }
+
+    /* On mobile, always show description */
+    .events-activity-desc {
+        max-height: 120px;
+        opacity: 1;
+        margin-top: 12px;
+    }
+}
+
+
+</style>
 </head>
 
 <body>
@@ -140,320 +493,242 @@
     </section>
 
 
-    <!-- INTRODUCTION -->
-    <section class="events-introduction">
+   <!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+<section class="events-introduction">
 
-        <div class="yojna-container">
+    <div class="yojna-container">
 
-            <div class="events-intro-grid">
+        <div class="events-intro-grid">
 
-                <div class="events-intro-heading">
-
-                    <span class="events-section-label">
-                        ABOUT YOJNA EVENTS
-                    </span>
-
-                    <h2>
-                        Professional Events.
-                        <span>Purposeful Experiences.</span>
-                    </h2>
-
-                </div>
+            <!-- LEFT — Image -->
+            <div class="events-intro-image">
+                <img
+                    src="assets/images/events/events-intro.jpg"
+                    alt="Yojna Events"
+                >
+            </div>
 
 
-                <div class="events-intro-text">
+            <!-- RIGHT — Content -->
+            <div class="events-intro-content">
 
-                    <p>
-                        With product promotions becoming an important
-                        requirement for companies looking for new ways
-                        to showcase their products, Industrial Care
-                        identified the need for a professional event
-                        management company.
-                    </p>
+                <span class="events-section-label">
+                    ABOUT YOJNA EVENTS
+                </span>
 
-                    <p>
-                        Yojna Events was established on
-                        <strong>January 25th, 2004</strong> by its
-                        parent company Industrial Care.
-                    </p>
+                <h2>
+                    Your Event,
+                    <span>Our Execution.</span>
+                </h2>
 
-                    <p>
-                        Industrial Care was established in 1987 and
-                        has operations across India. Yojna Events was
-                        created with the objective of providing
-                        <strong>“Customised Professional Service”</strong>
-                        in the field of event management.
-                    </p>
+                <p>
+                    Yojna Events is the event management division of
+                    Yojna Group — built to serve companies that need
+                    professional, on-ground brand experiences. As
+                    product promotions became essential for reaching
+                    customers, we stepped in to handle every stage
+                    of an event, from planning to final execution.
+                </p>
 
-                    <p>
-                        Over the years, Yojna Events has executed
-                        projects for companies including
-                        <strong>Tata Indicom, Jetking, HDFC,
-                        Hero Honda and JCB</strong>, among others.
-                    </p>
+                <p>
+                    Our approach is simple: understand the objective
+                    first, then design the right experience around it.
+                    Whether it's a product launch, roadshow, exhibition,
+                    conference, or corporate gathering, every event is
+                    planned with clear coordination, creative direction,
+                    and dependable on-ground execution.
+                </p>
 
-                </div>
+                <p>
+                    Over the years, Yojna Events has delivered work
+                    for brands like <strong>Tata Indicom, Jetking,
+                    HDFC, Hero Honda, and JCB</strong> — across
+                    Karnataka and beyond. Each project reinforces
+                    our core motto:
+                    <strong>“Customised Professional Service”</strong>
+                    in event management.
+                </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+<!-- =========================================================
+     WHAT WE DO
+========================================================= -->
+<section class="events-activities-section">
+
+    <div class="yojna-container">
+
+        <div class="events-section-heading">
+
+            <span class="events-section-label">
+                WHAT WE DO
+            </span>
+
+            <h2>
+                Complete Event
+                <span>Management Solutions.</span>
+            </h2>
+
+            <p>
+                From promotions and launches to exhibitions,
+                conferences and public events, Yojna Events
+                works across a wide range of event activities.
+            </p>
+
+        </div>
 
 
-    <!-- WHAT WE DO -->
-    <section class="events-activities-section">
+        <div class="events-activity-grid">
 
-        <div class="yojna-container">
-
-            <div class="events-section-heading">
-
-                <span class="events-section-label">
-                    WHAT WE DO
-                </span>
-
-                <h2>
-                    Complete Event
-                    <span>Management Solutions.</span>
-                </h2>
-
-                <p>
-                    From promotions and launches to exhibitions,
-                    conferences and public events, Yojna Events
-                    works across a wide range of event activities.
-                </p>
-
-            </div>
-
-
-            <div class="events-activity-grid">
-
-
-                <div class="events-activity-card">
-                    <span>01</span>
-                    <i class="bi bi-megaphone"></i>
-                    <h3>Product & Brand Promotions</h3>
-                    <p>
+            <!-- 01 -->
+            <div class="events-activity-card">
+                <div class="events-activity-image">
+                    <img src="assets/images/events/activity-1.jpg" alt="Product & Brand Promotions">
+                </div>
+                <div class="events-activity-overlay"></div>
+                <div class="events-activity-content">
+                    <span class="events-activity-number">01</span>
+                    <i class="bi bi-megaphone events-activity-icon"></i>
+                    <h3>Brand Promotions</h3>
+                    <p class="events-activity-desc">
                         Promotional activities designed to create
                         visibility and connect brands with audiences.
                     </p>
                 </div>
+            </div>
 
-
-                <div class="events-activity-card">
-                    <span>02</span>
-                    <i class="bi bi-signpost-2"></i>
+            <!-- 02 -->
+            <div class="events-activity-card">
+                <div class="events-activity-image">
+                    <img src="assets/images/events/activity-2.jpg" alt="Roadshows">
+                </div>
+                <div class="events-activity-overlay"></div>
+                <div class="events-activity-content">
+                    <span class="events-activity-number">02</span>
+                    <i class="bi bi-signpost-2 events-activity-icon"></i>
                     <h3>Roadshows</h3>
-                    <p>
+                    <p class="events-activity-desc">
                         Mobile promotional experiences that bring
                         brands directly to their target audiences.
                     </p>
                 </div>
+            </div>
 
-
-                <div class="events-activity-card">
-                    <span>03</span>
-                    <i class="bi bi-shop-window"></i>
-                    <h3>Exhibitions & Trade Fairs</h3>
-                    <p>
+            <!-- 03 -->
+            <div class="events-activity-card">
+                <div class="events-activity-image">
+                    <img src="assets/images/events/activity-3.jpg" alt="Exhibitions & Trade Fairs">
+                </div>
+                <div class="events-activity-overlay"></div>
+                <div class="events-activity-content">
+                    <span class="events-activity-number">03</span>
+                    <i class="bi bi-shop-window events-activity-icon"></i>
+                    <h3>Exhibitions &amp; Trade Fairs</h3>
+                    <p class="events-activity-desc">
                         Planning, coordination and stall-related
                         execution for exhibitions and trade events.
                     </p>
                 </div>
+            </div>
 
-
-                <div class="events-activity-card">
-                    <span>04</span>
-                    <i class="bi bi-mic"></i>
-                    <h3>Seminars & Conferences</h3>
-                    <p>
+            <!-- 04 -->
+            <div class="events-activity-card">
+                <div class="events-activity-image">
+                    <img src="assets/images/events/activity-4.jpg" alt="Seminars & Conferences">
+                </div>
+                <div class="events-activity-overlay"></div>
+                <div class="events-activity-content">
+                    <span class="events-activity-number">04</span>
+                    <i class="bi bi-mic events-activity-icon"></i>
+                    <h3>Seminars &amp; Conferences</h3>
+                    <p class="events-activity-desc">
                         Professional gatherings planned around
                         communication, participation and engagement.
                     </p>
                 </div>
+            </div>
 
-
-                <div class="events-activity-card">
-                    <span>05</span>
-                    <i class="bi bi-rocket-takeoff"></i>
+            <!-- 05 -->
+            <div class="events-activity-card">
+                <div class="events-activity-image">
+                    <img src="assets/images/events/activity-5.jpg" alt="Product Launches">
+                </div>
+                <div class="events-activity-overlay"></div>
+                <div class="events-activity-content">
+                    <span class="events-activity-number">05</span>
+                    <i class="bi bi-rocket-takeoff events-activity-icon"></i>
                     <h3>Product Launches</h3>
-                    <p>
+                    <p class="events-activity-desc">
                         Launch experiences that introduce products,
                         services and brands to their audience.
                     </p>
                 </div>
+            </div>
 
-
-                <div class="events-activity-card">
-                    <span>06</span>
-                    <i class="bi bi-people"></i>
-                    <h3>Dealer & Customer Meets</h3>
-                    <p>
+            <!-- 06 -->
+            <div class="events-activity-card">
+                <div class="events-activity-image">
+                    <img src="assets/images/events/activity-6.jpg" alt="Dealer & Customer Meets">
+                </div>
+                <div class="events-activity-overlay"></div>
+                <div class="events-activity-content">
+                    <span class="events-activity-number">06</span>
+                    <i class="bi bi-people events-activity-icon"></i>
+                    <h3>Dealer &amp; Customer Meets</h3>
+                    <p class="events-activity-desc">
                         Events designed to bring customers,
                         dealers and business teams together.
                     </p>
                 </div>
+            </div>
 
-
-                <div class="events-activity-card">
-                    <span>07</span>
-                    <i class="bi bi-building"></i>
+            <!-- 07 -->
+            <div class="events-activity-card">
+                <div class="events-activity-image">
+                    <img src="assets/images/events/activity-7.jpg" alt="Corporate Events">
+                </div>
+                <div class="events-activity-overlay"></div>
+                <div class="events-activity-content">
+                    <span class="events-activity-number">07</span>
+                    <i class="bi bi-building events-activity-icon"></i>
                     <h3>Corporate Events</h3>
-                    <p>
+                    <p class="events-activity-desc">
                         Corporate gatherings, celebrations,
                         meetings and employee experiences.
                     </p>
                 </div>
+            </div>
 
-
-                <div class="events-activity-card">
-                    <span>08</span>
-                    <i class="bi bi-trophy"></i>
-                    <h3>Sports & Public Events</h3>
-                    <p>
+            <!-- 08 -->
+            <div class="events-activity-card">
+                <div class="events-activity-image">
+                    <img src="assets/images/events/activity-8.jpg" alt="Sports & Public Events">
+                </div>
+                <div class="events-activity-overlay"></div>
+                <div class="events-activity-content">
+                    <span class="events-activity-number">08</span>
+                    <i class="bi bi-trophy events-activity-icon"></i>
+                    <h3>Sports &amp; Public Events</h3>
+                    <p class="events-activity-desc">
                         Public-facing events, sporting activities
                         and promotional experiences.
                     </p>
                 </div>
-
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-
-    <!-- WORK / PROJECTS -->
-    <section class="events-work-section">
-
-        <div class="yojna-container">
-
-            <div class="events-section-heading">
-
-                <span class="events-section-label">
-                    OUR WORK
-                </span>
-
-                <h2>
-                    Experiences We
-                    <span>Have Created.</span>
-                </h2>
-
-                <p>
-                    A selection of event activities and experiences
-                    from the work executed by Yojna Events.
-                </p>
-
-            </div>
-
-
-            <div class="events-work-grid">
-
-
-                <article class="events-work-card">
-
-                    <div class="events-work-image">
-                        <img src="images/events/event-1.jpg"
-                             alt="Yojna Events project">
-                    </div>
-
-                    <div class="events-work-content">
-
-                        <span>EVENT EXPERIENCE</span>
-
-                        <h3>
-                            Brand Promotions & Roadshows
-                        </h3>
-
-                        <p>
-                            Promotional activities created to take
-                            brands closer to their audiences.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="events-work-card">
-
-                    <div class="events-work-image">
-                        <img src="images/events/event-2.jpg"
-                             alt="Yojna Events project">
-                    </div>
-
-                    <div class="events-work-content">
-
-                        <span>EVENT EXPERIENCE</span>
-
-                        <h3>
-                            Exhibitions & Trade Events
-                        </h3>
-
-                        <p>
-                            Exhibition and stall management activities
-                            designed around business visibility.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="events-work-card">
-
-                    <div class="events-work-image">
-                        <img src="images/events/event-3.jpg"
-                             alt="Yojna Events project">
-                    </div>
-
-                    <div class="events-work-content">
-
-                        <span>EVENT EXPERIENCE</span>
-
-                        <h3>
-                            Corporate & Customer Events
-                        </h3>
-
-                        <p>
-                            Experiences created for corporate,
-                            customer and dealer engagement.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="events-work-card">
-
-                    <div class="events-work-image">
-                        <img src="images/events/event-4.jpg"
-                             alt="Yojna Events project">
-                    </div>
-
-                    <div class="events-work-content">
-
-                        <span>EVENT EXPERIENCE</span>
-
-                        <h3>
-                            Public & Cultural Events
-                        </h3>
-
-                        <p>
-                            Public-facing events and cultural
-                            programmes that bring communities together.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 
     <!-- EXECUTED EVENTS -->

@@ -19,6 +19,335 @@
 
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* =========================================================
+   MEDIA ACTIVITIES — PHOTO CARDS, PREMIUM UPGRADE
+========================================================= */
+
+.media-activities-section {
+    padding: 110px 0 120px;
+    background: #F3F3F3;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ambient purple glow */
+.media-activities-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(109, 96, 157, 0.09), transparent 65%);
+    top: -250px;
+    left: -250px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+.media-section-heading {
+    max-width: 720px;
+    margin-bottom: 65px;
+    position: relative;
+    z-index: 2;
+}
+
+.media-section-label {
+    display: inline-block;
+    color: #073042;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 34px;
+}
+
+.media-section-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 2px;
+    background: #6D609D;
+}
+
+.media-section-heading h2 {
+    margin: 0 0 18px;
+    color: #033141;
+    font-size: 46px;
+    line-height: 1.12;
+    letter-spacing: -0.5px;
+}
+
+.media-section-heading h2 span {
+    display: block;
+    color: #6D609D;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.media-section-heading p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 620px;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+.media-services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+   CARD — with photo background
+========================================================= */
+.media-service-item {
+    position: relative;
+    height: 340px;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #033141;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    isolation: isolate;
+}
+
+.media-service-item:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 30px 60px rgba(109, 96, 157, 0.28),
+        0 10px 24px rgba(3, 49, 65, 0.1);
+}
+
+/* ---------- IMAGE ---------- */
+.media-service-image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.media-service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.media-service-item:hover .media-service-image img {
+    transform: scale(1.12);
+}
+
+/* ---------- OVERLAY (default: navy gradient) ---------- */
+.media-service-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(3, 49, 65, 0.15) 0%,
+            rgba(3, 49, 65, 0.55) 45%,
+            rgba(3, 49, 65, 0.95) 100%
+        );
+    transition: background 0.5s ease;
+}
+
+/* On hover: purple gradient */
+.media-service-item:hover .media-service-overlay {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(109, 96, 157, 0.35) 0%,
+            rgba(109, 96, 157, 0.72) 45%,
+            rgba(70, 58, 110, 0.98) 100%
+        );
+}
+
+/* ---------- CONTENT ---------- */
+.media-service-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    padding: 26px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFFFFF;
+}
+
+/* ---------- NUMBER BADGE ---------- */
+.media-service-number {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    font-size: 13px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1.5px;
+    transition: color 0.4s ease, transform 0.4s ease;
+    z-index: 3;
+}
+
+.media-service-item:hover .media-service-number {
+    color: #FEF907;
+    transform: scale(1.1);
+}
+
+/* ---------- ICON (glassy tile) ---------- */
+.media-service-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #FEF907;
+    border-radius: 14px;
+    font-size: 22px;
+    margin-bottom: 16px;
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    align-self: flex-start;
+}
+
+.media-service-item:hover .media-service-icon {
+    background: #FEF907;
+    color: #033141;
+    border-color: #FEF907;
+    transform: translateY(-3px) rotate(-6deg);
+    box-shadow: 0 10px 25px rgba(254, 249, 7, 0.35);
+}
+
+/* ---------- TITLE ---------- */
+.media-service-content h3 {
+    margin: 0 0 6px;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.1px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- DESCRIPTION (reveal on hover) ---------- */
+.media-service-content p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 12.5px;
+    line-height: 1.55;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+        max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.35s ease,
+        margin 0.4s ease;
+}
+
+.media-service-item:hover .media-service-content p {
+    max-height: 80px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1200px) {
+    .media-services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .media-activities-section {
+        padding: 85px 0 95px;
+    }
+
+    .media-services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .media-service-item {
+        height: 320px;
+    }
+
+    .media-section-heading h2 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .media-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .media-service-item {
+        height: 300px;
+        border-radius: 16px;
+    }
+
+    /* Show description always on touch devices */
+    .media-service-content p {
+        max-height: 80px;
+        opacity: 1;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .media-activities-section {
+        padding: 70px 0;
+    }
+
+    .media-services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .media-section-heading {
+        margin-bottom: 45px;
+    }
+
+    .media-section-heading h2 {
+        font-size: 30px;
+    }
+
+    .media-section-heading p {
+        font-size: 15px;
+    }
+
+    .media-service-item {
+        height: 300px;
+    }
+
+    .media-service-content h3 {
+        font-size: 18px;
+    }
+
+    .media-service-content p {
+        font-size: 13.5px;
+    }
+}
+  </style>
 </head>
 
 <body>
@@ -192,249 +521,280 @@
     </section>
 
 
-    <!-- ACTIVITIES -->
-    <section class="media-activities-section">
+  <!-- =========================================================
+     ACTIVITIES
+========================================================= -->
+<section class="media-activities-section">
 
-        <div class="yojna-container">
+    <div class="yojna-container">
 
-            <div class="media-section-heading">
+        <div class="media-section-heading">
 
-                <span class="media-section-label">
-                    AREA OF ACTIVITIES
-                </span>
+            <span class="media-section-label">
+                AREA OF ACTIVITIES
+            </span>
 
-                <h2>
-                    Multiple Media Formats.
-                    <span>One Communication Goal.</span>
-                </h2>
+            <h2>
+                Multiple Media Formats.
+                <span>One Communication Goal.</span>
+            </h2>
 
-            </div>
+            <p>
+                From print and outdoor to digital and on-ground branding —
+                Yojna Media delivers across every channel that moves
+                your brand forward.
+            </p>
+
+        </div>
 
 
-            <div class="media-services-grid">
+        <div class="media-services-grid">
 
-                <div class="media-service-item">
-                    <i class="bi bi-newspaper"></i>
+            <!-- 01 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/newspaper.jpg" alt="Newspaper Advertising">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">01</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-newspaper"></i>
+                    </div>
                     <h3>Newspaper Advertising</h3>
+                    <p>Print ads in leading regional and national dailies.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-tv"></i>
-                    <h3>Cable & TV Advertising</h3>
+            <!-- 02 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/cable-tv.jpg" alt="Cable & TV Advertising">
                 </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">02</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-tv"></i>
+                    </div>
+                    <h3>Cable &amp; TV Advertising</h3>
+                    <p>Local cable and regional TV spots for wide reach.</p>
+                </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-signpost"></i>
+            <!-- 03 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/hoardings.jpg" alt="Hoardings">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">03</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-signpost-split"></i>
+                    </div>
                     <h3>Hoardings</h3>
+                    <p>High-visibility outdoor hoardings at prime locations.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-building"></i>
+            <!-- 04 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/road-archs.jpg" alt="Welcome Road Archs">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">04</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
                     <h3>Welcome Road Archs</h3>
+                    <p>Branded arches for city welcomes and event entries.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-bus-front"></i>
+            <!-- 05 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/bus-panels.jpg" alt="Bus Panels">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">05</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-bus-front"></i>
+                    </div>
                     <h3>Bus Panels</h3>
+                    <p>Mobile outdoor branding on public transport.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-film"></i>
+            <!-- 06 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/cinema-slides.jpg" alt="Cinema Slides">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">06</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-film"></i>
+                    </div>
                     <h3>Cinema Slides</h3>
+                    <p>On-screen ad slides in local theatres and multiplexes.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-brush"></i>
+            <!-- 07 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/wall-painting.jpg" alt="Wall Painting">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">07</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-brush"></i>
+                    </div>
                     <h3>Wall Painting</h3>
+                    <p>Hand-painted wall ads in high-footfall areas.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-truck"></i>
+            <!-- 08 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/roadshow-vehicles.jpg" alt="Roadshow Vehicles">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">08</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
                     <h3>Roadshow Vehicles</h3>
+                    <p>Branded vehicles for on-ground promotions.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-image"></i>
+            <!-- 09 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/banner-printing.jpg" alt="Banner Printing">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">09</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-image"></i>
+                    </div>
                     <h3>Banner Printing</h3>
+                    <p>Custom banners for events, shops, and campaigns.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-megaphone"></i>
+            <!-- 10 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/roadshows.jpg" alt="Roadshows">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">10</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-megaphone"></i>
+                    </div>
                     <h3>Roadshows</h3>
+                    <p>Multi-city roadshows that bring brands to the people.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-shop"></i>
+            <!-- 11 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/inshop-branding.jpg" alt="Inshop Branding">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">11</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-shop"></i>
+                    </div>
                     <h3>Inshop Branding</h3>
+                    <p>In-store branding that drives point-of-sale impact.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-balloon"></i>
+            <!-- 12 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/balloon-advertising.jpg" alt="Balloon Advertising">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">12</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-balloon"></i>
+                    </div>
                     <h3>Balloon Advertising</h3>
+                    <p>Eye-catching balloon branding for events and launches.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-lightbulb"></i>
+            <!-- 13 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/glow-sign.jpg" alt="Glow Sign Boards">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">13</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
                     <h3>Glow Sign Boards</h3>
+                    <p>Illuminated signage for shops and commercial spaces.</p>
                 </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-person-badge"></i>
-                    <h3>T-Shirts & Cap Advertising</h3>
+            <!-- 14 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/tshirt-cap.jpg" alt="T-Shirts & Cap Advertising">
                 </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">14</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-person-badge"></i>
+                    </div>
+                    <h3>T-Shirts &amp; Cap Advertising</h3>
+                    <p>Wearable branding for staff, events, and giveaways.</p>
+                </div>
+            </div>
 
-                <div class="media-service-item">
-                    <i class="bi bi-file-earmark-text"></i>
+            <!-- 15 -->
+            <div class="media-service-item">
+                <div class="media-service-image">
+                    <img src="assets/images/media/paper-insertions.jpg" alt="Paper Insertions">
+                </div>
+                <div class="media-service-overlay"></div>
+                <div class="media-service-content">
+                    <span class="media-service-number">15</span>
+                    <div class="media-service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
                     <h3>Paper Insertions</h3>
+                    <p>Flyers and inserts distributed through newspapers.</p>
                 </div>
-
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-
-    <!-- MEDIA WORK -->
-    <section class="media-work-section">
-
-        <div class="yojna-container">
-
-            <div class="media-section-heading">
-
-                <span class="media-section-label">
-                    OUR WORK
-                </span>
-
-                <h2>
-                    Campaigns That
-                    <span>Reached People.</span>
-                </h2>
-
-                <p>
-                    Selected work and campaign categories can be
-                    showcased here using your original photographs.
-                </p>
-
-            </div>
-
-
-            <div class="media-work-grid">
-
-
-                <article class="media-work-card">
-
-                    <div class="media-work-image">
-
-                        <img src="images/media/media-1.jpg"
-                             alt="Yojna Media advertising campaign">
-
-                    </div>
-
-                    <div class="media-work-content">
-
-                        <span>ADVERTISING CAMPAIGN</span>
-
-                        <h3>
-                            Brand Promotion
-                        </h3>
-
-                        <p>
-                            Advertising and promotional activity
-                            designed to increase visibility.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="media-work-card">
-
-                    <div class="media-work-image">
-
-                        <img src="images/media/media-2.jpg"
-                             alt="Yojna Media outdoor campaign">
-
-                    </div>
-
-                    <div class="media-work-content">
-
-                        <span>OUTDOOR MEDIA</span>
-
-                        <h3>
-                            Outdoor Branding
-                        </h3>
-
-                        <p>
-                            Outdoor formats that bring brand
-                            communication into public spaces.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="media-work-card">
-
-                    <div class="media-work-image">
-
-                        <img src="images/media/media-3.jpg"
-                             alt="Yojna Media roadshow">
-
-                    </div>
-
-                    <div class="media-work-content">
-
-                        <span>ON-GROUND PROMOTION</span>
-
-                        <h3>
-                            Roadshow Promotion
-                        </h3>
-
-                        <p>
-                            On-ground promotional activities designed
-                            to take campaigns directly to audiences.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="media-work-card">
-
-                    <div class="media-work-image">
-
-                        <img src="images/media/media-4.jpg"
-                             alt="Yojna Media branding">
-
-                    </div>
-
-                    <div class="media-work-content">
-
-                        <span>BRAND VISIBILITY</span>
-
-                        <h3>
-                            Inshop & Promotional Branding
-                        </h3>
-
-                        <p>
-                            Brand visibility solutions created for
-                            retail and promotional environments.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
+</section>
 
     <!-- EXECUTED -->
     <section class="media-executed-section">
