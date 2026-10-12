@@ -1,10 +1,9 @@
 /* =========================================================
-   MOBILE MENU + MOBILE DIVISIONS
+   MOBILE MENU + HERO SLIDER
    Shared across all pages
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
-
 
     /* ---------- MOBILE MENU TOGGLE ---------- */
 
@@ -32,19 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ---------- MOBILE DIVISIONS DROPDOWN ---------- */
+    /* ---------- HERO SLIDER ---------- */
 
-    const divisionToggle  = document.getElementById("divisionMobileToggle");
-    const mobileDivisions = document.querySelector(".yojna-mobile-divisions");
+    const heroSlides = document.querySelectorAll(".yojna-hero-slide");
+    let currentSlide = 0;
 
-    if (divisionToggle && mobileDivisions) {
+    if (heroSlides.length > 1) {
 
-        divisionToggle.addEventListener("click", function () {
+        setInterval(function () {
 
-            mobileDivisions.classList.toggle("active");
-            divisionToggle.classList.toggle("active");
+            heroSlides[currentSlide].classList.remove("active");
 
-        });
+            currentSlide++;
+
+            if (currentSlide >= heroSlides.length) {
+                currentSlide = 0;
+            }
+
+            heroSlides[currentSlide].classList.add("active");
+
+        }, 5000);
 
     }
 

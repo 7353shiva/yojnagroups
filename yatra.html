@@ -296,138 +296,340 @@
             font-size: 14px;
         }
 
+/* =========================================================
+   YATRA TOUR CATEGORIES — ROTATING STAGGERED REVEAL
+========================================================= */
 
-        /* =========================================================
-           TOUR CATEGORIES SECTION
-        ========================================================= */
+.yatra-tour-categories {
+    padding: 110px 0 120px;
+    background: #F3F3F3;
+    position: relative;
+    overflow: hidden;
+}
 
-        .yatra-tour-categories {
-            padding: 100px 0;
-            background: #F3F3F3;
-        }
+/* Ambient purple glow */
+.yatra-tour-categories::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(109, 96, 157, 0.07), transparent 65%);
+    top: -250px;
+    right: -250px;
+    border-radius: 50%;
+    pointer-events: none;
+}
 
-        .yatra-tour-categories-heading {
-            max-width: 720px;
-            margin-bottom: 55px;
-        }
+/* =========================================================
+   HEADING
+========================================================= */
+.yatra-tour-categories-heading {
+    max-width: 720px;
+    margin-bottom: 65px;
+    position: relative;
+    z-index: 2;
+}
 
-        .yatra-tour-categories-heading .yatra-section-label {
-            display: inline-block;
-            color: #033141;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 2.5px;
-            margin-bottom: 15px;
-        }
+.yatra-section-label {
+    display: inline-block;
+    color: #073042;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 34px;
+}
 
-        .yatra-tour-categories-heading h2 {
-            margin: 0 0 18px;
-            color: #033141;
-            font-size: 44px;
-            line-height: 1.15;
-        }
+.yatra-section-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 2px;
+    background: #E67817;
+}
 
-        .yatra-tour-categories-heading h2 span {
-            display: block;
-            color: #F5B301;
-        }
+.yatra-tour-categories-heading h2 {
+    margin: 0 0 18px;
+    color: #E67817;
+    font-size: 46px;
+    line-height: 1.12;
+    letter-spacing: -0.5px;
+}
 
-        .yatra-tour-categories-heading p {
-            margin: 0;
-            color: #666;
-            font-size: 16px;
-            line-height: 1.75;
-        }
+.yatra-tour-categories-heading h2 span {
+    display: block;
+    color: #E67817;
+    font-style: italic;
+    font-weight: 800;
+}
 
-        .yatra-tour-categories-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.yatra-tour-categories-heading p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 620px;
+}
 
-        .yatra-tour-category-card {
-            position: relative;
-            min-height: 280px;
-            padding: 40px 32px;
-            background: #FFFFFF;
-            border: 1px solid #E2E2E2;
-            border-radius: 16px;
-            transition: all 0.4s ease;
-            overflow: hidden;
-        }
+/* =========================================================
+   GRID
+========================================================= */
+.yatra-tour-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+}
 
-        .yatra-tour-category-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 4px;
-            background: #F5B301;
-            transition: width 0.4s ease;
-        }
+/* =========================================================
+   CARD — base state (pre-animation)
+========================================================= */
+.yatra-tour-category-card {
+    position: relative;
+    padding: 40px 32px 36px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAF2;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
 
-        .yatra-tour-category-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-            border-color: transparent;
-        }
+    /* Initial state for rotation reveal */
+    opacity: 0;
+    transform: rotate(-8deg) translateY(50px) scale(0.92);
+    transform-origin: center bottom;
 
-        .yatra-tour-category-card:hover::before {
-            width: 100%;
-        }
+    transition:
+        opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
 
-        .yatra-tour-category-icon {
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 22px;
-            background: rgba(7, 48, 66, 0.08);
-            color: #073042;
-            border-radius: 14px;
-            font-size: 26px;
-            transition: all 0.4s ease;
-        }
+/* Purple corner accent */
+.yatra-tour-category-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background:#E67817;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        .yatra-tour-category-card:hover .yatra-tour-category-icon {
-            background: #073042;
-            color: #FEF907;
-        }
+/* ---------- REVEALED STATE (when in view) ---------- */
+.yatra-tour-category-card.is-visible {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0) scale(1);
+}
 
-        .yatra-tour-category-card h3 {
-            margin: 0 0 12px;
-            color: #033141;
-            font-size: 22px;
-            font-weight: 700;
-        }
+/* Staggered delay per card */
+.yatra-tour-category-card:nth-child(1) { transition-delay: 0.05s; }
+.yatra-tour-category-card:nth-child(2) { transition-delay: 0.20s; }
+.yatra-tour-category-card:nth-child(3) { transition-delay: 0.35s; }
+.yatra-tour-category-card:nth-child(4) { transition-delay: 0.50s; }
+.yatra-tour-category-card:nth-child(5) { transition-delay: 0.65s; }
+.yatra-tour-category-card:nth-child(6) { transition-delay: 0.80s; }
 
-        .yatra-tour-category-card p {
-            margin: 0 0 20px;
-            color: #666;
-            font-size: 14px;
-            line-height: 1.7;
-        }
+/* ---------- HOVER STATE ---------- */
+.yatra-tour-category-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 30px 60px rgba(109, 96, 157, 0.15),
+        0 8px 20px rgba(3, 49, 65, 0.06);
+    border-color: rgba(109, 96, 157, 0.25);
+}
 
-        .yatra-tour-category-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+.yatra-tour-category-card:hover::before {
+    width: 100%;
+}
 
-        .yatra-tour-category-tag {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(7, 48, 66, 0.06);
-            color: #073042;
-            font-size: 11px;
-            font-weight: 700;
-            border-radius: 4px;
-            letter-spacing: 0.5px;
-        }
+/* =========================================================
+   ICON
+========================================================= */
+.yatra-tour-category-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #F7F5FF 0%, #EFEBF9 100%);
+    color:#E67817;
+    border-radius: 16px;
+    font-size: 26px;
+    line-height: 1;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
 
+.yatra-tour-category-icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    font-size: inherit;
+    position: relative;
+    top: -1px;
+}
 
+.yatra-tour-category-icon i::before {
+    display: block;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.yatra-tour-category-card:hover .yatra-tour-category-icon {
+    background: linear-gradient(135deg,  #E67817 0%,  #E67817 100%);
+    color: #FFFFFF;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+        0 12px 30px #E67817(109, 96, 157, 0.35),
+        0 0 0 6px rgba(109, 96, 157, 0.08);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+.yatra-tour-category-card h3 {
+    margin: 0 0 12px;
+    color: #033141;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.2px;
+    transition: color 0.3s ease;
+}
+
+.yatra-tour-category-card:hover h3 {
+    color: #E67817;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+.yatra-tour-category-card > p {
+    margin: 0 0 22px;
+    color: #666;
+    font-size: 14.5px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   TAGS
+========================================================= */
+.yatra-tour-category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.yatra-tour-category-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(109, 96, 157, 0.08);
+    color: #E67817;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.yatra-tour-category-card:hover .yatra-tour-category-tag {
+    background: rgba(109, 96, 157, 0.14);
+    color: #E67817;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1024px) {
+    .yatra-tour-categories {
+        padding: 85px 0 95px;
+    }
+
+    .yatra-tour-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .yatra-tour-categories-heading h2 {
+        font-size: 38px;
+    }
+
+    .yatra-tour-category-card {
+        padding: 34px 28px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .yatra-tour-categories {
+        padding: 70px 0;
+    }
+
+    .yatra-tour-categories-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .yatra-tour-categories-heading {
+        margin-bottom: 45px;
+    }
+
+    .yatra-tour-categories-heading h2 {
+        font-size: 28px;
+    }
+
+    .yatra-tour-category-card {
+        padding: 30px 24px 28px;
+    }
+
+    .yatra-tour-category-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .yatra-tour-category-card h3 {
+        font-size: 19px;
+    }
+
+    .yatra-tour-category-card > p {
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION (accessibility)
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+    .yatra-tour-category-card {
+        opacity: 1;
+        transform: none;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .yatra-tour-category-card.is-visible {
+        transform: none;
+    }
+}
         /* =========================================================
            SPECIAL SERVICES SECTION
         ========================================================= */
@@ -731,36 +933,24 @@
 
     <!-- MOBILE NAVIGATION -->
 
-    <div class="yojna-mobile-nav" id="yojnaMobileNav">
+  <div class="yojna-mobile-nav" id="yojnaMobileNav">
 
-        <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
 
-        <a href="about.html">About</a>
+    <a href="about.html">About</a>
 
-        <button class="yojna-mobile-division-toggle" id="divisionMobileToggle">
-            Divisions
-            <i class="bi bi-chevron-down"></i>
-        </button>
+    <a href="events.html">Events</a>
 
-        <div class="yojna-mobile-divisions">
+    <a href="media.html">Media</a>
 
-            <a href="events.html">Events</a>
-            <a href="media.html">Media</a>
-            <a href="yatra.html" >Yatra</a>
-            <a href="services.html">Services</a>
+    <a href="yatra.html">Yatra</a>
 
-        </div>
+    <a href="services.html">Services</a>
 
-        <a href="projects.html">Projects</a>
+    <a href="gallery.html">Gallery</a>
 
-        <a href="contact.html">Contact</a>
-
-        <a href="contact.html" class="yojna-mobile-talk">
-            Contact Us
-            <i class="bi bi-arrow-up-right"></i>
-        </a>
-
-    </div>
+    <a href="contact.html">Contact</a>
+</div>
 
 </header>
 
@@ -848,10 +1038,12 @@
         <!-- MAKEMYTRIP COLLABORATION HIGHLIGHT -->
         <div class="yojna-yatra-partner">
 
-            <div class="yojna-yatra-partner-badge">
-                <span class="yojna-yatra-partner-label">Official Distribution Partner</span>
-                <span class="yojna-yatra-partner-name">MakeMyTrip</span>
-            </div>
+          <div class="yojna-yatra-partner-badge">
+    <span class="yojna-yatra-partner-label">Official Distribution Partner</span>
+    <img src="assets/images/yatra/makemytrip-logo.png"
+         alt="MakeMyTrip"
+         class="yojna-yatra-partner-logo">
+</div>
 
             <div class="yojna-yatra-partner-content">
                 <h3>In Collaboration with MakeMyTrip</h3>
@@ -1605,6 +1797,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(".yatra-tour-category-card");
+
+    if (cards.length === 0) return;
+
+    const observer = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                // Stop observing once revealed (animation runs once)
+                observer.unobserve(entry.target);
+            }
+        });
+
+    }, {
+        threshold: 0.15,
+        rootMargin: "0px 0px -80px 0px"
+    });
+
+    cards.forEach(function (card) {
+        observer.observe(card);
+    });
+
+});
 </script>
 </body>
 </html>
